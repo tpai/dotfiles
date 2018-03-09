@@ -1,0 +1,39 @@
+#!bin/sh
+
+ROOT_DIR=.dotfiles
+
+function create_symlink
+{
+  ln -nfs "$HOME/$ROOT_DIR/$1" "$HOME/$2"
+}
+
+if [ ! -d "$HOME/$ROOT_DIR" ]; then
+  echo "Installing dotfiles for the first time"
+
+  # Clone dotfiles repo
+  git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
+
+  # Install tmux
+  brew install zsh tmux reattach-to-user-namespace
+  brew install macvim --with-override-system-vim --with-lua --with-luajit
+  brew link --overwrite macvim
+
+  # Create symlinks
+  create_symlink "vim"              ".vim"
+  create_symlink "vim/vimrc"        ".vimrc"
+  create_symlink "vim/vimrc.before" ".vimrc.before"
+  create_symlink "vim/vimrc.after"  ".vimrc.after"
+  create_symlink "tmux"             ".tmux"
+  create_symlink "tmux/tmux.conf"   ".tmux.conf"
+
+  # Install vim plugins
+  vim +PlugInstall
+
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+  # Change default shell
+  chsh -s /bin/zsh
+else
+  echo "Dotfiles is already installed"
+fi

@@ -1,0 +1,6 @@
+so ~/.vimrc.before
+
+so ~/.vim/plugins.vim
+so ~/.vim/settings.vim
+
+so ~/.vimrc.after

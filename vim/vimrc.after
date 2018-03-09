@@ -1,0 +1,11 @@
+syntax enable
+colorscheme molokai
+
+set number                      "Line numbers are good
+set smartindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+set mouse=a                     " Mouse Enabled
+set clipboard=unnamed
