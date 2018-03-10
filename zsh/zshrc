@@ -8,7 +8,5 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-
-tmux
 # Customize
 for config_file ($HOME/.dotfiles/zsh/*.zsh) source $config_file
