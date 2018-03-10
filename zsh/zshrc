@@ -8,9 +8,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-alias ga='git add -A'
-alias gs='git status'
-alias gc='git commit'
-alias gl='git log --graph --date=short'
 
 tmux
+# Customize
+for config_file ($HOME/.dotfiles/zsh/*.zsh) source $config_file
