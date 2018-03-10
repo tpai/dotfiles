@@ -1,5 +1,7 @@
 let g:ctrlp_working_path_mode = 'ra'
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 " Using git ls-files if Ag is not available
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
