@@ -19,7 +19,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
 
   # Install tmux
-  brew install zsh fasd tmux reattach-to-user-namespace
+  brew install zsh fasd tmux reattach-to-user-namespace the_silver_searcher
   brew install macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
 
