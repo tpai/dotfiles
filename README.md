@@ -1,6 +1,6 @@
 # Dotfiles
 
-These dotfiles is build based on my development environment, please consider properly before you run the install script.
+These dotfiles is build based on my mac development environment, please consider properly before you run the install script.
 
 ## Usage
 
