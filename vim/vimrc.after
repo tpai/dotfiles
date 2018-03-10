@@ -6,6 +6,7 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
-set mouse=a                     " Mouse Enabled
-set clipboard=unnamed
+set mouse=a                     "Enable mouse control
+set clipboard=unnamed           "Copy to system clipboard
+set nowrap                      "Don't wrap lines
+set linebreak                   "Wrap lines at convenient points
