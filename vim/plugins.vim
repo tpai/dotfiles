@@ -9,7 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'pangloss/vim-javascript'
