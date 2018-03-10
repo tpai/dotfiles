@@ -1,0 +1,15 @@
+export ZSH=~/.oh-my-zsh
+
+ZSH_THEME="robbyrussell"
+
+plugins=(
+  git fasd command-not-found
+)
+
+source $ZSH/oh-my-zsh.sh
+
+alias gs='git status'
+alias gc='git commit'
+alias gl='git log --graph --date=short'
+
+tmux
