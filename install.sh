@@ -18,10 +18,14 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
 
-  # Install tmux
+  # Install shell related packages
   brew install zsh fasd tmux reattach-to-user-namespace the_silver_searcher
   brew install macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
+
+  # Install development related packages
+  brew install python@2
+  export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Create symlinks
   create_symlink "vim"              ".vim"
