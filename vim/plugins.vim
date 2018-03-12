@@ -14,6 +14,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'vim-syntastic/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'prettier/vim-prettier', {
