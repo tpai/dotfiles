@@ -8,6 +8,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 " Enable the eslint checker
+" https://github.com/vim-syntastic/syntastic/issues/1692#issuecomment-350153207
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_generic = 1
 let g:syntastic_javascript_eslint_exec = '/bin/ls'
