@@ -9,10 +9,6 @@ set noswapfile
 set nobackup
 set nowb
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 set nowrap                      " Don't wrap lines
@@ -33,6 +29,7 @@ set smartcase                   " ...unless we type a capital
 nnoremap // :let @/=""<CR>
 
 " Indentation
+set breakindent
 set autoindent
 set smartindent
 set smarttab
@@ -41,6 +38,12 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
+" Auto indent pasted text
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
+
+filetype plugin on
+filetype indent on
 
 " Auto Completion
 set wildmode=list:longest
