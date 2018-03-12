@@ -1,21 +1,70 @@
-"Color scheme settings
+" Color scheme settings
 let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme solarized
 
-set number                      "Line numbers are good
-set smartindent
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set mouse=a                     "Enable mouse control
-set clipboard=unnamed           "Copy to system clipboard
-set nowrap                      "Don't wrap lines
-set linebreak                   "Wrap lines at convenient points
-set hidden                      "Buffers can exist in the background without being in a window
-
-"Turn off swap file
+" Turn off swap file
 set noswapfile
 set nobackup
 set nowb
+
+" Auto indent pasted text
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+set nowrap                      " Don't wrap lines
+set linebreak                   " Wrap lines at convenient points
+
+" Scrolling
+set scrolloff=8                 " Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+" Search
+set incsearch                   " Find the next match as we type the search
+set hlsearch                    " Highlight searches by default
+set ignorecase                  " Ignore case when searching...
+set smartcase                   " ...unless we type a capital
+
+" Clear the latest search result
+nnoremap // :let @/=""<CR>
+
+" Indentation
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+
+
+" Auto Completion
+set wildmode=list:longest
+set wildmenu                    " enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~     " stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+
+" Folds
+set foldmethod=indent           " fold based on indent
+set foldnestmax=3               " deepest fold is 3 levels
+set nofoldenable                " dont fold by default
+
+set number                      " Line numbers are good
+set mouse=a                     " Enable mouse control
+set clipboard=unnamed           " Copy to system clipboard
+set hidden                      " Buffers can exist in the background without being in a window
+set visualbell                  " No sounds
+set autoread                    " Reload files changed outside vim
+set nofoldenable                " dont fold by default
