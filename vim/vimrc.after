@@ -14,3 +14,8 @@ set clipboard=unnamed           "Copy to system clipboard
 set nowrap                      "Don't wrap lines
 set linebreak                   "Wrap lines at convenient points
 set hidden                      "Buffers can exist in the background without being in a window
+
+"Turn off swap file
+set noswapfile
+set nobackup
+set nowb
