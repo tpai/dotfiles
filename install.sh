@@ -23,12 +23,6 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   brew install macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
 
-  # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  # Change default shell
-  chsh -s /bin/zsh
-
   # Create symlinks
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
@@ -41,6 +35,12 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
 
   # Install vim plugins
   vim +PlugInstall
+
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+  # Change default shell
+  chsh -s /bin/zsh
 else
   echo "Dotfiles is already installed!"
 fi
