@@ -24,7 +24,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   brew link --overwrite macvim
 
   # Install development related packages
-  brew install python@2
+  brew install cmake python@2
   export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Create symlinks
