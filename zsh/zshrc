@@ -3,10 +3,13 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 plugins=(
-  git fasd command-not-found
+  git fasd command-not-found vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize
 for config_file ($HOME/.dotfiles/zsh/*.zsh) source $config_file
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
