@@ -51,6 +51,8 @@ alias gl='git log --graph --date=short'
 alias gplr='git pull --rebase'
 alias gfap='git fetch --all --prune'
 alias gri='git rebase --interactive'
+alias gsh='git stash'
+alias gshp='git stash pop'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
