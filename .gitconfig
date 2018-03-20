@@ -41,7 +41,7 @@
   cp = cherry-pick -x               # grab a change from a branch
 
   # diff
-  d = diff                          # diff unstaged changes
+	d = difftool
   dc = diff --cached                # diff staged changes
   last = diff HEAD^                 # diff last committed change
 
@@ -119,6 +119,7 @@
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
 	algorithm = patience
+	tool = vimdiff
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -128,3 +129,5 @@
 [user]
 	name = Tony Pai
 	email = tony77794@gmail.com
+[difftool]
+	prompt = false
