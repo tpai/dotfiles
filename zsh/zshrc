@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 plugins=(
-  git fasd command-not-found vi-mode
+  git fasd command-not-found vi-mode history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
