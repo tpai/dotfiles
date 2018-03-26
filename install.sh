@@ -34,8 +34,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "vim/vimrc.after"  ".vimrc.after"
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
-  create_symlink "zsh/zshrc"        ".zshrc"
-  create_symlink ".gitconfig"       ".gitconfig"
+  create_symlink ".gitconfig" ".gitconfig"
 
   # Install vim plugins
   vim +PlugInstall
@@ -45,6 +44,9 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
 
   # Change default shell
   chsh -s /bin/zsh
+
+  # Create zsh symlink
+  create_symlink "zsh/zshrc" ".zshrc"
 else
   echo "Dotfiles is already installed!"
 fi
