@@ -47,7 +47,7 @@ alias ze='vim ~/.zshrc'
 alias ga='git add -A'
 alias gs='git status'
 alias gc='git commit'
-alias gl='git log --graph --date=short'
+alias gl="git log --color --graph --abbrev=8 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s' --abbrev-commit"
 alias gplr='git pull --rebase'
 alias gfap='git fetch --all --prune'
 alias gri='git rebase --interactive'
