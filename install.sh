@@ -34,7 +34,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "vim/vimrc.after"  ".vimrc.after"
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
-  create_symlink ".gitconfig" ".gitconfig"
+  create_symlink ".gitconfig"       ".gitconfig"
 
   # Install vim plugins
   vim +PlugInstall
@@ -46,7 +46,35 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   chsh -s /bin/zsh
 
   # Create zsh symlink
-  create_symlink "zsh/zshrc" ".zshrc"
+  create_symlink "zsh/zshrc"        ".zshrc"
 else
-  echo "Dotfiles is already installed!"
+  echo "Upgrading dotfiles..."
+
+  # Switch to the latest master branch
+  git stash
+  git checkout master
+  git pull --rebase
+  git stash pop
+
+  # Update packages
+  brew upgrade zsh fasd tmux reattach-to-user-namespace the_silver_searcher cmake python@2
+  brew upgrade macvim --with-override-system-vim --with-lua --with-luajit
+  brew link --overwrite macvim
+
+  # Upgrade vim-plug self and update plugins
+  vim +PlugUpgrade -c q!
+  vim +PlugInstall -c q!
+
+  # Upgrade oh-my-zsh
+  sh $ZSH/tools/upgrade.sh
+
+  # Reset symlinks
+  create_symlink "vim"              ".vim"
+  create_symlink "vim/vimrc"        ".vimrc"
+  create_symlink "vim/vimrc.before" ".vimrc.before"
+  create_symlink "vim/vimrc.after"  ".vimrc.after"
+  create_symlink "tmux"             ".tmux"
+  create_symlink "tmux/tmux.conf"   ".tmux.conf"
+  create_symlink ".gitconfig"       ".gitconfig"
+  create_symlink "zsh/zshrc"        ".zshrc"
 fi

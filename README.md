@@ -2,18 +2,23 @@
 
 These dotfiles is build based on my mac development environment, please consider properly before you run the install script.
 
-## Usage
-
-Run shell script in terminal. 
+## Install
 
 ```
 sh -c "`curl -fsSL https://raw.githubusercontent.com/tpai/dotfiles/master/install.sh `"
 ```
 
-Put this line into iTerm `Profiles > General > Command > Send text at start`
+Paster the following line into iTerm `Profiles > General > Command > Send text at start`
 
 ```
-tmux attach -t init || tmux new -s init
+tmux new
 ```
 
-Done!
+## Update
+
+```
+sh ~/.dotfiles/install.sh
+```
+
+It will auto update required brew formula, vim plugins and oh-my-zsh.
+
