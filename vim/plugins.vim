@@ -5,6 +5,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
