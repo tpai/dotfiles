@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+" Default
 Plug 'tpope/vim-sensible'
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
@@ -7,13 +8,16 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+" Search
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
+" NERDTree
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'ryanoasis/vim-devicons'
 
+" Editing
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'vim-syntastic/syntastic'
