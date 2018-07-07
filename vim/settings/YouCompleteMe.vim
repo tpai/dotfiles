@@ -6,3 +6,8 @@ let g:ycm_enable_diagnostic_highlighting = 0
 " Don't show YCM's preview window
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+
+" Fix warning
+if has('python3')
+  silent! python3 1
+endif
