@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 " Search
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': './install --all' }
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
