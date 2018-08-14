@@ -18,8 +18,8 @@ _gen_fzf_default_opts() {
 
   # Solarized Dark color scheme for fzf
   export FZF_DEFAULT_OPTS="
-  --color fg:$base1,bg:$base03,hl:$blue,fg+:$base1,bg+:$base02,hl+:$blue
-  --color info:$base01,prompt:$base1,pointer:$base00,marker:$base00,spinner:$yellow
+  --color fg:$base01,bg:$base03,hl:$blue,fg+:$base1,bg+:$base02,hl+:$blue
+  --color info:$cyan,prompt:$base1,pointer:$base00,marker:$base00,spinner:$yellow
   "
 }
 
