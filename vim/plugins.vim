@@ -21,6 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 " Editing
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'digitaltoad/vim-pug'
 Plug 'vim-syntastic/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
