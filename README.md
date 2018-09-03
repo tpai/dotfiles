@@ -26,8 +26,6 @@ It will auto update required brew formula, vim plugins and oh-my-zsh.
 
 ```
 sh ~/.dotfiles/uninstall.sh
-
-rm -rf ~/.dotfiles
 ```
 
-If you no longer need this dotfiles, please run without hesitation.
+Run this command if you are no longer need the dotfiles.

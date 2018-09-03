@@ -16,3 +16,5 @@ remove_symlink ".tmux"
 remove_symlink ".tmux.conf"
 remove_symlink ".gitconfig"
 remove_symlink ".zshrc"
+
+rm -rf $HOME/$ROOT_DIR
