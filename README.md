@@ -1,18 +1,29 @@
 # Dotfiles
 
-These dotfiles is build based on my mac development environment, please consider properly before you run the install script.
+Dotfiles are built based on my development environment, please consider properly before run the install command.
+
+## Features
+
+- tmux
+- emmet
+- syntastic
+- nerdtree
+- fzf
+- vim-javascript
+- vim-jsx
+- vim-pug
 
 ## Install
 
-```
-sh -c "`curl -fsSL https://raw.githubusercontent.com/tpai/dotfiles/master/install.sh `"
-```
+1. Run install script
 
-Paster the following line into iTerm `Profiles > General > Command > Send text at start`
+    ```
+    sh -c "`curl -fsSL https://raw.githubusercontent.com/tpai/dotfiles/master/install.sh `"
+    ```
 
-```
-tmux new
-```
+2. Paste `tmux new` into iTerm `Profiles > General > Command > Send text at start`
+
+3. `Profiles > Text > Change Font > Family > DriodSansMono Nerd Font`
 
 ## Update
 
@@ -28,4 +39,4 @@ It will auto update required brew formula, vim plugins and oh-my-zsh.
 sh ~/.dotfiles/uninstall.sh
 ```
 
-Run this command if you are no longer need the dotfiles.
+If you are no longer need dotfiles.
