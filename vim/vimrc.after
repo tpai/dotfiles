@@ -70,4 +70,3 @@ set clipboard=unnamed           " Copy to system clipboard
 set hidden                      " Buffers can exist in the background without being in a window
 set visualbell                  " No sounds
 set autoread                    " Reload files changed outside vim
-set nofoldenable                " dont fold by default
