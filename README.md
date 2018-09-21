@@ -21,7 +21,7 @@ Dotfiles are built based on my development environment, please consider properly
     sh -c "`curl -fsSL https://raw.githubusercontent.com/tpai/dotfiles/master/install.sh `"
     ```
 
-2. Paste `tmux new` into iTerm `Profiles > General > Command > Send text at start`
+2. Paste `tmux` into iTerm `Profiles > General > Command > Send text at start`
 
 3. `Profiles > Text > Change Font > Family > DriodSansMono Nerd Font`
 
