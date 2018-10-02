@@ -3,20 +3,12 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 plugins=(
-  git fasd command-not-found vi-mode history-substring-search
+  git nvm fasd command-not-found vi-mode history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize
+# Load config files
 for config_file ($HOME/.dotfiles/zsh/*.zsh) source $config_file
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/tonypai/chromeless/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/tonypai/chromeless/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/tonypai/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/tonypai/chromeless/serverless/node_modules/tabtab/.completions/sls.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -8,7 +8,7 @@ function create_symlink
 }
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
-  echo "This install script only support MacOS."
+  echo "The dotfiles only support MacOS."
   exit 1
 fi
 
@@ -81,9 +81,6 @@ else
   vim +PlugUpgrade -c q!
   vim +PlugInstall -c q!
 
-  # Upgrade oh-my-zsh
-  sh $ZSH/tools/upgrade.sh
-
   # Reset symlinks
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
@@ -92,5 +89,10 @@ else
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
   create_symlink ".gitconfig"       ".gitconfig"
+
+  # Upgrade oh-my-zsh
+  sh $ZSH/tools/upgrade.sh
+
+  # Reset zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
 fi
