@@ -12,6 +12,16 @@ if [[ "$(uname)" -ne "Darwin" ]]; then
   exit 1
 fi
 
+if ! which brew &> /dev/null; then
+  echo "Install brew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if ! which git &> /dev/null; then
+  echo "Install git"
+  brew install git
+fi
+
 if [ ! -d "$HOME/$ROOT_DIR" ]; then
   echo "Installing dotfiles for the first time..."
 
