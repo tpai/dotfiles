@@ -30,6 +30,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
 
   # Install shell related packages
   brew install zsh fasd tmux reattach-to-user-namespace the_silver_searcher
+  brew install bat fd jq wifi-password
   brew install macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
 

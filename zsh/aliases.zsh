@@ -56,3 +56,11 @@ alias gshp='git stash pop'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
+
+# bat
+alias oldcat=/bin/cat
+alias cat=/usr/local/bin/bat
+
+# fd
+alias oldfind=/usr/bin/find
+alias find=/usr/local/bin/fd
