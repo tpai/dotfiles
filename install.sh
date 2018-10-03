@@ -23,7 +23,7 @@ if ! which git &> /dev/null; then
 fi
 
 if [ ! -d "$HOME/$ROOT_DIR" ]; then
-  echo "Installing dotfiles for the first time..."
+  echo "Install dotfiles for the first time"
 
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
