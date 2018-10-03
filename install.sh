@@ -72,8 +72,10 @@ else
   git pull --rebase
   git stash pop
 
-  # Update packages
-  brew upgrade zsh fasd tmux reattach-to-user-namespace the_silver_searcher cmake python@2
+  # Upgrade packages
+  brew upgrade zsh fasd tmux reattach-to-user-namespace the_silver_searcher
+  brew upgrade bat fd jq wifi-password
+  brew upgrade cmake python@2
   brew upgrade macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
 
