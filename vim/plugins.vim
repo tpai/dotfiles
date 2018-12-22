@@ -28,10 +28,7 @@ Plug 'tpai/vim-react-snips'
 Plug 'SirVer/ultisnips'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Valloric/YouCompleteMe', {
-  \ 'do': './install.py --tern-completer' }
-Plug 'ternjs/tern_for_vim', {
-  \ 'do': 'yarn install' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
