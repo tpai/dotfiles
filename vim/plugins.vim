@@ -22,7 +22,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'digitaltoad/vim-pug'
-Plug 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic', { 'do': 'yarn global add sass-lint' }
 Plug 'mattn/emmet-vim'
 Plug 'tpai/vim-react-snips'
 Plug 'SirVer/ultisnips'
