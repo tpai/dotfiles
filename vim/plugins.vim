@@ -19,6 +19,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'ryanoasis/vim-devicons'
 
 " Editing
+Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'digitaltoad/vim-pug'
@@ -32,5 +33,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
