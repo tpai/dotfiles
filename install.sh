@@ -28,6 +28,15 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
 
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+  # Change default shell
+  chsh -s /bin/zsh
+
+  # Create zsh symlink
+  create_symlink "zsh/zshrc"        ".zshrc"
+
   # Install shell related packages
   brew install zsh fasd tmux reattach-to-user-namespace the_silver_searcher
   brew install bat fd jq wifi-password
@@ -43,6 +52,9 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   chmod 644 *.otf
   mv *.otf ~/Library/Fonts
 
+  # Install vim plugins
+  vim +PlugInstall
+
   # Create symlinks
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
@@ -51,18 +63,6 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
   create_symlink ".gitconfig"       ".gitconfig"
-
-  # Install vim plugins
-  vim +PlugInstall
-
-  # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  # Change default shell
-  chsh -s /bin/zsh
-
-  # Create zsh symlink
-  create_symlink "zsh/zshrc"        ".zshrc"
 else
   echo "🚀 Upgrading dotfiles..."
 
@@ -71,6 +71,12 @@ else
   git checkout master
   git pull --rebase
   git stash pop
+
+  # Upgrade oh-my-zsh
+  sh $ZSH/tools/upgrade.sh
+
+  # Reset zsh symlink
+  create_symlink "zsh/zshrc"        ".zshrc"
 
   # Upgrade packages
   brew upgrade zsh fasd tmux reattach-to-user-namespace the_silver_searcher
@@ -91,10 +97,4 @@ else
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
   create_symlink ".gitconfig"       ".gitconfig"
-
-  # Upgrade oh-my-zsh
-  sh $ZSH/tools/upgrade.sh
-
-  # Reset zsh symlink
-  create_symlink "zsh/zshrc"        ".zshrc"
 fi
