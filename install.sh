@@ -8,12 +8,12 @@ function create_symlink
 }
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
-  echo "The dotfiles only support MacOS."
+  echo "😬 The dotfiles only support MacOS."
   exit 1
 fi
 
 if ! which brew &> /dev/null; then
-  echo "Install brew"
+  echo "🍺 Install brew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -23,7 +23,7 @@ if ! which git &> /dev/null; then
 fi
 
 if [ ! -d "$HOME/$ROOT_DIR" ]; then
-  echo "Install dotfiles for the first time"
+  echo "🌱 Install dotfiles for the first time"
 
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
@@ -64,7 +64,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Create zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
 else
-  echo "Upgrading dotfiles..."
+  echo "🚀 Upgrading dotfiles..."
 
   # Switch to the latest master branch
   git stash
