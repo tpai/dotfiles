@@ -38,7 +38,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "zsh/zshrc"        ".zshrc"
 
   # Install shell related packages
-  brew install zsh fasd tmux reattach-to-user-namespace the_silver_searcher
+  brew install zsh tmux reattach-to-user-namespace the_silver_searcher
   brew install bat fd jq wifi-password
   brew install macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
@@ -79,7 +79,7 @@ else
   create_symlink "zsh/zshrc"        ".zshrc"
 
   # Upgrade packages
-  brew upgrade zsh fasd tmux reattach-to-user-namespace the_silver_searcher
+  brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher
   brew upgrade bat fd jq wifi-password
   brew upgrade cmake python@2
   brew upgrade macvim --with-override-system-vim --with-lua --with-luajit
