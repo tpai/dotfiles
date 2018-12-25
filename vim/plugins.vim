@@ -33,6 +33,5 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
-Plug 'tpope/vim-eunuch'
 
 call plug#end()
