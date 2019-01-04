@@ -17,6 +17,7 @@ Plug 'junegunn/fzf', { 'do': './install --all' }
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Editing
 Plug 'editorconfig/editorconfig-vim'
