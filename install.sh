@@ -18,7 +18,7 @@ if ! which brew &> /dev/null; then
 fi
 
 if ! which git &> /dev/null; then
-  echo "Install git"
+  echo "🐙 Install git"
   brew install git
 fi
 
