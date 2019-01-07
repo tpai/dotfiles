@@ -17,10 +17,5 @@ function! OpenNerdTree()
 endfunction
 nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
 
-
-" 當沒指定任何檔案開啟 vim 時仍打開 NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 " 只剩 NERDTree 時自動關閉
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
