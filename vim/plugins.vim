@@ -5,7 +5,10 @@ Plug 'tpope/vim-sensible'
 Plug 'flazz/vim-colorschemes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Git
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 
 " Search
