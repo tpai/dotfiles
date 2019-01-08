@@ -73,7 +73,7 @@ The following keys are my most used commands.
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
   * `<C-m>` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
-  * `<\-p> - prettify code
+  * `<\\-p> - prettify code
 
 ### Shell
 
