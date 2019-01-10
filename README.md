@@ -47,10 +47,27 @@ The following keys are my most used commands.
 
 ### Vim
 
+* TMUX
+  * `tmux ls` - list sessions
+  * `tmux new -s <id>` - create new session
+  * `tmux attach -t <id>` - attach to specific session
+  * `<C-a d>` - detach session
+  * `tmux kill -t <id>` - kill session
+* Window
+  * `<C-a c>` - create window
+  * `<C-a n>` - next window
+  * `<C-a p>` - previous window
+  * `<C-a x>` - kill window
+* Pane
+  * `<C-h,j,k,l>` - navigate between panes
+  * `<C-a Shift-h,j,k,l>` - resize focused pane
+  * `vv` - vertical split
+  * `ss` - horizontal split
+  * `<C-a PgUp,PgDown>` - scroll
 * NERDtree
   * `<C-\>` - toggle NERDTree
   * `?` - show help
-* Navigation
+* File Navigation
   * `,t` - in current folder (based on `ctrlp`)
   * `,b` - in buffer (based on `fzf`)
   * `,ag` - using fuzzy search (based on `fzf`)
@@ -63,17 +80,19 @@ The following keys are my most used commands.
   * `gu` - undo changes of current hunk
   * `gp` - see changes of current hunk
   * `:Gblame` - blame someone about code
-* TMUX
-  * `<C-h,j,k,l>` - navigate between windows
-  * `vv` - split window in vertical way
-  * `ss` - split window in horizontal way
 * Editing
   * `sj` - split brackets
   * `sk` - join brackets
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
   * `<C-m>` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
-  * `<\\-p> - prettify code
+  * `<\-p>` - prettify code
+  * `gc` - comment / uncomment
+  * `<C-//>` - comment / uncomment
+  * `:%s/search/replace/g` - search and replace
+  * `//` - clear search result
+  * `%` - jump to closing tag
+  * `:e ++ff=dos` - convert `^M` to unix line ending
 
 ### Shell
 
