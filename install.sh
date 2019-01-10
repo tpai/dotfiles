@@ -52,7 +52,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "zsh/zshrc"        ".zshrc"
 
   # Change default shell
-  sudo chsh -s /bin/zsh
+  chsh -s /bin/zsh
 
   # Install development related packages
   brew install cmake python@2
