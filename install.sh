@@ -63,9 +63,6 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   chmod 644 *.otf
   mv *.otf ~/Library/Fonts
 
-  # Install vim plugins
-  vim +PlugInstall
-
   # Create symlinks
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
@@ -74,6 +71,9 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
   create_symlink ".gitconfig"       ".gitconfig"
+
+  # Install vim plugins
+  vim +PlugInstall
 else
   echo "🚀 Upgrading dotfiles..."
 
@@ -96,10 +96,6 @@ else
   brew upgrade macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
 
-  # Upgrade vim-plug self and update plugins
-  vim +PlugUpgrade -c q!
-  vim +PlugInstall -c q!
-
   # Reset symlinks
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
@@ -108,4 +104,8 @@ else
   create_symlink "tmux"             ".tmux"
   create_symlink "tmux/tmux.conf"   ".tmux.conf"
   create_symlink ".gitconfig"       ".gitconfig"
+
+  # Upgrade vim-plug self and update plugins
+  vim +PlugUpgrade -c q!
+  vim +PlugInstall -c q!
 fi
