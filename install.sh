@@ -43,7 +43,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
   # Change default shell
-  chsh -s /bin/zsh
+  sudo chsh -s /bin/zsh
 
   # Create zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
