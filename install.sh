@@ -42,17 +42,17 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-  # Change default shell
-  sudo chsh -s /bin/zsh
-
-  # Create zsh symlink
-  create_symlink "zsh/zshrc"        ".zshrc"
-
   # Install shell related packages
   brew install zsh tmux reattach-to-user-namespace the_silver_searcher
   brew install exa bat fd jq wifi-password
   brew install macvim --with-override-system-vim --with-lua --with-luajit
   brew link --overwrite macvim
+
+  # Create zsh symlink
+  create_symlink "zsh/zshrc"        ".zshrc"
+
+  # Change default shell
+  sudo chsh -s /bin/zsh
 
   # Install development related packages
   brew install cmake python@2
