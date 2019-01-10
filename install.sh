@@ -59,9 +59,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Install fonts
-  curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/DroidSansMono.zip | tar zx
-  chmod 644 *.otf
-  mv *.otf ~/Library/Fonts
+  yes | cp -rf fonts/* ~/Library/Fonts
 
   # Create symlinks
   create_symlink "vim"              ".vim"
