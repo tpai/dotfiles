@@ -10,7 +10,6 @@ fi
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
 
 # Moving around
 alias cdb='cd -'
@@ -27,12 +26,6 @@ elif [[ $platform == 'darwin' ]]; then
   alias ll='exa -alg --git'
   alias ls='exa -s ext'
 fi
-
-# show me files matching "ls grep"
-alias lsg='ll | grep'
-
-# find files by keywords in JS project
-alias grepjs='grep --exclude-dir={node_modules,tests,output,www,.git} --include=\*.{js,jsx} -rnw "." -e '
 
 # mimic vim functions
 alias :q='exit'
