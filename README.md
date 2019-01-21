@@ -31,7 +31,7 @@ Dotfiles are built based on my development environment, please consider properly
 sh ~/.dotfiles/install.sh
 ```
 
-It will auto update required brew formula, vim plugins and oh-my-zsh.
+Update required brew formula, vim plugins and oh-my-zsh.
 
 ## Uninstall
 
@@ -39,7 +39,7 @@ It will auto update required brew formula, vim plugins and oh-my-zsh.
 sh ~/.dotfiles/uninstall.sh
 ```
 
-If you are no longer need dotfiles.
+Return to dust.
 
 ## Mappings
 
