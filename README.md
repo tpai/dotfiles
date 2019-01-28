@@ -71,6 +71,7 @@ The following keys are my most used commands.
   * `,t` - in current folder (based on `ctrlp`)
   * `,b` - in buffer (based on `fzf`)
   * `,ag` - using fuzzy search (based on `fzf`)
+  * `gf` - open file under cursor (resolved JS import issue)
 * Git
   * `gv@` - browse changes of commits of all files
   * `gv!` - browse changes of commits of current file
