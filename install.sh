@@ -59,7 +59,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Install fonts
-  yes | cp -rf fonts/* ~/Library/Fonts
+  yes | cp -rf "$HOME/$ROOT_DIR/fonts/*" ~/Library/Fonts
 
   # Create symlinks
   create_symlink "vim"              ".vim"
