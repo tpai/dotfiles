@@ -33,6 +33,7 @@ Plug 'tpai/vim-react-snips'
 Plug 'SirVer/ultisnips'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
