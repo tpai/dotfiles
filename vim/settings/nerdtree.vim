@@ -1,5 +1,6 @@
 " Show hidden files by default
 let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore = ['^node_modules$']
 
 " Make nerdtree look nice
 let NERDTreeMinimalUI = 1
