@@ -17,3 +17,6 @@ let g:syntastic_javascript_eslint_args='-f compact'
 
 " Enable the scss checker
 let g:syntastic_scss_checkers=['sass_lint']
+
+" Debug Mode
+let g:syntastic_debug = 0
