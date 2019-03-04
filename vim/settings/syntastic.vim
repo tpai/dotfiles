@@ -12,7 +12,7 @@ let g:syntastic_quiet_messages={'level': 'warnings'}
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_generic=1
 let g:syntastic_javascript_eslint_exec='/bin/ls'
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_eslint_exe='$((test -f $(npm bin)/eslint && echo "$(npm bin)/eslint") || (test -f $(npm root)/eslint/bin/eslint.js && echo "$(npm root)/eslint/bin/eslint.js") || (test -f $(which eslint) && echo "$(which eslint)"))'
 let g:syntastic_javascript_eslint_args='-f compact'
 
 " Enable the scss checker
