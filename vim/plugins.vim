@@ -39,4 +39,7 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
 
+" Others
+Plug 'anned20/vimsence'
+
 call plug#end()
