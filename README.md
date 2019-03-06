@@ -86,7 +86,7 @@ The following keys are my most used commands.
   * `sk` - join brackets
   * `ga` - active easy align (must do visual select first)
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
-  * `<C-m>` - emmet for HTML, CSS and JSX
+  * `<C-m>,` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
   * `<\-p>` - prettify code
   * `gc` - comment / uncomment
