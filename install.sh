@@ -45,7 +45,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Install shell related packages
   brew install zsh tmux reattach-to-user-namespace the_silver_searcher
   brew install exa bat fasd fd jq wifi-password yarn
-  brew install macvim --with-override-system-vim --with-lua --with-luajit
+  brew install macvim
   brew link --overwrite macvim
 
   # Create zsh symlink
@@ -91,7 +91,7 @@ else
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher
   brew upgrade exa bat fasd fd jq wifi-password yarn
   brew upgrade cmake python@2
-  brew upgrade macvim --with-override-system-vim --with-lua --with-luajit
+  brew upgrade macvim
   brew link --overwrite macvim
 
   # Reset symlinks
