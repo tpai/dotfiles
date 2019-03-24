@@ -51,15 +51,12 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Create zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
 
-  # Change default shell
-  chsh -s /bin/zsh
-
   # Install development related packages
   brew install cmake python@2
   export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Install fonts
-  yes | cp -rf "$HOME/$ROOT_DIR/fonts/*" ~/Library/Fonts
+  cp -rf "$HOME/$ROOT_DIR/fonts/*" ~/Library/Fonts
 
   # Create symlinks
   create_symlink "vim"              ".vim"
