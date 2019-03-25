@@ -8,7 +8,7 @@ function create_symlink
 }
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
-  echo "😬 The dotfiles only support MacOS."
+  echo "😬 This dotfiles only support Mac OS X"
   exit 1
 fi
 
@@ -34,7 +34,7 @@ if ! which node &> /dev/null; then
 fi
 
 if [ ! -d "$HOME/$ROOT_DIR" ]; then
-  echo "🌱 Install dotfiles for the first time"
+  echo "🌱 Launch dotfiles for the first time"
 
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
@@ -42,9 +42,11 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-  # Install shell related packages
+  # Install packages
+  echo "📦 Install packages"
   brew install zsh tmux reattach-to-user-namespace the_silver_searcher
-  brew install exa bat fasd fd jq wifi-password yarn
+  brew install exa bat fasd fd jq wifi-password
+  brew install yarn --ignore-dependencies
   brew install macvim
   brew link --overwrite macvim
 
@@ -56,9 +58,11 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Install fonts
+  echo "📜 Copy fonts into system"
   cp -rf "$HOME/$ROOT_DIR/fonts/*" ~/Library/Fonts
 
   # Create symlinks
+  echo "🔗 Create symlinks"
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
   create_symlink "vim/vimrc.before" ".vimrc.before"
@@ -85,6 +89,7 @@ else
   create_symlink "zsh/zshrc"        ".zshrc"
 
   # Upgrade packages
+  echo "📦 Upgrade packages"
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher
   brew upgrade exa bat fasd fd jq wifi-password yarn
   brew upgrade cmake python@2
@@ -92,6 +97,7 @@ else
   brew link --overwrite macvim
 
   # Reset symlinks
+  echo "🔗 Reset symlinks"
   create_symlink "vim"              ".vim"
   create_symlink "vim/vimrc"        ".vimrc"
   create_symlink "vim/vimrc.before" ".vimrc.before"
