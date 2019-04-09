@@ -24,24 +24,21 @@ function! s:ag_handler(lines)
   endif
 endfunction
 
-command! -nargs=* F call fzf#run({
-\ 'source':  printf('ag --nogroup --column "%s"',
-\                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
-\ 'sink*':    function('<sid>ag_handler'),
-\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
-\            '--multi --bind=ctrl-a:select-all,ctrl-d:deselect-all',
-\ 'down':    '40%'
-\ })
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --type-add "lockfiles:{Gemfile,yarn}.lock" --type-add "test:*.{spec,test}.*" -T lockfiles -T test -T svg --color=never --column --line-number --no-heading --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(),
+  \   <bang>0)
 
-" respecting gitignore
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " map ,ag to Ag with FZF
-nmap <silent> ,ag :F<CR>
+nmap <silent> ,ag :Rg<CR>
 
 " map ,t to FZF
 nmap <silent> ,t :call fzf#run({
-      \  'sink':   'e',
-      \  'source': "ag -g \"\"",
-      \  'down':   '40%'
-      \ })<CR>
+  \  'sink':   'e',
+  \  'source': "rg --type-add 'lockfiles:{Gemfile,yarn}.lock' --type-add 'test:*.{spec,test}.*' -T lockfiles -T test -T svg --files",
+  \  'down':   '40%'
+  \ })<CR>

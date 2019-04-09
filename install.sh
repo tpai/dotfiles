@@ -45,7 +45,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Install packages
   echo "📦 Install packages"
   brew install zsh tmux reattach-to-user-namespace the_silver_searcher
-  brew install exa bat fasd fd jq wifi-password
+  brew install exa bat fasd fd jq wifi-password ripgrep
   brew install yarn --ignore-dependencies
   brew install macvim
   brew link --overwrite macvim
@@ -91,10 +91,11 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher
-  brew upgrade exa bat fasd fd jq wifi-password yarn
-  brew upgrade cmake python@2
+  brew upgrade exa bat fasd fd jq wifi-password ripgrep
+  brew upgrade yarn --ignore-dependencies
   brew upgrade macvim
   brew link --overwrite macvim
+  brew upgrade cmake python@2
 
   # Reset symlinks
   echo "🔗 Reset symlinks"

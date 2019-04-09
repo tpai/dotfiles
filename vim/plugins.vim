@@ -12,9 +12,9 @@ Plug 'junegunn/gv.vim'
 Plug 'airblade/vim-gitgutter'
 
 " Search
-Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf', { 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
