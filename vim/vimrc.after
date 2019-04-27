@@ -90,3 +90,6 @@ function! LoadMainNodeModule(fname)
 endfunction
 
 set includeexpr=LoadMainNodeModule(v:fname)
+
+" File encoding
+set fileencodings=utf-8,gb18030,gbk,gb2312,latin1,ucs-bom,default
