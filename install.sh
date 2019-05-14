@@ -59,7 +59,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
 
   # Install fonts
   echo "📜 Copy fonts into system"
-  cp -rf "$HOME/$ROOT_DIR/fonts/*" ~/Library/Fonts
+  cp -rf $HOME/$ROOT_DIR/fonts/* ~/Library/Fonts
 
   # Create symlinks
   echo "🔗 Create symlinks"
