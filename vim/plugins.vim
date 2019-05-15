@@ -22,11 +22,17 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Editing
-Plug 'editorconfig/editorconfig-vim'
+" Syntax Highlighting
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
 Plug 'digitaltoad/vim-pug'
+
+" Code Completion
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
+
+" Editing
+Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-syntastic/syntastic', { 'do': 'yarn global add sass-lint' }
 Plug 'mattn/emmet-vim'
 Plug 'tpai/vim-react-snips'
@@ -34,7 +40,6 @@ Plug 'SirVer/ultisnips'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
