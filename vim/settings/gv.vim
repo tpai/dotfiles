@@ -1,2 +1,2 @@
-nmap gv@ :GV<cr>
-nmap gv! :GV!<cr>
+nmap gva :GV<cr>
+nmap gvc :GV!<cr>

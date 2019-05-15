@@ -73,8 +73,8 @@ The following keys are my most used commands.
   * `,ag` - using fuzzy search (based on `fzf`)
   * `gf` - open file under cursor (resolved JS import issue)
 * Git
-  * `gv@` - browse changes of commits of all files
-  * `gv!` - browse changes of commits of current file
+  * `gva` - browse changes of commits of all files
+  * `gvc` - browse changes of commits of current file
   * `gs` - git status (next: `<C-n>`, prev: `<C-p>`)
   * `gj` - next hunk
   * `gk` - prev hunk
