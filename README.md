@@ -1,17 +1,6 @@
 # Dotfiles
 
-Dotfiles are built based on my development environment, please consider properly before run the install command.
-
-## Features
-
-- tmux
-- emmet
-- syntastic
-- nerdtree
-- fzf
-- vim-javascript
-- vim-jsx
-- vim-pug
+This dotfiles is built for JS and Typescript development.
 
 ## Install
 
@@ -68,10 +57,9 @@ The following keys are my most used commands.
   * `<C-\>` - toggle NERDTree
   * `?` - show help
 * File Navigation
-  * `,t` - in current folder (based on `ctrlp`)
-  * `,b` - in buffer (based on `fzf`)
-  * `,ag` - using fuzzy search (based on `fzf`)
-  * `gf` - open file under cursor (resolved JS import issue)
+  * `,t` - in current folder (support by `ctrlp`)
+  * `,b` - in buffer (support by `fzf`)
+  * `,ag` - using fuzzy search (support by `fzf`)
 * Git
   * `gva` - browse changes of commits of all files
   * `gvc` - browse changes of commits of current file
@@ -88,6 +76,7 @@ The following keys are my most used commands.
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
   * `<C-m>,` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
+  * `,jd` - go to definition (support by YCM)
   * `<\-p>` - prettify code
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment
@@ -98,9 +87,9 @@ The following keys are my most used commands.
 
 ### Shell
 
-* `z` - cd to folder using fuzzy search (based on `fzf`)
-* `find` - better file search (based on `fd`)
-* `ll` - list files in current folder with details (based on `exa`)
-* `cat` - print beautified file content (based on `bat`)
+* `z` - cd to folder using fuzzy search (support by `fzf`)
+* `find` - better file search (support by `fd`)
+* `ll` - list files in current folder with details (support by `exa`)
+* `cat` - print beautified file content (support by `bat`)
 * `jq` - parse json text (e.g. `echo '{"a": 1}' | jq .a`)
 * `wifi-password` - fetch wifi password of connected SSID
