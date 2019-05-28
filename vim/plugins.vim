@@ -27,6 +27,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'digitaltoad/vim-pug'
+Plug 'dart-lang/dart-vim-plugin'
 
 " Code Completion
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
