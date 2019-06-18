@@ -28,9 +28,10 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Code Completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer --go-completer' }
 
 " Editing
 Plug 'editorconfig/editorconfig-vim'

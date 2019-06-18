@@ -53,6 +53,11 @@ alias gsh='git stash'
 alias gshp='git stash pop'
 alias gpuo='git push -u origin'
 
+# Go
+alias gor='go run'
+alias gob='go build'
+alias got='go test'
+
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
 
