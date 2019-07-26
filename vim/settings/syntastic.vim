@@ -19,11 +19,11 @@ let g:syntastic_javascript_eslint_args='-f compact'
 let g:syntastic_scss_checkers=['sass_lint']
 
 " Enable typescript checker
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+let g:tsuquyomi_disable_quickfix=1
+let g:syntastic_typescript_checkers=['tsuquyomi'] " You shouldn't use 'tsc' checker.
 
 " Ignore html tidy checker errors for typescript
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
 
 " Debug Mode
-let g:syntastic_debug = 0
+let g:syntastic_debug=0
