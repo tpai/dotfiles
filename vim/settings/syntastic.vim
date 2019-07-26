@@ -14,6 +14,7 @@ let g:syntastic_javascript_eslint_generic=1
 let g:syntastic_javascript_eslint_exec='/bin/ls'
 let g:syntastic_javascript_eslint_exe='$((test -f $(npm bin)/eslint && echo "$(npm bin)/eslint") || (test -f $(npm root)/eslint/bin/eslint.js && echo "$(npm root)/eslint/bin/eslint.js") || (test -f $(which eslint) && echo "$(which eslint)"))'
 let g:syntastic_javascript_eslint_args='-f compact'
+let g:syntastic_vue_checkers=['javascript/eslint']
 
 " Enable scss checker
 let g:syntastic_scss_checkers=['sass_lint']
