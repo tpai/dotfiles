@@ -28,3 +28,6 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming em
 
 " Debug Mode
 let g:syntastic_debug=0
+
+" Auto fix
+nnoremap \\ :!$(npm bin)/eslint --fix %:p<cr>
