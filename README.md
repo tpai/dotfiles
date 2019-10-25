@@ -93,3 +93,4 @@ The following keys are my most used commands.
 * `cat` - print beautified file content (support by `bat`)
 * `jq` - parse json text (e.g. `echo '{"a": 1}' | jq .a`)
 * `wifi-password` - fetch wifi password of connected SSID
+* `ping localhost | gnomon` - annotate console statements with timestamps
