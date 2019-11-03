@@ -30,9 +30,11 @@ Plug 'digitaltoad/vim-pug'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'posva/vim-vue'
+Plug 'plasticboy/vim-markdown'
 
 " Code Completion
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer --go-completer' }
+Plug 'zxqfl/tabnine-vim'
 
 " Editing
 Plug 'editorconfig/editorconfig-vim'
