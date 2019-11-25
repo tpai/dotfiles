@@ -50,7 +50,7 @@ alias gfap='git fetch --all --prune'
 alias gr='git rebase'
 alias gri='git rebase --interactive'
 alias grs='git reset --hard'
-alias gsh='git stash'
+alias gsh='git stash --include-untracked'
 alias gshp='git stash pop'
 alias gpuo='git push -u origin'
 
