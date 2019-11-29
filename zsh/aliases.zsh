@@ -37,25 +37,24 @@ alias ve='vim ~/.vimrc'
 alias ze='vim ~/.zshrc'
 
 # Git Aliases
-alias ga='git add -A'
-alias gs='git status'
-alias gcm='git commit -m'
 alias gl='vim +GV'
 alias gv='vim +GV'
+alias ga='git add -A'
+alias gcm='git commit -m'
 alias gco='git checkout'
-alias gcob='git checkout -b'
-alias gplr='git pull --rebase'
-alias gfp='git fetch --all --prune'
-alias gfap='git fetch --all --prune'
+alias gcob='git checkout -b'              # create branch
+alias gco-='git checkout --'              # unchange changed files
+alias gcfd='git clean -fd'                # remove untracked files
+alias gfp='git fetch --all --prune'       # fetch and prune branch
+alias gplr='git pull --rebase'            # pull and ff branch
+alias gpu='git push -u'
 alias gr='git rebase'
-alias gri='git rebase --interactive'
-alias grs='git reset --hard'
-alias gsh='git stash --include-untracked'
+alias gri='git rebase --interactive'      # rebase in interactive mode
+alias gr.='git reset .'                   # unstage all
+alias grh='git reset --hard'              # force reset
+alias gs='git status'
+alias gsh='git stash --include-untracked' # stash untracked files
 alias gshp='git stash pop'
-alias gpuo='git push -u origin'
-alias gr.='git reset .'
-alias gco-='git checkout --'
-alias gcfd='git clean -fd'
 
 # Go
 alias gor='go run'
