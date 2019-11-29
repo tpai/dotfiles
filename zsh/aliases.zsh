@@ -53,6 +53,9 @@ alias grs='git reset --hard'
 alias gsh='git stash --include-untracked'
 alias gshp='git stash pop'
 alias gpuo='git push -u origin'
+alias gr.='git reset .'
+alias gco-='git checkout --'
+alias gcfd='git clean -fd'
 
 # Go
 alias gor='go run'
