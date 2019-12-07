@@ -47,7 +47,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   brew install zsh tmux reattach-to-user-namespace the_silver_searcher \
                exa bat fasd fd jq wifi-password ripgrep onefetch \
                go
-  brew install yarn --without-node
+  brew install yarn --ignore-dependencies
   brew install macvim
   brew link --overwrite macvim
 
@@ -97,7 +97,7 @@ else
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher \
                exa bat fasd fd jq wifi-password ripgrep onefetch \
                go
-  brew upgrade yarn --without-node
+  brew upgrade yarn --ignore-dependencies
   brew upgrade macvim
   brew link --overwrite macvim
   brew upgrade cmake python@2
