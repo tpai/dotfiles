@@ -95,7 +95,7 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher \
-               exa bat fasd fd jq wifi-password ripgrep \
+               exa bat fasd fd jq wifi-password ripgrep onefetch \
                go
   brew upgrade yarn --without-node
   brew upgrade macvim
