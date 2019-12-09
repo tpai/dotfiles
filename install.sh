@@ -34,7 +34,7 @@ if ! which node &> /dev/null; then
 fi
 
 if [ ! -d "$HOME/$ROOT_DIR" ]; then
-  echo "🌱 Launch dotfiles for the first time"
+  echo "🌱 Install dotfiles"
 
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
@@ -78,7 +78,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Install vim plugins
   vim +PlugInstall
 else
-  echo "🚀 Upgrading dotfiles..."
+  echo "🚀 Upgrading dotfiles"
 
   # Switch to the latest master branch
   git stash
