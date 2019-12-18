@@ -71,3 +71,12 @@ alias cat=/usr/local/bin/bat
 # fd
 alias oldfind=/usr/bin/find
 alias find=/usr/local/bin/fd
+
+# k8s
+alias k='kubectl'
+alias ka='kubectl apply -f'
+alias kconf='kubectl config view --minify'
+alias kconfset='kubectl config set-context --current'
+alias kd='kubectl describe'
+alias kdel='kubectl delete'
+alias kg='kubectl get'
