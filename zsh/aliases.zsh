@@ -79,5 +79,6 @@ alias kconf='kubectl config view --minify'
 alias kconfset='kubectl config set-context --current'
 alias kd='kubectl describe'
 alias kdel='kubectl delete'
+alias kdelrs="kubectl get replicaset.apps | grep -E \"([0]{1}\s*){3}\" | awk '{print \"replicaset.apps/\"\$1;}' | xargs kubectl delete"
 alias kg='kubectl get'
-alias kdelreapps='kg replicaset.apps | grep -E "([0]{1}\s*){3}" | awk "{print \"replicaset.apps/\"$1;}" | xargs kubectl delete'
+alias kl='kubectl logs'
