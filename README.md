@@ -12,7 +12,7 @@ This dotfiles is built for JS and Typescript development.
 
 2. Paste `tmux` into iTerm `Profiles > General > Command > Send text at start`
 
-3. `Profiles > Text > Change Font > Family > DriodSansMono Nerd Font`
+3. `Profiles > Text > Change Font > Family > DroidSansMono Nerd Font`
 
 ## Update
 
