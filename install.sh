@@ -58,7 +58,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink "zsh/zshrc"        ".zshrc"
 
   # Install development related packages
-  brew install cmake python@2
+  brew install cmake python python@2
   export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Install fonts
