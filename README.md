@@ -76,7 +76,8 @@ The following keys are my most used commands.
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
   * `<C-m>,` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
-  * `,jd` - go to definition (support by YCM)
+  * `,jd` - jump to definition (offered by YCM)
+  * `,jr` - list references then jump to it (offered by YCM)
   * `<\-p>` - prettify code
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment

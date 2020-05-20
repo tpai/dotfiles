@@ -8,6 +8,7 @@ set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
 nnoremap <silent> ,jd :YcmCompleter GoTo<CR>
+nnoremap <silent> ,jr :YcmCompleter GoToReferences<CR>
 
 " Fix warning
 if has('python3')
