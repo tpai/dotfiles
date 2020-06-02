@@ -24,8 +24,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Syntax Highlighting
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'digitaltoad/vim-pug'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
