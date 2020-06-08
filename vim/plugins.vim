@@ -48,5 +48,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
+Plug 'ruanyl/vim-fixmyjs'
 
 call plug#end()
