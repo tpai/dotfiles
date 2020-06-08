@@ -24,7 +24,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Syntax Highlighting
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'digitaltoad/vim-pug'
 Plug 'dart-lang/dart-vim-plugin'
