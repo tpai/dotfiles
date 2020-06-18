@@ -31,6 +31,7 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'posva/vim-vue'
 Plug 'plasticboy/vim-markdown'
+Plug 'jxnblk/vim-mdx-js'
 Plug 'ap/vim-css-color'
 
 " Code Completion
@@ -38,17 +39,14 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer --go-complet
 Plug 'zxqfl/tabnine-vim'
 
 " Editing
+Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'vim-syntastic/syntastic', { 'do': 'yarn global add sass-lint' }
 Plug 'mattn/emmet-vim'
 Plug 'tpai/vim-react-snips'
 Plug 'SirVer/ultisnips'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
-Plug 'ruanyl/vim-fixmyjs'
+Plug 'Oldenborg/vim-px-to-rem'
 
 call plug#end()

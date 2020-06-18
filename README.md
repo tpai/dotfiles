@@ -57,9 +57,9 @@ The following keys are my most used commands.
   * `<C-\>` - toggle NERDTree
   * `?` - show help
 * File Navigation
-  * `,t` - in current folder (support by `ctrlp`)
-  * `,b` - in buffer (support by `fzf`)
-  * `,ag` - using fuzzy search (support by `fzf`)
+  * `,t` - in current folder (provided by `ctrlp`)
+  * `,b` - in buffer (provided by `fzf`)
+  * `,ag` - using fuzzy search (provided by `fzf`)
 * Git
   * `gva` - browse changes of commits of all files
   * `gvc` - browse changes of commits of current file
@@ -76,11 +76,14 @@ The following keys are my most used commands.
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
   * `<C-m>,` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
-  * `,jd` - jump to definition (offered by YCM)
-  * `,jr` - list references then jump to it (offered by YCM)
-  * `<\-p>` - prettify code
+  * `,jd` - jump to definition (provided by YCM)
+  * `,jr` - list references then jump to it (provided by YCM)
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment
+  * `ej` - next lint error
+  * `ek` - prev lint error
+  * `<\-\>` - fix and prettify (provided by ALE)
+  * `<\-r>` - px to rem
   * `:%s/search/replace/g` - search and replace
   * `//` - clear search result
   * `%` - jump to closing tag
@@ -88,10 +91,10 @@ The following keys are my most used commands.
 
 ### Shell
 
-* `z` - cd to folder using fuzzy search (support by `fzf`)
-* `find` - better file search (support by `fd`)
-* `ll` - list files in current folder with details (support by `exa`)
-* `cat` - print beautified file content (support by `bat`)
+* `z` - cd to folder using fuzzy search (provided by `fzf`)
+* `find` - better file search (provided by `fd`)
+* `ll` - list files in current folder with details (provided by `exa`)
+* `cat` - print beautified file content (provided by `bat`)
 * `jq` - parse json text (e.g. `echo '{"a": 1}' | jq .a`)
 * `wifi-password` - fetch wifi password of connected SSID
 * `ping localhost | gnomon` - annotate console statements with timestamps
