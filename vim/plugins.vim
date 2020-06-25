@@ -40,6 +40,7 @@ Plug 'zxqfl/tabnine-vim'
 
 " Editing
 Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'tpai/vim-react-snips'
