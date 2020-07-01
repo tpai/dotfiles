@@ -34,12 +34,8 @@ Plug 'plasticboy/vim-markdown'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'ap/vim-css-color'
 
-" Code Completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer --go-completer' }
-Plug 'zxqfl/tabnine-vim'
-
 " Editing
-Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tsserver coc-eslint coc-vetur coc-stylelint coc-markdownlint coc-yaml coc-json coc-html coc-css' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'

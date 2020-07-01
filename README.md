@@ -76,18 +76,21 @@ The following keys are my most used commands.
   * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
   * `<C-m>,` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
-  * `,jd` - jump to definition (provided by YCM)
-  * `,jr` - list references then jump to it (provided by YCM)
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment
-  * `ej` - next lint error
-  * `ek` - prev lint error
-  * `<\-\>` - fix and prettify (provided by ALE)
   * `<\-r>` - px to rem
   * `:%s/search/replace/g` - search and replace
   * `//` - clear search result
   * `%` - jump to closing tag
   * `:e ++ff=dos` - convert `^M` to unix line ending
+  * `<\-p>` - prettify
+  * `<\-ac>` - show code action dialog
+  * `ej` - next diagnostic
+  * `ek` - prev diagnostic
+  * `,jd` - go to definition
+  * `,jr` - list references
+  * `\rn` - symbol renaming
+  * `\fr` - fix imports/requires
 
 ### Shell
 
