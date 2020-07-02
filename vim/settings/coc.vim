@@ -24,6 +24,9 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Show code action dialog
 nmap <leader>ac  <Plug>(coc-codeaction)
 
+" Execute eslint autofix
+nmap <leader>f :CocCommand eslint.executeAutofix<cr>
+
 " Navigate diagnostics
 nmap <silent> ek <Plug>(coc-diagnostic-prev)
 nmap <silent> ej <Plug>(coc-diagnostic-next)
@@ -34,10 +37,6 @@ nmap <silent> ,jr <Plug>(coc-references)
 
 " Symbol renaming.
 nmap <silent> ,rn <Plug>(coc-rename)
-
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-nmap <leader>fr :OR<CR>
 
 " Mappings for CoCList
 " Show all diagnostics.
