@@ -39,8 +39,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tsserver
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
-Plug 'tpai/vim-react-snips'
-Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'tomtom/tcomment_vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'junegunn/vim-easy-align'
