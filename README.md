@@ -73,12 +73,9 @@ The following keys are my most used commands.
   * `sj` - split brackets
   * `sk` - join brackets
   * `ga` - active easy align (must do visual select first)
-  * `<C-f>` - format snippet (forward: `<C-l>`, backward: `<C-b>`)
-  * `<C-m>,` - emmet for HTML, CSS and JSX
   * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment
-  * `<\-r>` - px to rem
   * `:%s/search/replace/g` - search and replace
   * `//` - clear search result
   * `%` - jump to closing tag
@@ -89,8 +86,8 @@ The following keys are my most used commands.
   * `ek` - prev diagnostic
   * `,jd` - go to definition
   * `,jr` - list references
-  * `\rn` - symbol renaming
-  * `\fr` - fix imports/requires
+  * `<\-rn>` - symbol renaming
+  * `<\-f>` - eslint autofix
 
 ### Shell
 
