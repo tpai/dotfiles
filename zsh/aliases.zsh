@@ -41,6 +41,7 @@ alias gl='vim +GV'
 alias gv='vim +GV'
 alias ga='git add -A'
 alias gcm='git commit -m'
+alias gcam='git commit --amend'
 alias gco='git checkout'
 alias gcob='git checkout -b'              # create branch
 alias gco-='git checkout --'              # unchange changed files
