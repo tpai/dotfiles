@@ -38,9 +38,6 @@ nmap <silent> ,jr <Plug>(coc-references)
 " Symbol renaming.
 nmap <silent> ,rn <Plug>(coc-rename)
 
-" Show snippets
-nmap <silent> <C-m> :CocList snippets<CR>
-
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
@@ -58,3 +55,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" Show snippets
+nnoremap <silent><nowait> <space>sn :CocList snippets<CR>
