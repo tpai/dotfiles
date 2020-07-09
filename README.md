@@ -64,6 +64,8 @@ The following keys are my most used commands.
   * `gva` - browse changes of commits of all files
   * `gvc` - browse changes of commits of current file
   * `gs` - git status (next: `<C-n>`, prev: `<C-p>`)
+  * `gb` - git blame
+  * `gd` - git diff
   * `gj` - next hunk
   * `gk` - prev hunk
   * `gu` - undo changes of current hunk
@@ -81,13 +83,13 @@ The following keys are my most used commands.
   * `%` - jump to closing tag
   * `:e ++ff=dos` - convert `^M` to unix line ending
   * `<\-p>` - prettify
-  * `<\-ac>` - show code action dialog
+  * `<\-f>` - eslint autofix
   * `ej` - next diagnostic
   * `ek` - prev diagnostic
   * `,jd` - go to definition
   * `,jr` - list references
-  * `<\-rn>` - symbol renaming
-  * `<\-f>` - eslint autofix
+  * `,rn` - symbol renaming
+  * `,ac` - show code action dialog
 
 ### Shell
 

@@ -21,9 +21,6 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" Show code action dialog
-nmap <leader>ac  <Plug>(coc-codeaction)
-
 " Execute eslint autofix
 nmap <leader>f :CocCommand eslint.executeAutofix<cr>
 
@@ -37,6 +34,9 @@ nmap <silent> ,jr <Plug>(coc-references)
 
 " Symbol renaming.
 nmap <silent> ,rn <Plug>(coc-rename)
+
+" Show code action dialog
+nmap <silent> ,ac <Plug>(coc-codeaction)
 
 " Mappings for CoCList
 " Show all diagnostics.
