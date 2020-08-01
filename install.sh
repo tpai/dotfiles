@@ -51,9 +51,6 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   brew install macvim
   brew link --overwrite macvim
 
-  # Install global node bin
-  yarn global add gnomon
-
   # Create zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
 
@@ -101,9 +98,6 @@ else
   brew upgrade macvim
   brew link --overwrite macvim
   brew upgrade cmake python@2
-
-  # Upgrade global node bin
-  yarn global upgrade gnomon
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
