@@ -46,7 +46,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   echo "📦 Install packages"
   brew install zsh tmux reattach-to-user-namespace the_silver_searcher \
                exa bat fasd fd jq wifi-password ripgrep neofetch onefetch \
-               go
+               go jesseduffield/lazydocker/lazydocker
   brew install yarn --ignore-dependencies
   brew install macvim
   brew link --overwrite macvim
@@ -93,7 +93,7 @@ else
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher \
                exa bat fasd fd jq wifi-password ripgrep neofetch onefetch \
-               go
+               go jesseduffield/lazydocker/lazydocker
   brew upgrade yarn --ignore-dependencies
   brew upgrade macvim
   brew link --overwrite macvim
