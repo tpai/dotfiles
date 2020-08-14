@@ -4,10 +4,10 @@ command! -bang -nargs=* Rg
   \   fzf#vim#with_preview(),
   \   <bang>0)
 
-" map ,ag to Ag with FZF
+" map ,ag to RipGrep
 nmap <silent> ,ag :Rg<CR>
 
-" map ,t to FZF
+" map ,t to FZF (find files with RG and ignore unnecessary files)
 nmap <silent> ,t :call fzf#run({
   \  'sink':   'e',
   \  'source': "rg --type-add 'lockfiles:{Gemfile,yarn}.lock' --type-add 'test:*.{spec,test}.*' -T lockfiles -T test -T svg --files",
