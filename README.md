@@ -91,12 +91,15 @@ The following keys are my most used commands.
   * `,rn` - symbol renaming
   * `,ac` - show code action dialog
 
-### Shell
+### Console
 
 * `z` - cd to folder using fuzzy search (provided by `fzf`)
+* `ctrl+r` - fuzzy search used commands (provided by `fzf`)
+* `ping` - pretty ping (provided by `prettyping`)
+* `top` - awesome interactive process viewer (provided by `htop`)
 * `find` - better file search (provided by `fd`)
 * `ll` - list files in current folder with details (provided by `exa`)
 * `cat` - print beautified file content (provided by `bat`)
 * `jq` - parse json text (e.g. `echo '{"a": 1}' | jq .a`)
+* `tldr` - neat man page (e.g. `tldr ls`)
 * `wifi-password` - fetch wifi password of connected SSID
-* `ping localhost | gnomon` - annotate console statements with timestamps
