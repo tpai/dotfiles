@@ -42,6 +42,8 @@ The following keys are my most used commands.
   * `tmux attach -t <id>` - attach to specific session
   * `<C-a d>` - detach session
   * `tmux kill -t <id>` - kill session
+  * `<C-a \<>` - open status line menu
+  * `<C-a \>>` - open pane menu
 * Window
   * `<C-a c>` - create window
   * `<C-a n>` - next window
