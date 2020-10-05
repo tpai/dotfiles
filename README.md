@@ -92,6 +92,7 @@ The following keys are my most used commands.
   * `,jr` - list references
   * `,rn` - symbol renaming
   * `,ac` - show code action dialog
+  * `,cj` - create jsdoc for function
 
 ### Console
 
