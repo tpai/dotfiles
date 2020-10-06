@@ -16,9 +16,10 @@ alias cdb='cd -'
 alias cls='clear;ls'
 
 # Show human friendly numbers and colors
-alias df='df -h'
-alias du='du -h -d 2'
-alias dun='du -d 0 -m node_modules/* | sort -rn | head -n 10'
+alias olddf=/bin/df
+alias df='olddf -h'
+alias olddu=/usr/bin/du
+alias du='olddu -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
@@ -75,11 +76,11 @@ alias oldfind=/usr/bin/find
 alias find=/usr/local/bin/fd
 
 # ping
-alias oldping="ping"
+alias oldping=/sbin/ping
 alias ping="prettyping --nolegend"
 
 # top
-alias oldtop="top"
+alias oldtop=/usr/bin/top
 alias top="sudo htop" # use sudo to fix high sierra bug
 
 # k8s
