@@ -91,6 +91,7 @@ The following keys are my most used commands.
   * `,jd` - go to definition
   * `,jr` - list references
   * `,rn` - symbol renaming
+  * `,rf` - file renaming (require `watchman` to be installed)
   * `,ac` - show code action dialog
   * `,cj` - create jsdoc for function
 

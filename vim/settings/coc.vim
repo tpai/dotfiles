@@ -28,12 +28,15 @@ nmap <leader>f :CocCommand eslint.executeAutofix<cr>
 nmap <silent> ek <Plug>(coc-diagnostic-prev)
 nmap <silent> ej <Plug>(coc-diagnostic-next)
 
-" GoTo code navigation.
+" Code navigation
 nmap <silent> ,jd <Plug>(coc-definition)
 nmap <silent> ,jr <Plug>(coc-references)
 
-" Symbol renaming.
+" Symbol renaming
 nmap <silent> ,rn <Plug>(coc-rename)
+
+" File renaming
+nmap <silent> ,rf :CocCommand workspace.renameCurrentFile<cr>
 
 " Show code action dialog
 nmap <silent> ,ac <Plug>(coc-codeaction)
