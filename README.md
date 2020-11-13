@@ -94,6 +94,8 @@ The following keys are my most used commands.
   * `,rf` - file renaming (require `watchman` to be installed)
   * `,ac` - show code action dialog
   * `,cj` - create jsdoc for function
+  * `,,c` - convert to cammel case
+  * `,,s` - convert to snake case
 
 ### Console
 
