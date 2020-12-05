@@ -94,7 +94,7 @@ else
   brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher \
                exa bat fasd fd jq wifi-password ripgrep neofetch onefetch \
                go watchman prettyping htop tldr
-  brew upgrade yarn --ignore-dependencies
+  brew upgrade yarn
   brew upgrade macvim
   brew link --overwrite macvim
   brew upgrade cmake python@2
