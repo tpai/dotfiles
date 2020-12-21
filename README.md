@@ -55,6 +55,9 @@ The following keys are my most used commands.
   * `vv` - vertical split
   * `ss` - horizontal split
   * `<C-a PgUp,PgDown>` - scroll
+* Floating Window
+  * `<Shift-j>` - scroll down
+  * `<Shift-k>` - scroll up
 * NERDtree
   * `<C-\>` - toggle NERDTree
   * `?` - show help

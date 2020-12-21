@@ -32,6 +32,10 @@ nmap <silent> ej <Plug>(coc-diagnostic-next)
 nmap <silent> ,jd <Plug>(coc-definition)
 nmap <silent> ,jr <Plug>(coc-references)
 
+" Scroll in float
+nnoremap <silent><expr> <s-j> coc#float#has_scroll() ? coc#float#scroll(1, 1) : "\<s-j>"
+nnoremap <silent><expr> <s-k> coc#float#has_scroll() ? coc#float#scroll(0, 1) : "\<s-k>"
+
 " Symbol renaming
 nmap <silent> ,rn <Plug>(coc-rename)
 
