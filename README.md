@@ -99,6 +99,8 @@ The following keys are my most used commands.
   * `,cj` - create jsdoc for function
   * `,,c` - convert to cammel case
   * `,,s` - convert to snake case
+  * `,,r` - convert to rem
+  * `,,p` - convert to px
 
 ### Console
 
