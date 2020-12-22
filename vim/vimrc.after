@@ -63,16 +63,16 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 " Folds
-set foldmethod=indent           " fold based on indent
-set foldnestmax=3               " deepest fold is 3 levels
-set nofoldenable                " dont fold by default
+set foldmethod=indent              " fold based on indent
+set foldnestmax=3                  " deepest fold is 3 levels
+set nofoldenable                   " dont fold by default
 
-set number                      " Line numbers are good
-set mouse=a                     " Enable mouse control
-set clipboard=unnamed           " Copy to system clipboard
-set hidden                      " Buffers can exist in the background without being in a window
-set visualbell                  " No sounds
-set autoread                    " Reload files changed outside vim
+set number                         " Line numbers are good
+set mouse=a                        " Enable mouse control
+set clipboard^=unnamed,unnamedplus " Align copy behavior across platform
+set hidden                         " Buffers can exist in the background without being in a window
+set visualbell                     " No sounds
+set autoread                       " Reload files changed outside vim
 
 " Auto close preview window when enter insert mode
 autocmd InsertEnter * if pumvisible() == 0|pclose|endif
