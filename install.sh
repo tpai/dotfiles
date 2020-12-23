@@ -97,7 +97,7 @@ else
   brew upgrade yarn
   brew upgrade macvim
   brew link --overwrite macvim
-  brew upgrade cmake python@2
+  brew upgrade cmake python python@2
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
