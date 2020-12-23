@@ -111,5 +111,5 @@ else
 
   # Upgrade vim-plug self and update plugins
   vim +PlugUpgrade -c q!
-  vim +PlugInstall -c q!
+  vim +PlugUpdate -c q!
 fi
