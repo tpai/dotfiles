@@ -1,4 +1,4 @@
-#!bin/sh
+#!/usr/bin/env bash
 
 ROOT_DIR=.dotfiles
 
