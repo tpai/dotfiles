@@ -80,7 +80,8 @@ The following keys are my most used commands.
   * `sj` - split brackets
   * `sk` - join brackets
   * `ga` - active easy align (must do visual select first)
-  * `,mc` - multi cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
+  * `,mc` - multiple cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
+  * `,ma` - multiple cursor select all words
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment
   * `:%s/search/replace/g` - search and replace
