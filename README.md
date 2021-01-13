@@ -92,6 +92,7 @@ The following keys are my most used commands.
   * `<\-f>` - eslint autofix
   * `ej` - next diagnostic
   * `ek` - prev diagnostic
+  * `,df` - show definition in floating window
   * `,jd` - go to definition
   * `,jr` - list references
   * `,rn` - symbol renaming
