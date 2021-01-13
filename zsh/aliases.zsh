@@ -29,14 +29,14 @@ elif [[ $platform == 'darwin' ]]; then
   alias ls='exa -s ext'
 fi
 
-# mimic vim functions
-alias :q='exit'
-
-# vimrc editing
-alias ve='vim ~/.vimrc'
-
-# zsh profile editing
-alias ze='vim ~/.zshrc'
+# Vim Aliases
+if type nvim &> /dev/null; then
+  alias vim='nvim'
+fi
+alias vi='vim'
+alias :q='exit'         # mimic vim functions
+alias ve='vim ~/.vimrc' # vimrc editing
+alias ze='vim ~/.zshrc' # zsh profile editing
 
 # Git Aliases
 alias gl='vim +GV'
