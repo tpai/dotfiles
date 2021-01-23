@@ -48,7 +48,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   brew install zsh tmux \
                ripgrep fasd fd \
                exa bat prettyping htop tldr duf \
-               go jq \
+               jq \
                neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman \
   brew install yarn --ignore-dependencies
@@ -77,7 +77,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   create_symlink ".gitconfig"       ".gitconfig"
 
   # Install vim plugins
-  vim +PlugInstall
+  vim -c PlugInstall -c q! -c q!
 else
   echo "🚀 Upgrading dotfiles"
 
@@ -95,10 +95,10 @@ else
 
   # Upgrade packages
   echo "📦 Upgrade packages"
-  brew install zsh tmux \
+  brew upgrade zsh tmux \
                ripgrep fasd fd \
                exa bat prettyping htop tldr duf \
-               go jq \
+               jq \
                neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman \
   brew upgrade yarn
@@ -117,6 +117,5 @@ else
   create_symlink ".gitconfig"       ".gitconfig"
 
   # Upgrade vim-plug self and update plugins
-  vim +PlugUpgrade -c q!
-  vim +PlugUpdate -c q!
+  vim -c PlugUpgrade -c PlugUpdate -c q! -c q!
 fi

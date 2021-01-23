@@ -47,7 +47,7 @@ Return to dust.
   * tldr - man
   * duf - df
 * Language
-  * go
+  * go - run `install-go.sh`
   * jq - json query
 * Info
   * neofetch - system info
