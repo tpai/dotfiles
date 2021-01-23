@@ -44,9 +44,13 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
 
   # Install packages
   echo "📦 Install packages"
-  brew install zsh tmux reattach-to-user-namespace the_silver_searcher \
-               exa bat fasd fd jq wifi-password ripgrep neofetch onefetch \
-               go watchman prettyping htop tldr
+  # Misc
+  brew install zsh tmux \
+               ripgrep fasd fd \
+               exa bat prettyping htop tldr \
+               go jq \
+               neofetch onefetch wifi-password \
+               reattach-to-user-namespace watchman \
   brew install yarn --ignore-dependencies
   brew install macvim
   brew link --overwrite macvim
@@ -91,9 +95,12 @@ else
 
   # Upgrade packages
   echo "📦 Upgrade packages"
-  brew upgrade zsh tmux reattach-to-user-namespace the_silver_searcher \
-               exa bat fasd fd jq wifi-password ripgrep neofetch onefetch \
-               go watchman prettyping htop tldr
+  brew install zsh tmux \
+               ripgrep fasd fd \
+               exa bat prettyping htop tldr \
+               go jq \
+               neofetch onefetch wifi-password \
+               reattach-to-user-namespace watchman \
   brew upgrade yarn
   brew upgrade macvim
   brew link --overwrite macvim

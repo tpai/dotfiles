@@ -30,6 +30,38 @@ sh ~/.dotfiles/uninstall.sh
 
 Return to dust.
 
+## Brew Packages
+
+* Main
+  * zsh
+  * tmux
+* Search
+  * ripgrep - code fuzzy search
+  * fasd - folder search and navigation
+  * fd - file and folder search
+* Better Command
+  * exa - ls
+  * bat - cat
+  * prettyping - ping
+  * htop - top
+  * tldr - man
+* Language
+  * go
+  * jq - json query
+* Info
+  * neofetch - system info
+  * onefetch - git repo info
+  * wifi-password
+* Misc
+  * reattach-to-user-namespace - for tmux clipboard
+  * watchman - coc file renaming (update related imports)
+  * git
+  * yarn
+  * neovim
+  * cmake
+  * python
+  * python@2
+
 ## Mappings
 
 The following keys are my most used commands.
