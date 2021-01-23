@@ -45,6 +45,7 @@ Return to dust.
   * prettyping - ping
   * htop - top
   * tldr - man
+  * duf - df
 * Language
   * go
   * jq - json query

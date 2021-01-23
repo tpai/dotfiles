@@ -47,7 +47,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   # Misc
   brew install zsh tmux \
                ripgrep fasd fd \
-               exa bat prettyping htop tldr \
+               exa bat prettyping htop tldr duf \
                go jq \
                neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman \
@@ -97,7 +97,7 @@ else
   echo "📦 Upgrade packages"
   brew install zsh tmux \
                ripgrep fasd fd \
-               exa bat prettyping htop tldr \
+               exa bat prettyping htop tldr duf \
                go jq \
                neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman \
