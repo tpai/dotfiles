@@ -1,4 +1,5 @@
 tmux/plugins/
 vim/plugged/
 vim/autoload/*.old
+vim/coc-settings.json
 .*.swp

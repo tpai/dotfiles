@@ -12,17 +12,17 @@ if [[ "$(uname)" -ne "Darwin" ]]; then
   exit 1
 fi
 
-if ! which brew &> /dev/null; then
+if ! type brew &> /dev/null; then
   echo "🍺 Install brew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-if ! which git &> /dev/null; then
+if ! type git &> /dev/null; then
   echo "🐙 Install git"
   brew install git
 fi
 
-if ! which node &> /dev/null; then
+if ! type node &> /dev/null; then
   echo "🔯 Install node"
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
@@ -52,8 +52,12 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
                neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman \
   brew install yarn --ignore-dependencies
-  brew install macvim
-  brew link --overwrite macvim
+
+  # Install neovim
+  brew install neovim
+  mkdir -p ~/.local/share/nvim/site/autoload/
+  mkdir -p ~/.config/nvim/
+  python3 -m pip install --user --upgrade pynvim # Install required module
 
   # Create zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
@@ -66,15 +70,20 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   echo "📜 Copy fonts into system"
   cp -rf $HOME/$ROOT_DIR/fonts/* ~/Library/Fonts
 
+  # Create coc settings
+  cp $HOME/vim/settings/coc-settings.json $HOME/vim/coc-settings.json
+
   # Create symlinks
   echo "🔗 Create symlinks"
-  create_symlink "vim"              ".vim"
-  create_symlink "vim/vimrc"        ".vimrc"
-  create_symlink "vim/vimrc.before" ".vimrc.before"
-  create_symlink "vim/vimrc.after"  ".vimrc.after"
-  create_symlink "tmux"             ".tmux"
-  create_symlink "tmux/tmux.conf"   ".tmux.conf"
-  create_symlink ".gitconfig"       ".gitconfig"
+  create_symlink "vim/autoload/plug.vim" ".local/share/nvim/site/autoload/plug.vim"
+  create_symlink "vim"                   ".vim"
+  create_symlink "vim/coc-settings.json" ".config/nvim/coc-settings.json"
+  create_symlink "vim/vimrc"             ".config/nvim/init.vim"
+  create_symlink "vim/vimrc.before"      ".vimrc.before"
+  create_symlink "vim/vimrc.after"       ".vimrc.after"
+  create_symlink "tmux"                  ".tmux"
+  create_symlink "tmux/tmux.conf"        ".tmux.conf"
+  create_symlink ".gitconfig"            ".gitconfig"
 
   # Install vim plugins
   vim -c PlugInstall -c q! -c q!
@@ -102,19 +111,20 @@ else
                neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman \
   brew upgrade yarn
-  brew upgrade macvim
-  brew link --overwrite macvim
+  brew upgrade neovim
   brew upgrade cmake python python@2
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
-  create_symlink "vim"              ".vim"
-  create_symlink "vim/vimrc"        ".vimrc"
-  create_symlink "vim/vimrc.before" ".vimrc.before"
-  create_symlink "vim/vimrc.after"  ".vimrc.after"
-  create_symlink "tmux"             ".tmux"
-  create_symlink "tmux/tmux.conf"   ".tmux.conf"
-  create_symlink ".gitconfig"       ".gitconfig"
+  create_symlink "vim/autoload/plug.vim" ".local/share/nvim/site/autoload/plug.vim"
+  create_symlink "vim"                   ".vim"
+  create_symlink "vim/coc-settings.json" ".config/nvim/coc-settings.json"
+  create_symlink "vim/vimrc"             ".config/nvim/init.vim"
+  create_symlink "vim/vimrc.before"      ".vimrc.before"
+  create_symlink "vim/vimrc.after"       ".vimrc.after"
+  create_symlink "tmux"                  ".tmux"
+  create_symlink "tmux/tmux.conf"        ".tmux.conf"
+  create_symlink ".gitconfig"            ".gitconfig"
 
   # Upgrade vim-plug self and update plugins
   vim -c PlugUpgrade -c PlugUpdate -c q! -c q!
