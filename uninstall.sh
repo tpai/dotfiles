@@ -10,6 +10,7 @@ function remove_symlink
 # Remove symlinks
 remove_symlink ".local/share/nvim/site/autoload/plug.vim"
 remove_symlink ".vim"
+remove_symlink ".config/nvim/coc-settings.json"
 remove_symlink ".config/nvim/init.vim"
 remove_symlink ".vimrc.before"
 remove_symlink ".vimrc.after"

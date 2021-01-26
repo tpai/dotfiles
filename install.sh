@@ -70,10 +70,14 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
   echo "📜 Copy fonts into system"
   cp -rf $HOME/$ROOT_DIR/fonts/* ~/Library/Fonts
 
+  # Create coc settings
+  cp $HOME/vim/settings/coc-settings.json $HOME/vim/coc-settings.json
+
   # Create symlinks
   echo "🔗 Create symlinks"
   create_symlink "vim/autoload/plug.vim" ".local/share/nvim/site/autoload/plug.vim"
   create_symlink "vim"                   ".vim"
+  create_symlink "vim/coc-settings.json" ".config/nvim/coc-settings.json"
   create_symlink "vim/vimrc"             ".config/nvim/init.vim"
   create_symlink "vim/vimrc.before"      ".vimrc.before"
   create_symlink "vim/vimrc.after"       ".vimrc.after"
@@ -114,6 +118,7 @@ else
   echo "🔗 Reset symlinks"
   create_symlink "vim/autoload/plug.vim" ".local/share/nvim/site/autoload/plug.vim"
   create_symlink "vim"                   ".vim"
+  create_symlink "vim/coc-settings.json" ".config/nvim/coc-settings.json"
   create_symlink "vim/vimrc"             ".config/nvim/init.vim"
   create_symlink "vim/vimrc.before"      ".vimrc.before"
   create_symlink "vim/vimrc.after"       ".vimrc.after"
