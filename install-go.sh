@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
+source _common.sh
+
 if ! which go &> /dev/null; then
   brew install go
-  vim -c 'PlugInstall vim-go' -c q! -c q!
+
+  # install vim-terraform plugin
+  toggle_plugin 'fatih/vim-go' on
+  vim -c 'PlugInstall' -c q! -c q!
 else
   brew upgrade go
-  vim -c 'PlugUpdate vim-go' -c q! -c q!
+
+  # update vim-terraform plugin
+  toggle_plugin 'fatih/vim-go' on
+  vim -c 'PlugUpdate' -c q! -c q!
 fi

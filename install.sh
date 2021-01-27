@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 
-ROOT_DIR=.dotfiles
-
-function create_symlink
-{
-  ln -nfs "$HOME/$ROOT_DIR/$1" "$HOME/$2"
-}
+source _common.sh
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
   echo "😬 This dotfiles only support Mac OS X"
@@ -33,11 +28,11 @@ if ! type node &> /dev/null; then
   nvm ls
 fi
 
-if [ ! -d "$HOME/$ROOT_DIR" ]; then
+if [ ! -d "$REPO" ]; then
   echo "🌱 Install dotfiles"
 
   # Clone dotfiles repo
-  git clone --depth=1 https://github.com/tpai/dotfiles.git "$HOME/$ROOT_DIR"
+  git clone --depth=1 https://github.com/tpai/dotfiles.git "$REPO"
 
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -68,7 +63,7 @@ if [ ! -d "$HOME/$ROOT_DIR" ]; then
 
   # Install fonts
   echo "📜 Copy fonts into system"
-  cp -rf $HOME/$ROOT_DIR/fonts/* ~/Library/Fonts
+  cp -rf $REPO/fonts/* ~/Library/Fonts
 
   # Create coc settings
   cp $HOME/vim/settings/coc-settings.json $HOME/vim/coc-settings.json

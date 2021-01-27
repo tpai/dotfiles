@@ -3,3 +3,4 @@ vim/plugged/
 vim/autoload/*.old
 vim/coc-settings.json
 .*.swp
+*.bak
