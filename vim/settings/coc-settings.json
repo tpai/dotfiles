@@ -3,5 +3,8 @@
     "javascriptreact": ["javascript"],
     "typescriptreact": ["javascript"],
     "typescript": ["javascript"]
+  },
+  "yaml.schemas": {
+    "kubernetes": ["k8s/*.yaml", "k8s/*.yml"]
   }
 }
