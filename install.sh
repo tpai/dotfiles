@@ -28,6 +28,15 @@ if ! type node &> /dev/null; then
   nvm ls
 fi
 
+if ! type pyenv &> /dev/null; then
+  echo "🐍 Install pyenv"
+  brew install pyenv
+  pyenv install $(pyenv install --list | grep -v - | grep -v b | tail -1)
+  pyenv versions
+  # Init pyenv manually
+  eval "$(pyenv init -)"
+fi
+
 if [ ! -d "$REPO" ]; then
   echo "🌱 Install dotfiles"
 
@@ -45,21 +54,17 @@ if [ ! -d "$REPO" ]; then
                exa bat prettyping htop tldr duf \
                jq \
                neofetch onefetch wifi-password \
-               reattach-to-user-namespace watchman \
+               reattach-to-user-namespace watchman cmake \
   brew install yarn --ignore-dependencies
 
   # Install neovim
   brew install neovim
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
-  python3 -m pip install --user --upgrade pynvim # Install required module
+  pip install --user --upgrade pynvim # Install python client
 
   # Create zsh symlink
   create_symlink "zsh/zshrc"        ".zshrc"
-
-  # Install development related packages
-  brew install cmake python python@2
-  export PATH="/usr/local/opt/python@2/bin:$PATH"
 
   # Install fonts
   echo "📜 Copy fonts into system"
@@ -104,10 +109,9 @@ else
                exa bat prettyping htop tldr duf \
                jq \
                neofetch onefetch wifi-password \
-               reattach-to-user-namespace watchman \
+               reattach-to-user-namespace watchman cmake \
   brew upgrade yarn
   brew upgrade neovim
-  brew upgrade cmake python python@2
 
   # Reset symlinks
   echo "🔗 Reset symlinks"

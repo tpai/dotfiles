@@ -37,7 +37,7 @@ Plug 'ap/vim-css-color'
 " Plug 'hashivim/vim-terraform'
 
 " Editing
-Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tsserver coc-eslint coc-vetur coc-stylelint coc-markdownlint coc-yaml coc-json coc-html coc-css coc-sh' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tsserver coc-eslint coc-vetur coc-stylelint coc-markdownlint coc-yaml coc-json coc-html coc-css coc-sh coc-pyright' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'

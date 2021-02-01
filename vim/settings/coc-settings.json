@@ -6,5 +6,6 @@
   },
   "yaml.schemas": {
     "kubernetes": ["k8s/*.yaml", "k8s/*.yml"]
-  }
+  },
+  "python.pythonPath": "python"
 }
