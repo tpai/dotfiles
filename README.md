@@ -60,8 +60,8 @@ Return to dust.
   * yarn
   * neovim
   * cmake
-  * python
-  * python@2
+  * pyenv
+  * nvm
 
 ## Mappings
 
