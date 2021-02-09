@@ -83,6 +83,10 @@ alias ping="prettyping --nolegend"
 alias oldtop=/usr/bin/top
 alias top="sudo htop" # use sudo to fix high sierra bug
 
+# tldr
+alias oldman=/usr/bin/man
+alias man=/usr/local/bin/tldr
+
 # k8s
 alias k='kubectl'
 alias ka='kubectl apply -f'
