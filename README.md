@@ -82,6 +82,7 @@ The following keys are my most used commands.
   * `<C-a n>` - next window
   * `<C-a p>` - previous window
   * `<C-a x>` - kill window
+  * `<C-a :move-window -r>` - reorder window index
 * Pane
   * `<C-h,j,k,l>` - navigate between panes
   * `<C-a Shift-h,j,k,l>` - resize focused pane
