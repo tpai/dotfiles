@@ -99,8 +99,8 @@ The following keys are my most used commands.
   * `,t` - in current folder (provided by `ctrlp`)
   * `,b` - in buffer (provided by `fzf`)
   * `,ag` - using fuzzy search (provided by `fzf`)
-    * `<Tab>` - select files which needs to replace
-    * `:cfdo %s/old/new/g | update` - replace and update multiple files
+    * `<Tab>` - select files which needs to change
+    * `:cfdo %s/old/new/g | update` - search, replace and update multiple files
 * Git
   * `gva` - browse changes of commits of all files
   * `gvc` - browse changes of commits of current file
@@ -120,7 +120,7 @@ The following keys are my most used commands.
   * `,ma` - multiple cursor select all words
   * `gc` - comment / uncomment
   * `<C-//>` - comment / uncomment
-  * `:%s/search/replace/g` - search and replace
+  * `:%s/old/new/g` - search and replace in current file
   * `//` - clear search result
   * `%` - jump to closing tag
   * `:e ++ff=dos` - convert `^M` to unix line ending
