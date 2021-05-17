@@ -87,6 +87,16 @@ if [ ! -d "$REPO" ]; then
   create_symlink "tmux/tmux.conf"        ".tmux.conf"
   create_symlink ".gitconfig"            ".gitconfig"
 
+  # Install sync configs
+  if [ -d "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/" ]; then
+    mv ~/.ssh ~/.ssh-old
+    mv ~/.kube ~/.kube-old
+    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.ssh"  ".ssh"
+    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.kube" ".kube"
+  else
+    echo "iCloud directory does not exist."
+  fi
+
   # Install vim plugins
   vim -c PlugInstall -c q! -c q!
 else
@@ -126,6 +136,24 @@ else
   create_symlink "tmux"                  ".tmux"
   create_symlink "tmux/tmux.conf"        ".tmux.conf"
   create_symlink ".gitconfig"            ".gitconfig"
+
+  # Reset sync configs
+  if [ -d "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/" ]; then
+    if [ ! -d "~/.ssh-old" ]; then
+      mv ~/.ssh ~/.ssh-old
+    else
+      remove_symlink ".ssh"
+    fi
+    if [ ! -d "~/.kube-old" ]; then
+      mv ~/.kube ~/.kube-old
+    else
+      remove_symlink ".kube"
+    fi
+    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.ssh"  ".ssh"
+    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.kube" ".kube"
+  else
+    echo "iCloud directory does not exist."
+  fi
 
   # Upgrade vim-plug self and update plugins
   vim -c PlugUpgrade -c PlugUpdate -c q! -c q!
