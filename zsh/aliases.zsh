@@ -17,7 +17,7 @@ alias cls='clear;ls'
 
 # Show human friendly numbers and colors
 alias olddf=/bin/df
-alias df='olddf -h'
+alias df='duf'
 alias olddu=/usr/bin/du
 alias du='olddu -h -d 2'
 
