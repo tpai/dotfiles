@@ -52,12 +52,17 @@ if [ ! -d "$REPO" ]; then
   echo "📦 Install packages"
   # Misc
   brew install zsh tmux \
-               ripgrep fasd fd \
-               exa bat prettyping htop tldr duf \
-               jq \
-               neofetch onefetch wifi-password \
+               ripgrep jq fasd fd duf \
+               exa bat prettyping tldr mas httpie \
+               ctop glances neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman cmake \
   brew install yarn --ignore-dependencies
+
+  # Install from App Store
+  # Alfred, Magnet, Bitwarden
+  mas install 405843582 441258766 1352778147
+  # Telegram, LINE
+  mas install 539883307 747648890
 
   # Install neovim
   brew install neovim
@@ -117,10 +122,9 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-               ripgrep fasd fd \
-               exa bat prettyping htop tldr duf \
-               jq \
-               neofetch onefetch wifi-password \
+               ripgrep jq fasd fd duf \
+               exa bat prettyping tldr mas httpie \
+               ctop glances neofetch onefetch wifi-password \
                reattach-to-user-namespace watchman cmake \
   brew upgrade yarn
   brew upgrade neovim
