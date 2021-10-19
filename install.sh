@@ -57,7 +57,7 @@ if [ ! -d "$REPO" ]; then
                ripgrep jq fasd fd duf \
                exa bat prettyping tldr mas httpie \
                ctop glances neofetch onefetch wifi-password \
-               reattach-to-user-namespace watchman cmake \
+               reattach-to-user-namespace watchman cmake
   brew install yarn --ignore-dependencies
 
   # Install from App Store
@@ -127,7 +127,7 @@ else
                ripgrep jq fasd fd duf \
                exa bat prettyping tldr mas httpie \
                ctop glances neofetch onefetch wifi-password \
-               reattach-to-user-namespace watchman cmake \
+               reattach-to-user-namespace watchman cmake
   brew upgrade yarn
   brew upgrade neovim
 
