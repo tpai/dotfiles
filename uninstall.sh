@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-source _common.sh
+set -e
+
+REPO=${HOME:=~}/.dotfiles
 
 # Remove symlinks
 remove_symlink ".local/share/nvim/site/autoload/plug.vim"

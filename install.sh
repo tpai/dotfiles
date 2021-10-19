@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-source _common.sh
+set -e
+
+REPO=${HOME:=~}/.dotfiles
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
   echo "😬 This dotfiles only support Mac OS X"
@@ -9,7 +11,7 @@ fi
 
 if ! type brew &> /dev/null; then
   echo "🍺 Install brew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 if ! type git &> /dev/null; then
@@ -46,7 +48,7 @@ if [ ! -d "$REPO" ]; then
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$REPO"
 
   # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   # Install packages
   echo "📦 Install packages"
