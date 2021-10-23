@@ -97,3 +97,7 @@ alias kdel='kubectl delete'
 alias kdelrs="kubectl get replicaset.apps | grep -E \"([0]{1}\s*){3}\" | awk '{print \"replicaset.apps/\"\$1;}' | xargs kubectl delete"
 alias kg='kubectl get'
 alias kl='kubectl logs'
+
+# instant snippets
+alias q='cd ~/.local/share/instant-snippets; vim README.md; cd -'
+alias qup='cd ~/.local/share/instant-snippets; git pull --rebase; cd -'
