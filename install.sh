@@ -2,7 +2,7 @@
 
 set -e
 
-REPO=${HOME:=~}/.dotfiles
+export REPO=${HOME:=~}/.dotfiles
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
   echo "😬 This dotfiles only support Mac OS X"
@@ -70,38 +70,42 @@ if [ ! -d "$REPO" ]; then
   brew install neovim
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
-  pip install --user --upgrade pynvim # Install python client
+
+  # Install python2 pip
+  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+  python2 get-pip.py && rm -rf get-pip.py
+  $HOME/Library/Python/2.7/bin/pip install --user --upgrade pynvim # Install python client
 
   # Create zsh symlink
-  create_symlink "zsh/zshrc"        ".zshrc"
+  ln -nfs "$REPO/zsh/zshrc" "$HOME/.zshrc"
 
   # Install fonts
   echo "📜 Copy fonts into system"
   cp -rf $REPO/fonts/* ~/Library/Fonts
 
   # Create coc settings
-  cp $HOME/vim/settings/coc-settings.json $HOME/vim/coc-settings.json
+  cp $REPO/vim/settings/coc-settings.json $REPO/vim/coc-settings.json
 
   # Create symlinks
   echo "🔗 Create symlinks"
-  create_symlink "vim/autoload/plug.vim" ".local/share/nvim/site/autoload/plug.vim"
-  create_symlink "vim"                   ".vim"
-  create_symlink "vim/coc-settings.json" ".config/nvim/coc-settings.json"
-  create_symlink "vim/vimrc"             ".config/nvim/init.vim"
-  create_symlink "vim/vimrc.before"      ".vimrc.before"
-  create_symlink "vim/vimrc.after"       ".vimrc.after"
-  create_symlink "tmux"                  ".tmux"
-  create_symlink "tmux/tmux.conf"        ".tmux.conf"
-  create_symlink ".gitconfig"            ".gitconfig"
+  ln -nfs "$REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
+  ln -nfs "$REPO/vim"                   "$HOME/.vim"
+  ln -nfs "$REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
+  ln -nfs "$REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
+  ln -nfs "$REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
+  ln -nfs "$REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
+  ln -nfs "$REPO/tmux"                  "$HOME/.tmux"
+  ln -nfs "$REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
+  ln -nfs "$REPO/.gitconfig"            "$HOME/.gitconfig"
 
   # Install sync configs
-  if [ -d "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/" ]; then
-    mv ~/.ssh ~/.ssh-old
-    mv ~/.kube ~/.kube-old
-    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.ssh"  ".ssh"
-    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.kube" ".kube"
+  if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
+    mv $HOME/.ssh $HOME/.ssh-old
+    mv $HOME/.kube $HOME/.kube-old
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh"  "$HOME/.ssh"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
   else
-    echo "iCloud directory does not exist."
+    echo "iCloud sync folder does not exist."
   fi
 
   # Install vim plugins
@@ -119,7 +123,7 @@ else
   sh $ZSH/tools/upgrade.sh
 
   # Reset zsh symlink
-  create_symlink "zsh/zshrc"        ".zshrc"
+  ln -nfs "$REPO/zsh/zshrc" ".zshrc"
 
   # Upgrade packages
   echo "📦 Upgrade packages"
@@ -133,32 +137,24 @@ else
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
-  create_symlink "vim/autoload/plug.vim" ".local/share/nvim/site/autoload/plug.vim"
-  create_symlink "vim"                   ".vim"
-  create_symlink "vim/coc-settings.json" ".config/nvim/coc-settings.json"
-  create_symlink "vim/vimrc"             ".config/nvim/init.vim"
-  create_symlink "vim/vimrc.before"      ".vimrc.before"
-  create_symlink "vim/vimrc.after"       ".vimrc.after"
-  create_symlink "tmux"                  ".tmux"
-  create_symlink "tmux/tmux.conf"        ".tmux.conf"
-  create_symlink ".gitconfig"            ".gitconfig"
+  ln -nfs "$REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
+  ln -nfs "$REPO/vim"                   "$HOME/.vim"
+  ln -nfs "$REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
+  ln -nfs "$REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
+  ln -nfs "$REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
+  ln -nfs "$REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
+  ln -nfs "$REPO/tmux"                  "$HOME/.tmux"
+  ln -nfs "$REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
+  ln -nfs "$REPO/.gitconfig"            "$HOME/.gitconfig"
 
   # Reset sync configs
-  if [ -d "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/" ]; then
-    if [ ! -d "~/.ssh-old" ]; then
-      mv ~/.ssh ~/.ssh-old
-    else
-      remove_symlink ".ssh"
-    fi
-    if [ ! -d "~/.kube-old" ]; then
-      mv ~/.kube ~/.kube-old
-    else
-      remove_symlink ".kube"
-    fi
-    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.ssh"  ".ssh"
-    create_symlink "~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Sync/.kube" ".kube"
+  if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
+    rm -rf "$HOME/.ssh"
+    rm -rf "$HOME/.kube"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh"  "$HOME/.ssh"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
   else
-    echo "iCloud directory does not exist."
+    echo "iCloud sync folder does not exist."
   fi
 
   # Upgrade vim-plug self and update plugins
