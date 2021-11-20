@@ -99,5 +99,5 @@ alias kg='kubectl get'
 alias kl='kubectl logs'
 
 # instant snippets
-alias q='cd ~/.local/share/instant-snippets; vim README.md; cd -'
-alias qup='cd ~/.local/share/instant-snippets; git pull --rebase; cd -'
+alias q='cd ~/.local/share/instant-snippets; vim +NERDTree +Rg; cd -'
+alias qup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
