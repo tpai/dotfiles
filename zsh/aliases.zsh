@@ -102,5 +102,5 @@ alias kl='kubectl logs'
 alias port='if [ "$(uname)" = "Darwin" ]; then lsof -Pni4 | grep LISTEN; else netstat -tulpn | grep LISTEN; fi'
 
 # instant snippets
-alias q='cd ~/.local/share/instant-snippets; vim +NERDTree +Rg; cd -'
+alias q='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
 alias qup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
