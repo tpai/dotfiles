@@ -34,6 +34,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'jxnblk/vim-mdx-js'
 Plug 'ap/vim-css-color'
+Plug 'tomlion/vim-solidity'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'hashivim/vim-terraform'
 
