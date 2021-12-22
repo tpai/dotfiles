@@ -1,3 +1,3 @@
-nmap gs :Gstatus<cr>
-nmap gb :Gblame<cr>
+nmap gs :Git<cr>
+nmap gb :Git blame<cr>
 nmap gd :Gdiffsplit<cr>
