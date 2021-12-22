@@ -67,28 +67,31 @@ Return to dust.
 
 The following keys are my most used commands.
 
-### Vim
+### tmux
 
-* TMUX
-  * `tmux ls` - list sessions
-  * `tmux new -s <id>` - create new session
-  * `tmux attach -t <id>` - attach to specific session
-  * `<C-a d>` - detach session
-  * `tmux kill -t <id>` - kill session
-  * `<C-a \<>` - open status line menu
-  * `<C-a \>>` - open pane menu
-* Window
-  * `<C-a c>` - create window
-  * `<C-a n>` - next window
-  * `<C-a p>` - previous window
-  * `<C-a x>` - kill window
-  * `<C-a :move-window -r>` - reorder window index
-* Pane
+* `tmux ls` - list sessions
+* `tmux new -s <id>` - create new session
+* `tmux attach -t <id>` - attach to specific session
+* `tmux kill -t <id>` - kill session
+* `<C-a d>` - detach session
+* `<C-a \<>` - open status line menu
+* `<C-a \>>` - open pane menu
+* `<C-a :setw synchronize-panes on>` - all panes share the same input
+* `<C-a c>` - create window
+* `<C-a n>` - next window
+* `<C-a p>` - previous window
+* `<C-a x>` - kill window
+* `<C-a :move-window -r>` - reorder window index
+* `<C-h,j,k,l>` - navigate between windows
+* `<C-a Shift-h,j,k,l>` - resize focused window
+* `<C-a PgUp,PgDown>` - scroll the window
+
+### vim
+
+* Panes
   * `<C-h,j,k,l>` - navigate between panes
-  * `<C-a Shift-h,j,k,l>` - resize focused pane
   * `vv` - vertical split
   * `ss` - horizontal split
-  * `<C-a PgUp,PgDown>` - scroll
 * Floating Window
   * `<Shift-j>` - scroll down
   * `<Shift-k>` - scroll up
@@ -96,9 +99,9 @@ The following keys are my most used commands.
   * `<C-\>` - toggle NERDTree
   * `?` - show help
 * File Navigation
-  * `,t` - in current folder (provided by `ctrlp`)
-  * `,b` - in buffer (provided by `fzf`)
-  * `,ag` - using fuzzy search (provided by `fzf`)
+  * `,t` - in current folder (powered by `ctrlp`)
+  * `,b` - in buffer (powered by `fzf`)
+  * `,ag` - using fuzzy search (powered by `fzf`)
     * `<Tab>` - select files which needs to change
     * `:cfdo %s/old/new/g | update` - search, replace and update multiple files
 * Git
@@ -111,7 +114,6 @@ The following keys are my most used commands.
   * `gk` - prev hunk
   * `gu` - undo changes of current hunk
   * `gp` - see changes of current hunk
-  * `:Gblame` - blame someone about code
 * Editing
   * `sj` - split brackets
   * `sk` - join brackets
@@ -142,13 +144,13 @@ The following keys are my most used commands.
 
 ### Console
 
-* `z` - cd to folder using fuzzy search (provided by `fzf`)
-* `ctrl+r` - fuzzy search used commands (provided by `fzf`)
-* `ping` - pretty ping (provided by `prettyping`)
-* `top` - awesome interactive process viewer (provided by `htop`)
-* `find` - better file search (provided by `fd`)
-* `ll` - list files in current folder with details (provided by `exa`)
-* `cat` - print beautified file content (provided by `bat`)
+* `z` - cd to folder using fuzzy search (powered by `fzf`)
+* `ctrl+r` - fuzzy search used commands (powered by `fzf`)
+* `ping` - pretty ping (powered by `prettyping`)
+* `top` - awesome interactive process viewer (powered by `htop`)
+* `find` - better file search (powered by `fd`)
+* `ll` - list files in current folder with details (powered by `exa`)
+* `cat` - print beautified file content (powered by `bat`)
 * `jq` - parse json text (e.g. `echo '{"a": 1}' | jq .a`)
 * `tldr` - neat man page (e.g. `tldr ls`)
 * `wifi-password` - fetch wifi password of connected SSID
