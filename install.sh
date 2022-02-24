@@ -67,7 +67,7 @@ if [ ! -d "$REPO" ]; then
   mas install 539883307 747648890
 
   # Install neovim
-  brew install neovim
+  brew install neovim@0.6.1
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
 
