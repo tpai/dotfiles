@@ -36,7 +36,7 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'ap/vim-css-color'
 Plug 'tomlion/vim-solidity'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" Plug 'hashivim/vim-terraform'
+" Plug 'hashivim/vim-hashicorp-tools', { 'do': 'sh ./assemble.sh' }
 
 " Editing
 Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tsserver coc-eslint coc-vetur coc-stylelint coc-markdownlint coc-yaml coc-json coc-html coc-css coc-sh coc-pyright' }
