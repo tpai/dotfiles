@@ -11,7 +11,11 @@ fi
 
 if ! type brew &> /dev/null; then
   echo "🍺 Install brew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  # activate brew instantly
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/tony.pai/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if ! type git &> /dev/null; then
