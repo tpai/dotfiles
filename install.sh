@@ -51,9 +51,6 @@ if [ ! -d "$DOT_REPO" ]; then
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT_REPO"
 
-  # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
-
   # Install packages
   echo "📦 Install packages"
   # Misc
@@ -114,6 +111,9 @@ if [ ! -d "$DOT_REPO" ]; then
 
   # Install vim plugins
   vim -c PlugInstall -c q! -c q!
+
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 else
   echo "🚀 Upgrading dotfiles"
 
@@ -122,9 +122,6 @@ else
   git checkout master
   git pull --rebase
   git stash pop
-
-  # Upgrade oh-my-zsh
-  sh $ZSH/tools/upgrade.sh
 
   # Reset zsh symlink
   ln -nfs "$DOT_REPO/zsh/zshrc" ".zshrc"
@@ -163,4 +160,7 @@ else
 
   # Upgrade vim-plug self and update plugins
   vim -c PlugUpgrade -c PlugUpdate -c q! -c q!
+
+  # Upgrade oh-my-zsh
+  sh $ZSH/tools/upgrade.sh
 fi
