@@ -31,6 +31,7 @@ if ! type node &> /dev/null; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
   nvm install lts/gallium
+  nvm use lts/gallium
   nvm ls
 fi
 
