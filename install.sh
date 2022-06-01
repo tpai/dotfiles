@@ -101,8 +101,8 @@ if [ ! -d "$DOT_REPO" ]; then
 
   # Install sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
-    mv $HOME/.ssh $HOME/.ssh-old
-    mv $HOME/.kube $HOME/.kube-old
+    mv $HOME/.ssh $HOME/.ssh-old || true
+    mv $HOME/.kube $HOME/.kube-old || true
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh"  "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
   else
