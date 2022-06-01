@@ -52,7 +52,7 @@ if [ ! -d "$REPO" ]; then
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$REPO"
 
   # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
   # Install packages
   echo "📦 Install packages"
@@ -71,7 +71,7 @@ if [ ! -d "$REPO" ]; then
   mas install 539883307 747648890
 
   # Install neovim
-  brew install neovim@0.6.1
+  brew install neovim
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
 
