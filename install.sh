@@ -2,7 +2,7 @@
 
 set -e
 
-export REPO=${HOME:=~}/.dotfiles
+DOT_REPO=${HOME:=~}/.dotfiles
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
   echo "😬 This dotfiles only support Mac OS X"
@@ -45,11 +45,11 @@ if ! type pyenv &> /dev/null; then
   eval "$(pyenv init -)"
 fi
 
-if [ ! -d "$REPO" ]; then
+if [ ! -d "$DOT_REPO" ]; then
   echo "🌱 Install dotfiles"
 
   # Clone dotfiles repo
-  git clone --depth=1 https://github.com/tpai/dotfiles.git "$REPO"
+  git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT_REPO"
 
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
@@ -81,26 +81,26 @@ if [ ! -d "$REPO" ]; then
   $HOME/Library/Python/2.7/bin/pip install --user --upgrade pynvim # Install python client
 
   # Create zsh symlink
-  ln -nfs "$REPO/zsh/zshrc" "$HOME/.zshrc"
+  ln -nfs "$DOT_REPO/zsh/zshrc" "$HOME/.zshrc"
 
   # Install fonts
   echo "📜 Copy fonts into system"
-  cp -rf $REPO/fonts/* ~/Library/Fonts
+  cp -rf $DOT_REPO/fonts/* ~/Library/Fonts
 
   # Create coc settings
-  cp $REPO/vim/settings/coc-settings.json $REPO/vim/coc-settings.json
+  cp $DOT_REPO/vim/settings/coc-settings.json $DOT_REPO/vim/coc-settings.json
 
   # Create symlinks
   echo "🔗 Create symlinks"
-  ln -nfs "$REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
-  ln -nfs "$REPO/vim"                   "$HOME/.vim"
-  ln -nfs "$REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
-  ln -nfs "$REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
-  ln -nfs "$REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
-  ln -nfs "$REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
-  ln -nfs "$REPO/tmux"                  "$HOME/.tmux"
-  ln -nfs "$REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
-  ln -nfs "$REPO/.gitconfig"            "$HOME/.gitconfig"
+  ln -nfs "$DOT_REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
+  ln -nfs "$DOT_REPO/vim"                   "$HOME/.vim"
+  ln -nfs "$DOT_REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
+  ln -nfs "$DOT_REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
+  ln -nfs "$DOT_REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
+  ln -nfs "$DOT_REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
+  ln -nfs "$DOT_REPO/tmux"                  "$HOME/.tmux"
+  ln -nfs "$DOT_REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
+  ln -nfs "$DOT_REPO/.gitconfig"            "$HOME/.gitconfig"
 
   # Install sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
@@ -127,7 +127,7 @@ else
   sh $ZSH/tools/upgrade.sh
 
   # Reset zsh symlink
-  ln -nfs "$REPO/zsh/zshrc" ".zshrc"
+  ln -nfs "$DOT_REPO/zsh/zshrc" ".zshrc"
 
   # Upgrade packages
   echo "📦 Upgrade packages"
@@ -141,15 +141,15 @@ else
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
-  ln -nfs "$REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
-  ln -nfs "$REPO/vim"                   "$HOME/.vim"
-  ln -nfs "$REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
-  ln -nfs "$REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
-  ln -nfs "$REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
-  ln -nfs "$REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
-  ln -nfs "$REPO/tmux"                  "$HOME/.tmux"
-  ln -nfs "$REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
-  ln -nfs "$REPO/.gitconfig"            "$HOME/.gitconfig"
+  ln -nfs "$DOT_REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
+  ln -nfs "$DOT_REPO/vim"                   "$HOME/.vim"
+  ln -nfs "$DOT_REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
+  ln -nfs "$DOT_REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
+  ln -nfs "$DOT_REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
+  ln -nfs "$DOT_REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
+  ln -nfs "$DOT_REPO/tmux"                  "$HOME/.tmux"
+  ln -nfs "$DOT_REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
+  ln -nfs "$DOT_REPO/.gitconfig"            "$HOME/.gitconfig"
 
   # Reset sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then

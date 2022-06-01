@@ -26,4 +26,4 @@ else
   echo "iCloud sync folder does not exist."
 fi
 
-rm -rf $REPO
+rm -rf $DOT_REPO
