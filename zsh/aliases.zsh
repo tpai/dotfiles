@@ -16,9 +16,9 @@ alias cdb='cd -'
 alias cls='clear;ls'
 
 # Show human friendly numbers and colors
-alias olddf=df
+alias olddf="/usr/bin/env df"
 alias df='duf'
-alias olddu=du
+alias olddu="/usr/bin/env du"
 alias du='olddu -h -d 2'
 
 if [[ $platform == 'linux' ]]; then
@@ -68,23 +68,23 @@ alias got='go test'
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
 
 # bat
-alias oldcat=cat
+alias oldcat="/usr/bin/env cat"
 alias cat=bat
 
 # fd
-alias oldfind=find
+alias oldfind="/usr/bin/env find"
 alias find=fd
 
 # ping
-alias oldping=ping
+alias oldping="/usr/bin/env ping"
 alias ping="prettyping --nolegend"
 
 # top
-alias oldtop=top
+alias oldtop="/usr/bin/env top"
 alias top="sudo htop" # use sudo to fix high sierra bug
 
 # tldr
-alias oldman=man
+alias oldman="/usr/bin/env man"
 alias man=tldr
 
 # k8s
