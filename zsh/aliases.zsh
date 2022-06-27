@@ -107,14 +107,3 @@ alias qup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull -
 
 # navigation
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
-
-# docker
-if [[ $(uname -m) == 'arm64' ]]; then
-  alias db='docker build'
-  alias dr='docker run'
-  alias dp='docker pull'
-else
-  alias db='docker build --platform=linux/amd64'
-  alias dr='docker run --platform=linux/amd64'
-  alias dp='docker pull --platform=linux/amd64'
-fi

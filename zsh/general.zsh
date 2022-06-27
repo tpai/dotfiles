@@ -6,6 +6,7 @@ export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 if [[ $(arch) == 'arm64' ]]; then
   export PATH=/opt/homebrew/bin:$PATH
   export PATH=/opt/homebrew/sbin:$PATH
+  export DOCKER_DEFAULT_PLATFORM=linux/amd64
 fi
 
 # init pyenv
