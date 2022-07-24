@@ -43,7 +43,8 @@ Return to dust.
   * exa - ls
   * bat - cat
   * prettyping - ping
-  * htop - top
+  * glances - top
+  * ctop - ctop
   * tldr - man
   * duf - df
 * Language
@@ -144,13 +145,15 @@ The following keys are my most used commands.
 
 ### Console
 
-* `z` - cd to folder using fuzzy search (powered by `fzf`)
-* `ctrl+r` - fuzzy search used commands (powered by `fzf`)
-* `ping` - pretty ping (powered by `prettyping`)
-* `top` - awesome interactive process viewer (powered by `htop`)
-* `find` - better file search (powered by `fd`)
-* `ll` - list files in current folder with details (powered by `exa`)
-* `cat` - print beautified file content (powered by `bat`)
-* `jq` - parse json text (e.g. `echo '{"a": 1}' | jq .a`)
-* `tldr` - neat man page (e.g. `tldr ls`)
-* `wifi-password` - fetch wifi password of connected SSID
+* `z` - cd to folder using fuzzy search
+* `ctrl+r` - fuzzy search used commands
+* `ping` - pretty ping
+* `top` - awesome interactive process viewer
+* `ctop` - docker terminal UI
+* `find` - better file search
+* `ll` - list files in current folder with details
+* `cat` - print beautified file content
+* `jq` - json text parser (e.g. `echo '{"a": 1}' | jq .a`)
+* `man` - neat man page (e.g. `man ls`)
+* `http|https` - friendly HTTP request tool
+* `wifi-password` - retrieve connected wifi password

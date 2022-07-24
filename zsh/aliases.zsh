@@ -81,29 +81,27 @@ alias ping="prettyping --nolegend"
 
 # top
 alias oldtop="/usr/bin/env top"
-alias top="sudo htop" # use sudo to fix high sierra bug
+alias top="sudo glances" # use sudo to fix high sierra bug
 
 # tldr
 alias oldman="/usr/bin/env man"
 alias man=tldr
 
 # k8s
-alias k='kubectl'
 alias ka='kubectl apply -f'
-alias kconf='kubectl config view --minify'
-alias kconfset='kubectl config set-context --current'
-alias kd='kubectl describe'
-alias kdel='kubectl delete'
-alias kdelrs="kubectl get replicaset.apps | grep -E \"([0]{1}\s*){3}\" | awk '{print \"replicaset.apps/\"\$1;}' | xargs kubectl delete"
+alias kd='kubectl delete -f'
+alias kcl='kubectl cluster-info'
+alias kcf='kubectl config view --minify'
+alias kcfs='kubectl config set-context --current'
+alias ktop='kubectl top'
+alias ki='kubectl describe'
 alias kg='kubectl get'
 alias kl='kubectl logs'
 
-# list opened port
+# shortcut
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias port='if [ "$(uname)" = "Darwin" ]; then lsof -Pni4 | grep LISTEN; else netstat -tulpn | grep LISTEN; fi'
 
 # instant snippets
 alias q='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
 alias qup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
-
-# navigation
-alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
