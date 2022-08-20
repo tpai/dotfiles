@@ -2,7 +2,7 @@
 
 set -e
 
-DOT_REPO=${HOME:=~}/.dotfiles
+DOT=${HOME:=~}/.dotfiles
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
   echo "😬 This dotfiles only support Mac OS X"
@@ -46,11 +46,11 @@ if ! type pyenv &> /dev/null; then
   eval "$(pyenv init -)"
 fi
 
-if [ ! -d "$DOT_REPO" ]; then
+if [ ! -d "$DOT" ]; then
   echo "🌱 Install dotfiles"
 
   # Clone dotfiles repo
-  git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT_REPO"
+  git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT"
 
   # Install packages
   echo "📦 Install packages"
@@ -79,26 +79,26 @@ if [ ! -d "$DOT_REPO" ]; then
   $HOME/Library/Python/2.7/bin/pip install --user --upgrade pynvim # Install python client
 
   # Create zsh symlink
-  ln -nfs "$DOT_REPO/zsh/zshrc" "$HOME/.zshrc"
+  ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
 
   # Install fonts
   echo "📜 Copy fonts into system"
-  cp -rf $DOT_REPO/fonts/* ~/Library/Fonts
+  cp -rf $DOT/fonts/* ~/Library/Fonts
 
   # Create coc settings
-  cp $DOT_REPO/vim/settings/coc-settings.json $DOT_REPO/vim/coc-settings.json
+  cp $DOT/vim/settings/coc-settings.json $DOT/vim/coc-settings.json
 
   # Create symlinks
   echo "🔗 Create symlinks"
-  ln -nfs "$DOT_REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
-  ln -nfs "$DOT_REPO/vim"                   "$HOME/.vim"
-  ln -nfs "$DOT_REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
-  ln -nfs "$DOT_REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
-  ln -nfs "$DOT_REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
-  ln -nfs "$DOT_REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
-  ln -nfs "$DOT_REPO/tmux"                  "$HOME/.tmux"
-  ln -nfs "$DOT_REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
-  ln -nfs "$DOT_REPO/.gitconfig"            "$HOME/.gitconfig"
+  ln -nfs "$DOT/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
+  ln -nfs "$DOT/vim"                   "$HOME/.vim"
+  ln -nfs "$DOT/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
+  ln -nfs "$DOT/vim/vimrc"             "$HOME/.config/nvim/init.vim"
+  ln -nfs "$DOT/vim/vimrc.before"      "$HOME/.vimrc.before"
+  ln -nfs "$DOT/vim/vimrc.after"       "$HOME/.vimrc.after"
+  ln -nfs "$DOT/tmux"                  "$HOME/.tmux"
+  ln -nfs "$DOT/tmux/tmux.conf"        "$HOME/.tmux.conf"
+  ln -nfs "$DOT/.gitconfig"            "$HOME/.gitconfig"
 
   # Install sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
@@ -125,7 +125,7 @@ else
   git stash pop
 
   # Reset zsh symlink
-  ln -nfs "$DOT_REPO/zsh/zshrc" ".zshrc"
+  ln -nfs "$DOT/zsh/zshrc" ".zshrc"
 
   # Upgrade packages
   echo "📦 Upgrade packages"
@@ -139,15 +139,15 @@ else
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
-  ln -nfs "$DOT_REPO/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
-  ln -nfs "$DOT_REPO/vim"                   "$HOME/.vim"
-  ln -nfs "$DOT_REPO/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
-  ln -nfs "$DOT_REPO/vim/vimrc"             "$HOME/.config/nvim/init.vim"
-  ln -nfs "$DOT_REPO/vim/vimrc.before"      "$HOME/.vimrc.before"
-  ln -nfs "$DOT_REPO/vim/vimrc.after"       "$HOME/.vimrc.after"
-  ln -nfs "$DOT_REPO/tmux"                  "$HOME/.tmux"
-  ln -nfs "$DOT_REPO/tmux/tmux.conf"        "$HOME/.tmux.conf"
-  ln -nfs "$DOT_REPO/.gitconfig"            "$HOME/.gitconfig"
+  ln -nfs "$DOT/vim/autoload/plug.vim" "$HOME/.local/share/nvim/site/autoload/plug.vim"
+  ln -nfs "$DOT/vim"                   "$HOME/.vim"
+  ln -nfs "$DOT/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
+  ln -nfs "$DOT/vim/vimrc"             "$HOME/.config/nvim/init.vim"
+  ln -nfs "$DOT/vim/vimrc.before"      "$HOME/.vimrc.before"
+  ln -nfs "$DOT/vim/vimrc.after"       "$HOME/.vimrc.after"
+  ln -nfs "$DOT/tmux"                  "$HOME/.tmux"
+  ln -nfs "$DOT/tmux/tmux.conf"        "$HOME/.tmux.conf"
+  ln -nfs "$DOT/.gitconfig"            "$HOME/.gitconfig"
 
   # Reset sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
