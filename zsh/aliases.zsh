@@ -105,8 +105,9 @@ alias kl='kubectl logs'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias port='if [ "$(uname)" = "Darwin" ]; then lsof -Pni4 | grep LISTEN; else netstat -tulpn | grep LISTEN; fi'
 alias cidr='if [ "$(uname)" = "Darwin" ]; then ifconfig | grep "inet "; else eval $(ipcalc -np `ifconfig eth0 | sed -n "s/inet addr:\([^ ]*\).*Mask:\([^ ]*\).*/\1 \2/p"`); echo $NETWORK/$PREFIX; fi'
-alias download='curl -LJO'
-alias call='curl -kv'
+alias dl='curl -LJO'
+alias call='curl -s'
+alias falo='curl -sSI -o /dev/null -L -D - '
 
 # instant snippets
 alias q='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
