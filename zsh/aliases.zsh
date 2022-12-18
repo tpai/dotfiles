@@ -89,7 +89,7 @@ alias man=tldr
 
 # k8s
 alias ka='kubectl apply -f'
-alias kd='kubectl delete -f'
+alias kdd='kubectl delete -f'
 alias kcl='kubectl cluster-info'
 alias kc='kubectl config'
 alias kcv='kubectl config view --minify'
