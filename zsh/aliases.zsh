@@ -19,7 +19,7 @@ alias cls='clear;ls'
 alias olddf="/usr/bin/env df"
 alias df='duf'
 alias olddu="/usr/bin/env du"
-alias du='olddu -h -d 2'
+alias du='olddu -h -d 2 | sort --reverse -h'
 
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
