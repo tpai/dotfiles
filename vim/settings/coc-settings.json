@@ -5,7 +5,8 @@
     "typescript": ["javascript"]
   },
   "yaml.schemas": {
-    "kubernetes": "/*.yaml"
+    "https://json.schemastore.org/chart.json": "/Chart.yaml",
+    "kubernetes": ["/*.yaml", "/*.yml"]
   },
   "python.pythonPath": "python"
 }
