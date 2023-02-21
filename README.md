@@ -14,7 +14,6 @@ This dotfiles is built for JS and Typescript development.
 
 3. `Profiles > Text > Change Font > Family > DroidSansMono Nerd Font`
 
-
 ### Update
 
 ```sh
@@ -134,7 +133,8 @@ The following keys are my most used commands.
   - `,ma` - multiple cursor select all words
   - `gc` - comment / uncomment
   - `<C-//>` - comment / uncomment
-  - `:%s/old/new/g` - search and replace in current file
+  - `:%s/old/new/g` - search and replace for the current file
+  - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and repalce for all files
   - `//` - clear search result
   - `%` - jump to closing tag
   - `:e ++ff=dos` - convert `^M` to unix line ending
