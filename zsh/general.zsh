@@ -15,3 +15,10 @@ eval "$(pyenv init -)"
 # history
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
+
+# hey brew don't mess up with me
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+
+# git
+export LANG=en_US.UTF-8
