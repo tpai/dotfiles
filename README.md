@@ -172,3 +172,4 @@ The following keys are my most used commands.
 - `icloud` - navigate to iCloud directory
 - `q` - query from instant snippets
 - `qup` - update instant snippets repo
+- `exiftool` - print image metadata
