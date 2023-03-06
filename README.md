@@ -109,12 +109,16 @@ The following keys are my most used commands.
 - NERDtree
   - `<C-\>` - toggle NERDTree
   - `?` - show help
+- File
+  - `:new` - create new file
 - File Navigation
   - `,t` - in current folder (powered by `ctrlp`)
   - `,b` - in buffer (powered by `fzf`)
   - `,ag` - using fuzzy search (powered by `fzf`)
     - `<Tab>` - select files which needs to change
     - `:cfdo %s/old/new/g | update` - search, replace and update multiple files
+- Diff
+  - `:windo diffthis` - diff check for active files
 - Git
   - `gva` - browse changes of commits of all files
   - `gvc` - browse changes of commits of current file
