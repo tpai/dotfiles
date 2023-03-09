@@ -1,12 +1,3 @@
-# Get operating system
-platform='unknown'
-unamestr=$(uname)
-if [[ $unamestr == 'Linux' ]]; then
-  platform='linux'
-elif [[ $unamestr == 'Darwin' ]]; then
-  platform='darwin'
-fi
-
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "
@@ -21,13 +12,8 @@ alias df='duf'
 alias olddu="/usr/bin/env du"
 alias du='olddu -h -d 2 | sort --reverse -h'
 
-if [[ $platform == 'linux' ]]; then
-  alias ll='ls -alh --color=auto'
-  alias ls='ls --color=auto'
-elif [[ $platform == 'darwin' ]]; then
-  alias ll='exa -alg --git'
-  alias ls='exa -s ext'
-fi
+alias ll='exa -alg --git'
+alias ls='exa -s ext'
 
 # Vim Aliases
 if type nvim &> /dev/null; then
