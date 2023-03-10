@@ -23,5 +23,5 @@ export HOMEBREW_NO_INSTALL_CLEANUP=1
 # git
 export LANG=en_US.UTF-8
 
-# openai
+# OpenAI
 export OPENAI_API_KEY=
