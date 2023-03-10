@@ -22,7 +22,7 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Execute eslint autofix
-nmap <leader>f :CocCommand eslint.executeAutofix<cr>
+nmap <leader>l :CocCommand eslint.executeAutofix<cr>
 
 " Navigate diagnostics
 nmap <silent> ek <Plug>(coc-diagnostic-prev)
