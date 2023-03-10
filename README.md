@@ -1,6 +1,6 @@
 # Dotfiles
 
-This dotfiles is built for JS and Typescript development.
+This repo is to make a better terminal and IDE for me.
 
 ## Installation
 
@@ -20,7 +20,7 @@ This dotfiles is built for JS and Typescript development.
 ./install.sh
 ```
 
-Update required brew formula, vim plugins and oh-my-zsh.
+Update required brew formulas, vim plugins and oh-my-zsh.
 
 ### Uninstall
 
