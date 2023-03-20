@@ -87,7 +87,6 @@ The following keys are my most used commands.
 - `<C-a d>` - detach session
 - `<C-a \<>` - open status line menu
 - `<C-a \>>` - open pane menu
-- `<C-a :setw synchronize-panes on>` - all panes share the same input
 - `<C-a c>` - create window
 - `<C-a n>` - next window
 - `<C-a p>` - previous window
@@ -101,6 +100,8 @@ The following keys are my most used commands.
 
 - Panes
   - `<C-h,j,k,l>` - navigate between panes
+  - `<C-a e>` - enable sync mode for all panes
+  - `<C-a E>` - disable sync mode
   - `vv` - vertical split
   - `ss` - horizontal split
 - Floating Window
