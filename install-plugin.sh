@@ -34,12 +34,12 @@ case "$1" in
     ;;
   go)
     if ! which go &> /dev/null; then
-      brew install go
+      bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+      gvm install go1.20.2
+      gvm use go1.20.2
 
       vim -c 'CocInstall coc-go | PlugInstall'
     else
-      brew upgrade go
-
       vim -c 'CocUpdate | PlugUpdate'
     fi
     ;;

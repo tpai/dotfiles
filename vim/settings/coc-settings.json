@@ -8,5 +8,8 @@
     "https://json.schemastore.org/chart.json": "/Chart.yaml",
     "kubernetes": ["/*.yaml", "/*.yml"]
   },
-  "python.pythonPath": "python"
+  "python.pythonPath": "python",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go"
+  ]
 }
