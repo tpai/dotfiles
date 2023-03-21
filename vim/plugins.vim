@@ -35,7 +35,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'ap/vim-css-color'
 Plug 'tomlion/vim-solidity'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'hashivim/vim-hashicorp-tools', { 'do': 'sh ./assemble.sh' }
 
 " Editing

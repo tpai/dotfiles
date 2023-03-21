@@ -36,13 +36,11 @@ case "$1" in
     if ! which go &> /dev/null; then
       brew install go
 
-      toggle_plugin 'fatih/vim-go' on
-      vim -c 'PlugInstall' -c q! -c q!
+      vim -c 'CocInstall coc-go | PlugInstall'
     else
       brew upgrade go
 
-      toggle_plugin 'fatih/vim-go' on
-      vim -c 'PlugUpdate' -c q! -c q!
+      vim -c 'CocUpdate | PlugUpdate'
     fi
     ;;
   snip)
