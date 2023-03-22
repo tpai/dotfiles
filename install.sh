@@ -56,10 +56,10 @@ if [ ! -d "$DOT" ]; then
   echo "📦 Install packages"
   # Misc
   brew install zsh tmux \
-               ripgrep jq fasd fd duf \
-               exa bat prettyping tldr mas httpie k9s \
-               ctop glances neofetch onefetch wifi-password \
-               reattach-to-user-namespace watchman cmake
+    ripgrep jq fasd fd duf \
+    exa bat prettyping tldr mas httpie k9s \
+    ctop glances neofetch onefetch wifi-password \
+    reattach-to-user-namespace watchman cmake
   brew install yarn --ignore-dependencies
 
   # Install from App Store
@@ -104,7 +104,7 @@ if [ ! -d "$DOT" ]; then
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
     mv $HOME/.ssh $HOME/.ssh-old || true
     mv $HOME/.kube $HOME/.kube-old || true
-    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh"  "$HOME/.ssh"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh" "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
   else
     echo "iCloud sync folder does not exist."
@@ -130,10 +130,10 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-               ripgrep jq fasd fd duf \
-               exa bat prettyping tldr mas httpie k9s \
-               ctop glances neofetch onefetch wifi-password \
-               reattach-to-user-namespace watchman cmake
+    ripgrep jq fasd fd duf \
+    exa bat prettyping tldr mas httpie k9s \
+    ctop glances neofetch onefetch wifi-password \
+    reattach-to-user-namespace watchman cmake
   brew upgrade yarn
   brew upgrade neovim
 
@@ -153,7 +153,7 @@ else
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
     rm -rf "$HOME/.ssh"
     rm -rf "$HOME/.kube"
-    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh"  "$HOME/.ssh"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh" "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
   else
     echo "iCloud sync folder does not exist."

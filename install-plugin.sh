@@ -4,8 +4,7 @@ set -e
 
 DOT=${HOME:=~}/.dotfiles
 
-function toggle_plugin
-{
+function toggle_plugin {
   PLUGIN=$(echo $1 | sed -e 's/\//\\\//g')
   if [ "$2" = "on" ]; then
     sed -i.bak -e "s/\" Plug '$PLUGIN'/Plug '$PLUGIN'/g" $DOT/vim/plugins.vim
