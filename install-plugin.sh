@@ -23,12 +23,12 @@ case "$1" in
       brew install hashicorp/tap/terraform
 
       toggle_plugin 'hashivim/vim-hashicorp-tools' on
-      vim -c 'PlugInstall' -c q! -c q!
+      vim -c 'PlugInstall'
     else
       brew upgrade hashicorp/tap/terraform
 
       toggle_plugin 'hashivim/vim-hashicorp-tools' on
-      vim -c 'PlugUpdate' -c q! -c q!
+      vim -c 'PlugUpdate'
     fi
     ;;
   go)
