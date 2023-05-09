@@ -4,8 +4,7 @@ export KUBECONFIG=/Users/$USER/.kube/config:$(echo `ls -xm ~/.kube/*.yaml` | sed
 
 # M1
 if [[ $(arch) == 'arm64' ]]; then
-  export PATH=/opt/homebrew/bin:$PATH
-  export PATH=/opt/homebrew/sbin:$PATH
+  export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
   export DOCKER_DEFAULT_PLATFORM=linux/amd64
 fi
 
@@ -22,6 +21,10 @@ export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 # git
 export LANG=en_US.UTF-8
+
+# go
+export PATH=$PATH:/Users/$USER/.gvm/scripts/gvm
+export GO111MODULE=on
 
 # OpenAI
 export OPENAI_API_KEY=
