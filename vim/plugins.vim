@@ -50,6 +50,6 @@ Plug 'Oldenborg/vim-px-to-rem'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescript'], 'do': 'make install' }
 Plug 'nicwest/vim-camelsnek'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'aduros/ai.vim'
+Plug 'madox2/vim-ai'
 
 call plug#end()
