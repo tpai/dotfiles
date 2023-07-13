@@ -51,5 +51,6 @@ Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescri
 Plug 'nicwest/vim-camelsnek'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'madox2/vim-ai'
+Plug 'joshuavial/aider.nvim'
 
 call plug#end()
