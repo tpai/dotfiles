@@ -1,6 +1,13 @@
 # k8s
 export KUBE_EDITOR=vim
-export KUBECONFIG=/Users/$USER/.kube/config #:$(echo `ls -xm ~/.kube/*.yaml` | sed 's/ /:/g')
+
+
+kubeconfig_files=$(ls -xm $HOME/.kube/*.kubeconfig 2>/dev/null)
+if [[ -n $kubeconfig_files ]]; then
+  export KUBECONFIG=/Users/$USER/.kube/config:$(echo `ls -xm ~/.kube/*.kubeconfig` | sed 's/ /:/g')
+else
+  export KUBECONFIG=/Users/$USER/.kube/config
+fi
 
 # M1
 if [[ $(arch) == 'arm64' ]]; then
