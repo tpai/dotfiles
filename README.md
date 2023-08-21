@@ -48,7 +48,7 @@ Return to dust.
   - tmux
 - Search
   - ripgrep - code fuzzy search
-  - fasd - folder search and navigation
+  - zsh-z - folder navigation
   - fd - file and folder search
 - Better Command
   - exa - ls
