@@ -56,7 +56,7 @@ if [ ! -d "$DOT" ]; then
   echo "📦 Install packages"
   # Misc
   brew install zsh tmux \
-    ripgrep jq fasd fd duf \
+    ripgrep jq zoxide fd duf \
     exa bat prettyping tldr mas httpie k9s \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
@@ -130,7 +130,7 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-    ripgrep jq fasd fd duf \
+    ripgrep jq zoxide fd duf \
     exa bat prettyping tldr mas httpie k9s \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
