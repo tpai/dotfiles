@@ -33,5 +33,17 @@ export LANG=en_US.UTF-8
 export PATH=$PATH:/Users/$USER/.gvm/scripts/gvm
 export GO111MODULE=on
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+alias python="$(pyenv which python)"
+alias pip="$(pyenv which pip)"
+
 # OpenAI
 export OPENAI_API_KEY=
