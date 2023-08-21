@@ -56,15 +56,15 @@ if [ ! -d "$DOT" ]; then
   echo "📦 Install packages"
   # Misc
   brew install zsh tmux \
-    ripgrep jq zoxide fd duf \
+    ripgrep jq zoxide raycast fd duf \
     exa bat prettyping tldr mas httpie k9s \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
   brew install yarn --ignore-dependencies
 
   # Install from App Store
-  # Alfred, Magnet, Bitwarden
-  mas install 405843582 441258766 1352778147
+  # Magnet, Bitwarden
+  mas install 441258766 1352778147
   # Telegram, LINE
   mas install 539883307 747648890
 
@@ -130,7 +130,7 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-    ripgrep jq zoxide fd duf \
+    ripgrep jq zoxide raycast fd duf \
     exa bat prettyping tldr mas httpie k9s \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
