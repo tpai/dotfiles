@@ -74,10 +74,8 @@ if [ ! -d "$DOT" ]; then
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
 
-  # Install python2 pip
-  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-  python2 get-pip.py && rm -rf get-pip.py
-  $HOME/Library/Python/2.7/bin/pip install --user --upgrade pynvim # Install python client
+  # Install python client
+  pip3 install --user --upgrade pynvim
 
   # Create zsh symlink
   ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
