@@ -94,4 +94,4 @@ set includeexpr=LoadMainNodeModule(v:fname)
 set fileencodings=utf-8,gb18030,gbk,gb2312,latin1,ucs-bom,default
 
 " Fix Python3 support error caused by vim-ai
-let g:python3_host_prog = '/Users/tony.pai/.pyenv/versions/3.12.0rc1/bin/python'
+let g:python3_host_prog = '/Users/tony.pai/.pyenv/versions/3.7.17/bin/python'

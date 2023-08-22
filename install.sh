@@ -39,9 +39,9 @@ fi
 if ! type pyenv &> /dev/null; then
   echo "🐍 Install pyenv"
   brew install pyenv
-  LATEST_PYTHON=$(pyenv install --list | grep -v - | grep -v b | grep -v mini | tail -1)
-  pyenv install $LATEST_PYTHON
-  pyenv global $LATEST_PYTHON
+  PYTHON_VERSION=3.7.17
+  pyenv install $PYTHON_VERSION
+  pyenv global $PYTHON_VERSION
   pyenv versions
   # Init pyenv manually
   eval "$(pyenv init -)"
