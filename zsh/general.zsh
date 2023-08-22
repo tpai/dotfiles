@@ -15,9 +15,6 @@ if [[ $(arch) == 'arm64' ]]; then
   export DOCKER_DEFAULT_PLATFORM=linux/amd64
 fi
 
-# init pyenv
-eval "$(pyenv init -)"
-
 # history
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
