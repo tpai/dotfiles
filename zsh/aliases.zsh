@@ -96,5 +96,5 @@ alias call='curl -s'
 alias falo='curl -sSI -o /dev/null -L -D - '
 
 # instant snippets
-alias q='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
-alias qup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
+alias is='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
+alias isup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'

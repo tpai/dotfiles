@@ -42,7 +42,7 @@ case "$1" in
       vim -c 'CocUpdate | PlugUpdate'
     fi
     ;;
-  q)
+  is)
     git clone git@github.com:tpai/instant-snippets.git "${HOME:=~}/.local/share/instant-snippets"
     ;;
 esac
