@@ -17,6 +17,17 @@ case "$1" in
   foo)
     echo bar
     ;;
+  ai)
+    if ! which aider &> /dev/null; then
+      pip install aider-chat
+    else
+      pip install -U aider-chat
+    fi
+
+    if ! which q &> /dev/null; then
+      curl https://raw.githubusercontent.com/ibigio/shell-ai/main/install.sh | bash
+    fi
+    ;;
   tf)
     if ! which terraform &> /dev/null; then
       brew tap hashicorp/tap
