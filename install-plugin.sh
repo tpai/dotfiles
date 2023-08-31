@@ -25,7 +25,7 @@ case "$1" in
     fi
 
     if ! which q &> /dev/null; then
-      curl https://raw.githubusercontent.com/ibigio/shell-ai/main/install.sh | bash
+      curl https://raw.githubusercontent.com/ibigio/shell-ai/main/install.sh | sudo bash
     fi
     ;;
   tf)
