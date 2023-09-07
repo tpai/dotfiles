@@ -75,7 +75,7 @@ if [ ! -d "$DOT" ]; then
   mkdir -p ~/.config/nvim/
 
   # Install python client
-  pip3 install --user --upgrade pynvim
+  pip install --user --upgrade pynvim
 
   # Create zsh symlink
   ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"

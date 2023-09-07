@@ -93,5 +93,6 @@ set includeexpr=LoadMainNodeModule(v:fname)
 " File encoding
 set fileencodings=utf-8,gb18030,gbk,gb2312,latin1,ucs-bom,default
 
-" Fix Python3 support error caused by vim-ai
+" Add Python3 support for neovim
+let g:python_host_prog = substitute(system('which python'), '\n\+$', '', '')
 let g:python3_host_prog = substitute(system('which python3'), '\n\+$', '', '')
