@@ -58,7 +58,7 @@ if [ ! -d "$DOT" ]; then
   # Misc
   brew install zsh tmux \
     ripgrep jq zoxide raycast fd duf \
-    exa bat prettyping tldr mas httpie k9s \
+    exa bat prettyping tldr mas httpie \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
   brew install yarn --ignore-dependencies
@@ -130,7 +130,7 @@ else
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
     ripgrep jq zoxide raycast fd duf \
-    exa bat prettyping tldr mas httpie k9s \
+    exa bat prettyping tldr mas httpie \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
   brew upgrade yarn

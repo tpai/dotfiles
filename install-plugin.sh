@@ -53,6 +53,39 @@ case "$1" in
       vim -c 'CocUpdate | PlugUpdate'
     fi
     ;;
+  k8s)
+    brew install k9s helm
+    echo 'plugin:
+  nodeShell:
+    shortCut: s
+    confirm: false
+    description: Shell
+    scopes:
+      - node
+    command: kubectl
+    background: false
+    args:
+      - node-shell
+      - $NAME
+  debug:
+    shortCut: Shift-D
+    confirm: false
+    description: Debug
+    scopes:
+    - containers
+    command: kubectl
+    background: false
+    args:
+    - debug
+    - -it
+    - -n
+    - $NAMESPACE
+    - $POD
+    - --target
+    - $NAME
+    - --image
+    - busybox:1.35.0' > $HOME/Library/Application\ Support/k9s/plugin.yml
+    ;;
   is)
     git clone git@github.com:tpai/instant-snippets.git "${HOME:=~}/.local/share/instant-snippets"
     ;;
