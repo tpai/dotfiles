@@ -67,10 +67,28 @@ case "$1" in
     args:
       - node-shell
       - $NAME
+  copyDebug:
+    shortCut: Shift-Y
+    confirm: false
+    description: Debug(--copy-to)
+    scopes:
+    - containers
+    command: kubectl
+    background: false
+    args:
+    - debug
+    - -it
+    - -n
+    - $NAMESPACE
+    - $POD
+    - --share-processes
+    - --image
+    - busybox:1.35.0
+    - --copy-to=copy-debugger
   debug:
     shortCut: Shift-D
     confirm: false
-    description: Debug
+    description: Debug(--target)
     scopes:
     - containers
     command: kubectl
