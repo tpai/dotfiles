@@ -74,6 +74,9 @@ if [ ! -d "$DOT" ]; then
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
 
+  # Set git default editor to neovim
+  git config --global core.editor "nvim"
+
   # Install python client
   pip install --user --upgrade pynvim
 
