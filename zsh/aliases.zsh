@@ -98,3 +98,4 @@ alias falo='curl -sSI -o /dev/null -L -D - '
 # instant snippets
 alias is='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
 alias isup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
+alias isop='cd ~/.local/share/instant-snippets'
