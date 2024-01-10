@@ -31,12 +31,12 @@ case "$1" in
   tf)
     if ! which terraform &> /dev/null; then
       brew tap hashicorp/tap
-      brew install hashicorp/tap/terraform
+      brew install opentofu hashicorp/tap/terraform
 
       toggle_plugin 'hashivim/vim-hashicorp-tools' on
       vim -c 'PlugInstall'
     else
-      brew upgrade hashicorp/tap/terraform
+      brew upgrade opentofu hashicorp/tap/terraform
 
       toggle_plugin 'hashivim/vim-hashicorp-tools' on
       vim -c 'PlugUpdate'
