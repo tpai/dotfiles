@@ -55,7 +55,7 @@ case "$1" in
     ;;
   k8s)
     brew install k9s helm
-    echo 'plugin:
+    echo 'plugins:
   nodeShell:
     shortCut: s
     confirm: false
@@ -73,36 +73,22 @@ case "$1" in
     description: Debug(--copy-to)
     scopes:
     - containers
-    command: kubectl
+    command: bash
     background: false
     args:
-    - debug
-    - -it
-    - -n
-    - $NAMESPACE
-    - $POD
-    - --share-processes
-    - --image
-    - busybox:1.35.0
-    - --copy-to=copy-debugger
+    - -c
+    - "kubectl debug -it -n=$NAMESPACE $POD --share-processes --image busybox:1.35.0 --copy-to=copy-debugger"
   debug:
     shortCut: Shift-D
     confirm: false
     description: Debug(--target)
     scopes:
     - containers
-    command: kubectl
+    command: bash
     background: false
     args:
-    - debug
-    - -it
-    - -n
-    - $NAMESPACE
-    - $POD
-    - --target
-    - $NAME
-    - --image
-    - busybox:1.35.0' > $HOME/Library/Application\ Support/k9s/plugin.yml
+    - -c
+    - "kubectl debug -it -n $NAMESPACE $POD --target $NAME --image busybox:1.35.0"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
     ;;
   is)
     git clone git@github.com:tpai/instant-snippets.git "${HOME:=~}/.local/share/instant-snippets"
