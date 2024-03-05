@@ -44,9 +44,13 @@ case "$1" in
     ;;
   go)
     if ! which go &> /dev/null; then
-      bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-      gvm install go1.20.2
-      gvm use go1.20.2
+      curl -L https://go.dev/dl/go1.22.0.darwin-arm64.tar.gz | tar zx
+      sudo mv go ~
+      export GOROOT=$HOME/go
+      export GOPATH=$HOME/.go
+      echo "export GOROOT=$HOME/go" >> ~/.zshrc
+      echo "export GOPATH=$HOME/.go" >> ~/.zshrc
+      go version
 
       vim -c 'CocInstall coc-go | PlugInstall'
     else
