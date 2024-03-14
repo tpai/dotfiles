@@ -81,7 +81,7 @@ case "$1" in
     background: false
     args:
     - -c
-    - "kubectl debug -it -n=$NAMESPACE $POD --share-processes --image busybox:1.35.0 --copy-to=copy-debugger"
+    - "kubectl debug -it -n=$NAMESPACE $POD --share-processes --image busybox:1.36 --copy-to=copy-debugger"
   debug:
     shortCut: Shift-D
     confirm: false
