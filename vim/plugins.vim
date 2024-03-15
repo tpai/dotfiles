@@ -38,7 +38,7 @@ Plug 'tomlion/vim-solidity'
 " Plug 'hashivim/vim-hashicorp-tools', { 'do': 'sh ./assemble.sh' }
 
 " Editing
-Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tabnine coc-tsserver coc-eslint coc-vetur coc-stylelint coc-markdownlint coc-json coc-html coc-css coc-sh coc-pyright' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release', 'do': ':CocInstall coc-tabnine coc-tsserver coc-eslint coc-vetur coc-stylelint coc-json coc-html coc-css coc-sh coc-pyright' }
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 Plug 'tpai/coc-yaml',  {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpai/vim-prettier', { 'do': 'yarn install --frozen-lockfile', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown', 'vue', 'yaml', 'html', 'sh', 'conf'] }
@@ -51,7 +51,5 @@ Plug 'Oldenborg/vim-px-to-rem'
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescript'], 'do': 'make install' }
 Plug 'nicwest/vim-camelsnek'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'madox2/vim-ai'
-Plug 'joshuavial/aider.nvim'
 
 call plug#end()
