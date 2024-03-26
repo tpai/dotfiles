@@ -36,9 +36,15 @@ set breakindent
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
+" length of an actual \t character:
 set tabstop=2
+" length to use when shifting text (eg. <<, >> and == commands)
+" (0 for ‘tabstop’):
+set shiftwidth=0
+" length to use when editing text (eg. TAB and BS keys)
+" (0 for ‘tabstop’, -1 for ‘shiftwidth’):
+set softtabstop=-1
+" When 'expandtab' is set, indenting is always done using space characters only.
 set expandtab
 
 filetype plugin on
