@@ -61,6 +61,7 @@ if [ ! -d "$DOT" ]; then
     exa bat prettyping tldr mas httpie \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
+  brew install --cask fork keka battery
   brew install yarn --ignore-dependencies
 
   # Install from App Store
@@ -136,6 +137,7 @@ else
     exa bat prettyping tldr mas httpie \
     ctop glances neofetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
+  brew upgrade --cask fork keka battery
   brew upgrade yarn
   brew upgrade neovim
 
