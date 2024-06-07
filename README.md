@@ -1,6 +1,6 @@
 # Dotfiles
 
-This repo is to make a better terminal and IDE for me.
+The purpose of this repository is to enhance my terminal and IDE setup for improved productivity.
 
 ## Installation
 
