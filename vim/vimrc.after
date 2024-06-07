@@ -76,6 +76,10 @@ set hidden                         " Buffers can exist in the background without
 set visualbell                     " No sounds
 set autoread                       " Reload files changed outside vim
 
+" Tab shortcuts
+nnoremap <silent> <C-t>n :tabnext<cr>
+nnoremap <silent> <C-t>p :tabprevious<cr>
+
 " Auto close preview window when enter insert mode
 autocmd InsertEnter * if pumvisible() == 0|pclose|endif
 
