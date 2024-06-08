@@ -1,5 +1,3 @@
-so ~/.vimrc.before
-
 so ~/.vim/plugins.lua
 so ~/.vim/settings.vim
 

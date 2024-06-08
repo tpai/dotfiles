@@ -76,29 +76,8 @@ set hidden                         " Buffers can exist in the background without
 set visualbell                     " No sounds
 set autoread                       " Reload files changed outside vim
 
-" Tab shortcuts
-nnoremap <silent> <C-t>n :tabnext<cr>
-nnoremap <silent> <C-t>p :tabprevious<cr>
-
 " Auto close preview window when enter insert mode
 autocmd InsertEnter * if pumvisible() == 0|pclose|endif
-
-" Resolve path when using open file under cursor
-set path=.,src
-set suffixesadd=.js,.jsx
-
-function! LoadMainNodeModule(fname)
-  let nodeModules = "./node_modules/"
-  let packageJsonPath = nodeModules . a:fname . "/package.json"
-
-  if filereadable(packageJsonPath)
-    return nodeModules . a:fname . "/" . json_decode(join(readfile(packageJsonPath))).main
-  else
-    return nodeModules . a:fname
-  endif
-endfunction
-
-set includeexpr=LoadMainNodeModule(v:fname)
 
 " File encoding
 set fileencodings=utf-8,gb18030,gbk,gb2312,latin1,ucs-bom,default
@@ -106,3 +85,9 @@ set fileencodings=utf-8,gb18030,gbk,gb2312,latin1,ucs-bom,default
 " Add Python3 support for neovim
 let g:python_host_prog = substitute(system('which python'), '\n\+$', '', '')
 let g:python3_host_prog = substitute(system('which python3'), '\n\+$', '', '')
+
+" Disable legacy VI support
+set nocompatible
+
+" Default setting for working on multiple files
+set hidden
