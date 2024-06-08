@@ -161,20 +161,20 @@ The following keys are my most used commands.
 
 ### Console
 
-- `z` - cd to folder using fuzzy search
-- `ctrl+r` - fuzzy search used commands
-- `ping` - pretty ping
+- `z` - cd to a folder using fuzzy search
+- `ctrl+r` - fuzzy search for used commands
+- `ping` - display pretty ping
 - `top` - awesome interactive process viewer
 - `ctop` - docker terminal UI
-- `find` - better file search
-- `l` - list files in current folder with details
-- `cat` - print beautified file content
-- `jq` - json text parser (e.g. `echo '{"a": 1}' | jq .a`)
-- `man` - neat man page (e.g. `man ls`)
+- `find` - improved file search
+- `l` - list files in the current folder with details
+- `cat` - print beautified file contents
+- `jq` - JSON text parser (e.g. `echo '{"a": 1}' | jq .a`)
+- `man` - neat man pages (e.g. `man ls`)
 - `http|https` - friendly HTTP request tool
-- `wifi-password` - retrieve connected wifi password
+- `wifi-password` - retrieve the connected WiFi password
 - `port` - list listening ports
-- `icloud` - navigate to iCloud directory
+- `icloud` - navigate to the iCloud directory
 - `q` - query from instant snippets
-- `qup` - update instant snippets repo
+- `qup` - update instant snippets repository
 - `exiftool` - print image metadata
