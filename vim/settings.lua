@@ -13,4 +13,19 @@ local config = {
 		end,
   }
 }
+
 require('gp').setup(config)
+
+-- github/copilot
+vim.cmd [[
+  augroup copilot_disable
+    autocmd!
+    autocmd VimEnter * lua DisableCopilot()
+  augroup END
+]]
+
+function DisableCopilot()
+    if vim.fn.exists(':Copilot') == 2 then
+        vim.cmd('Copilot disable')
+    end
+end

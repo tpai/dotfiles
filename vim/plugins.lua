@@ -53,6 +53,7 @@ Plug ('Oldenborg/vim-px-to-rem')
 Plug ('heavenshell/vim-jsdoc', { ['for'] = {'javascript', 'javascript.jsx','typescript'}, ['do'] = 'make install' })
 Plug ('nicwest/vim-camelsnek')
 Plug ('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+Plug ('github/copilot.vim')
 Plug ('robitx/gp.nvim')
 
 vim.call('plug#end')
