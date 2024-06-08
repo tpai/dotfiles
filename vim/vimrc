@@ -1,4 +1,9 @@
+" Source vim plugins and settings
 so ~/.vim/plugins.lua
+so ~/.vim/settings.lua
+
+" Source Vim script settings
 so ~/.vim/settings.vim
 
+" Source additional Vim configurations
 so ~/.vimrc.after

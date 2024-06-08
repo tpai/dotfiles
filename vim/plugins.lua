@@ -56,5 +56,3 @@ Plug ('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
 Plug ('robitx/gp.nvim')
 
 vim.call('plug#end')
-
-require('gp').setup()

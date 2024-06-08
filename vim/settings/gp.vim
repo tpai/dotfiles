@@ -1,11 +1,11 @@
-" normal mode: open a chat
-nnoremap <silent> ,o :GpChatNew<cr>
-
-" normal mode: open chat list
-nnoremap <silent> ,O :GpChatFinder<cr>
+" all mode: stop generating
+noremap <silent> ,K :GpStop<cr>
 
 " normal mode: open a popup
-nnoremap <silent> ,k :GpPopup<cr>
+nnoremap <silent> ,p :GpPopup<cr>
+
+" normal mode: append
+nnoremap <silent> ,k :GpAppend<cr>
 
 " visual mode: rewrite
 xnoremap <silent> ,k :GpRewrite<cr>
