@@ -44,3 +44,4 @@ alias pip="$(pyenv which pip)"
 
 # OpenAI
 export OPENAI_API_KEY=
+export AZURE_OPENAI_API_KEY=

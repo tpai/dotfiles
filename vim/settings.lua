@@ -1,7 +1,13 @@
 -- gp.nvim
 local config = {
-	openai_api_key = os.getenv("OPENAI_API_KEY"),
-	openai_api_endpoint = "https://api.openai.com/v1/chat/completions",
+  -- openai = {
+  --   endpoint = "https://api.openai.com/v1/chat/completions",
+  --   secret = os.getenv("OPENAI_API_KEY"),
+  -- },
+  azure = {
+    endpoint = "https://$resource_name.openai.azure.com/openai/deployments/$deployment_name/chat/completions?api-version=2024-03-01-preview",
+    secret = os.getenv("AZURE_OPENAI_API_KEY"),
+  },
 
 	hooks = {
 		Explain = function(gp, params)
