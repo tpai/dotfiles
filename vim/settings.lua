@@ -1,3 +1,7 @@
+require("catppuccin").setup({
+  flavour = "mocha",
+})
+
 -- gp.nvim
 local config = {
   -- openai = {

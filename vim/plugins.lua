@@ -3,6 +3,7 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.vim/plugged')
 
 -- Default
+Plug ('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug ('tpope/vim-sensible')
 Plug ('flazz/vim-colorschemes')
 Plug ('terryma/vim-multiple-cursors')
