@@ -18,12 +18,6 @@ case "$1" in
     echo bar
     ;;
   ai)
-    if ! which aider &> /dev/null; then
-      pip install aider-chat
-    else
-      pip install -U aider-chat
-    fi
-
     if ! which q &> /dev/null; then
       curl https://raw.githubusercontent.com/ibigio/shell-ai/main/install.sh | sudo bash
     fi
