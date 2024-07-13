@@ -1,6 +1,5 @@
 # k8s
-export KUBE_EDITOR=vim
-
+export KUBE_EDITOR=nvim
 
 kubeconfig_files=$(ls -xm $HOME/.kube/*.kubeconfig 2>/dev/null)
 if [[ -n $kubeconfig_files ]]; then

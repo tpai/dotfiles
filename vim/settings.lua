@@ -3,7 +3,7 @@ require("catppuccin").setup({
 })
 
 -- gp.nvim
-local config = {
+require('gp').setup({
   -- openai = {
   --   endpoint = "https://api.openai.com/v1/chat/completions",
   --   secret = os.getenv("OPENAI_API_KEY"),
@@ -22,9 +22,7 @@ local config = {
 			gp.Prompt(params, gp.Target.popup, nil, agent.model, template, agent.system_prompt)
 		end,
   }
-}
-
-require('gp').setup(config)
+})
 
 -- github/copilot
 vim.cmd [[
