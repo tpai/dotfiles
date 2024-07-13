@@ -1,3 +1,4 @@
+-- vim theme
 require("catppuccin").setup({
   flavour = "mocha",
 })
