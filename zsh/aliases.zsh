@@ -12,8 +12,8 @@ alias df='duf'
 alias olddu="/usr/bin/env du"
 alias du='olddu -h -d 2 | sort --reverse -h'
 
-alias ll='exa -alg --git'
-alias ls='exa -s ext'
+alias ll='eza -alg --git'
+alias ls='eza -s ext'
 
 # Vim Aliases
 if type nvim &> /dev/null; then

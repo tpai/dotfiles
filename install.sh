@@ -56,7 +56,7 @@ if [ ! -d "$DOT" ]; then
   # Misc
   brew install zsh tmux \
     ripgrep jq zoxide raycast fd duf \
-    exa bat prettyping tldr mas httpie \
+    eza bat prettyping tldr mas httpie \
     ctop glances fastfetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
   brew install --cask fork keka battery keycastr
@@ -132,7 +132,7 @@ else
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
     ripgrep jq zoxide raycast fd duf \
-    exa bat prettyping tldr mas httpie \
+    eza bat prettyping tldr mas httpie \
     ctop glances fastfetch onefetch wifi-password \
     reattach-to-user-namespace watchman cmake
   brew upgrade --cask fork keka battery keycastr
