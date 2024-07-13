@@ -37,12 +37,12 @@ fi
 if ! type pyenv &> /dev/null; then
   echo "🐍 Install pyenv"
   brew install pyenv
-  PYTHON_VERSION=3.7.17
+  # Init pyenv manually
+  eval "$(pyenv init -)"
+  PYTHON_VERSION=3.12
   pyenv install $PYTHON_VERSION
   pyenv global $PYTHON_VERSION
   pyenv versions
-  # Init pyenv manually
-  eval "$(pyenv init -)"
 fi
 
 if [ ! -d "$DOT" ]; then
@@ -95,8 +95,6 @@ if [ ! -d "$DOT" ]; then
   ln -nfs "$DOT/vim"                   "$HOME/.vim"
   ln -nfs "$DOT/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
   ln -nfs "$DOT/vim/vimrc"             "$HOME/.config/nvim/init.vim"
-  ln -nfs "$DOT/vim/vimrc.before"      "$HOME/.vimrc.before"
-  ln -nfs "$DOT/vim/vimrc.after"       "$HOME/.vimrc.after"
   ln -nfs "$DOT/tmux"                  "$HOME/.tmux"
   ln -nfs "$DOT/tmux/tmux.conf"        "$HOME/.tmux.conf"
   ln -nfs "$DOT/.gitconfig"            "$HOME/.gitconfig"
@@ -112,7 +110,7 @@ if [ ! -d "$DOT" ]; then
   fi
 
   # Install vim plugins
-  vim -c PlugInstall -c q! -c q!
+  nvim -c PlugInstall -c q! -c q!
 
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
@@ -145,8 +143,6 @@ else
   ln -nfs "$DOT/vim"                   "$HOME/.vim"
   ln -nfs "$DOT/vim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
   ln -nfs "$DOT/vim/vimrc"             "$HOME/.config/nvim/init.vim"
-  ln -nfs "$DOT/vim/vimrc.before"      "$HOME/.vimrc.before"
-  ln -nfs "$DOT/vim/vimrc.after"       "$HOME/.vimrc.after"
   ln -nfs "$DOT/tmux"                  "$HOME/.tmux"
   ln -nfs "$DOT/tmux/tmux.conf"        "$HOME/.tmux.conf"
   ln -nfs "$DOT/.gitconfig"            "$HOME/.gitconfig"
@@ -162,7 +158,7 @@ else
   fi
 
   # Upgrade vim-plug self and update plugins
-  vim -c PlugUpgrade -c PlugUpdate -c q! -c q!
+  nvim -c PlugUpgrade -c PlugUpdate -c q! -c q!
 
   # Upgrade oh-my-zsh
   sh $ZSH/tools/upgrade.sh
