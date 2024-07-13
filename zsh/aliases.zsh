@@ -17,12 +17,12 @@ alias ls='eza -s ext'
 
 # Vim Aliases
 if type nvim &> /dev/null; then
+  alias oldvim='/usr/bin/vim'
   alias vim='nvim'
+  alias vi='nvim'
+  alias ve='nvim ~/.vimrc'
+  alias ze='nvim ~/.zshrc'
 fi
-alias vi='vim'
-alias :q='exit'         # mimic vim functions
-alias ve='vim ~/.vimrc' # vimrc editing
-alias ze='vim ~/.zshrc' # zsh profile editing
 
 # Git Aliases
 alias gl='vim +GV'
@@ -94,6 +94,7 @@ alias cidr='if [ "$(uname)" = "Darwin" ]; then ifconfig | grep "inet "; else eva
 alias dl='curl -LJO'
 alias call='curl -s'
 alias falo='curl -sSI -o /dev/null -L -D - '
+alias :q='exit'
 
 # instant snippets
 alias is='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
