@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 DOT=${HOME:=~}/.dotfiles
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
