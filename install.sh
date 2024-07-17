@@ -3,7 +3,7 @@
 DOT=${HOME:=~}/.dotfiles
 
 if [[ "$(uname)" -ne "Darwin" ]]; then
-  echo "😬 This dotfiles only support Mac OS X"
+  echo "😬 This dotfiles only support MacOS"
   exit 1
 fi
 
@@ -72,12 +72,8 @@ if [ ! -d "$DOT" ]; then
   brew install neovim
   mkdir -p ~/.local/share/nvim/site/autoload/
   mkdir -p ~/.config/nvim/
-
-  # Set git default editor to neovim
-  git config --global core.editor "nvim"
-
-  # Install python client
-  pip install --user --upgrade pynvim
+  git config --global core.editor "nvim" # Set git default editor to neovim
+  pip install --user --upgrade pynvim # Install python client
 
   # Create zsh symlink
   ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
