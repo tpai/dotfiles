@@ -6,4 +6,4 @@ so ~/.vim/settings.lua
 so ~/.vim/settings.vim
 
 " Source additional Vim configurations
-so ~/.vimrc.after
+so ~/.vim/vimrc.after
