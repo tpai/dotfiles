@@ -51,6 +51,9 @@ if [ ! -d "$DOT" ]; then
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT"
 
+  # Create zsh symlink
+  ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
+
   # Install packages
   echo "📦 Install packages"
   # Misc
@@ -75,12 +78,9 @@ if [ ! -d "$DOT" ]; then
   git config --global core.editor "nvim" # Set git default editor to neovim
   pip install --user --upgrade pynvim # Install python client
 
-  # Create zsh symlink
-  ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
-
   # Install fonts
   echo "📜 Copy fonts into system"
-  cp -rf $DOT/fonts/* ~/Library/Fonts
+  cp -rf $DOT/fonts/* /Library/Fonts
 
   # Create coc settings
   cp $DOT/vim/settings/coc-settings.json $DOT/vim/coc-settings.json
