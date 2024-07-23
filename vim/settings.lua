@@ -5,13 +5,31 @@ require("catppuccin").setup({
 
 -- gp.nvim
 require('gp').setup({
-  -- openai = {
-  --   endpoint = "https://api.openai.com/v1/chat/completions",
-  --   secret = os.getenv("OPENAI_API_KEY"),
-  -- },
-  azure = {
-    endpoint = "https://$resource_name.openai.azure.com/openai/deployments/$deployment_name/chat/completions?api-version=2024-03-01-preview",
-    secret = os.getenv("AZURE_OPENAI_API_KEY"),
+  providers = {
+    azure = {
+      disable = false,
+      endpoint = "https://$resource_name.openai.azure.com/openai/deployments/$deployment_name/chat/completions?api-version=2024-03-01-preview",
+      secret = os.getenv("AZURE_OPENAI_API_KEY"),
+    },
+  },
+
+	agents = {
+		{
+			provider = "azure",
+			name = "AZ_ChatGPT4o",
+			chat = true,
+			command = false,
+			model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
+			system_prompt = require("gp.defaults").chat_system_prompt,
+		},
+		{
+			provider = "azure",
+			name = "AZ_CodeGPT4o",
+			chat = false,
+			command = true,
+			model = { model = "gpt-4o", temperature = 0.8, top_p = 1 },
+			system_prompt = require("gp.defaults").code_system_prompt,
+		},
   },
 
 	hooks = {
