@@ -49,7 +49,8 @@ case "$1" in
     fi
     ;;
   k8s)
-    brew install k9s helm
+    brew install k9s kubectl helm
+    mkdir -p $HOME/Library/Application\ Support/k9s
     echo 'plugins:
   nodeShell:
     shortCut: s
