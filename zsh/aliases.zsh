@@ -2,10 +2,6 @@
 alias psa="ps aux"
 alias psg="ps aux | grep "
 
-# Moving around
-alias cdb='cd -'
-alias cls='clear;ls'
-
 # Show human friendly numbers and colors
 alias olddf="/usr/bin/env df"
 alias df='duf'
@@ -20,8 +16,8 @@ if type nvim &> /dev/null; then
   alias oldvim='/usr/bin/vim'
   alias vim='nvim'
   alias vi='nvim'
-  alias ve='nvim ~/.vimrc'
-  alias ze='nvim ~/.zshrc'
+  alias vimrc='nvim ~/.vimrc'
+  alias zshrc='nvim ~/.zshrc'
 fi
 
 # Git Aliases
@@ -32,7 +28,7 @@ alias gcm='git commit -m'
 alias gcam='git commit --amend'
 alias gco='git checkout'
 alias gcob='git checkout -b'              # create branch
-alias gco-='git checkout --'              # unchange changed files
+alias gco-='git checkout --'              # unchange files
 alias gcfd='git clean -fd'                # remove untracked files
 alias gfp='git fetch --all --prune'       # fetch and prune branch
 alias gplr='git pull --rebase'            # pull and ff branch
@@ -100,3 +96,6 @@ alias :q='exit'
 alias is='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
 alias isup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
 alias isop='cd ~/.local/share/instant-snippets'
+
+# misc
+alias clr='clear'
