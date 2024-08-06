@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 DOT=${HOME:=~}/.dotfiles
 
 function toggle_plugin {
@@ -28,12 +26,12 @@ case "$1" in
       brew install opentofu hashicorp/tap/terraform
 
       toggle_plugin 'hashivim/vim-hashicorp-tools' on
-      vim -c 'PlugInstall'
+      nvim -c 'PlugInstall'
     else
       brew upgrade opentofu hashicorp/tap/terraform
 
       toggle_plugin 'hashivim/vim-hashicorp-tools' on
-      vim -c 'PlugUpdate'
+      nvim -c 'PlugUpdate'
     fi
     ;;
   go)
@@ -41,11 +39,11 @@ case "$1" in
       bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
       source ~/.gvm/scripts/gvm
       gvm install go1.22.5 -B
-      gvm use go1.22.5
+      gvm use go1.22.5 --default
       go version
-      vim -c 'CocInstall coc-go | PlugInstall'
+      nvim -c 'CocInstall coc-go | PlugInstall'
     else
-      vim -c 'CocUpdate | PlugUpdate'
+      nvim -c 'CocUpdate | PlugUpdate'
     fi
     ;;
   k8s)
