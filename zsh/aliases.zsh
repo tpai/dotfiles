@@ -71,13 +71,14 @@ alias man=tldr
 
 # k8s
 alias ka='kubectl apply -f'
-alias kdd='kubectl delete -f'
+alias kD='kubectl delete -f'
 alias kcl='kubectl cluster-info'
 alias kc='kubectl config'
 alias kcv='kubectl config view --minify'
 alias kcc='kubectl config current-context'
 alias kcg='kubectl config get-contexts'
 alias kcu='kubectl config use-context'
+alias kcD='kubectl config delete-context'
 alias ktop='kubectl top'
 alias ki='kubectl describe'
 alias kg='kubectl get'
