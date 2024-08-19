@@ -85,6 +85,18 @@ case "$1" in
     - "kubectl debug -it -n $NAMESPACE $POD --target $NAME --image busybox:1.35.0"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
     ;;
   is)
-    git clone git@github.com:tpai/instant-snippets.git "${HOME:=~}/.local/share/instant-snippets"
+    ZK_PATH="${HOME:=~}/.local/share/instant-snippets"
+    brew install zk
+    git clone git@github.com:tpai/instant-snippets.git $ZK_PATH
+    cd $ZK_PATH && zk init --no-input && zk index
+    cat <<EOF >> vim/settings.lua
+-- zk
+require("zk").setup()
+require("zk.api").index("$HOME/.local/share/instant-snippets")
+
+local opts = { noremap=true, silent=false }
+vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
+EOF
     ;;
 esac

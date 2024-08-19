@@ -18,6 +18,7 @@ Plug ('airblade/vim-gitgutter')
 Plug ('ctrlpvim/ctrlp.vim')
 Plug ('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' })
 Plug ('junegunn/fzf.vim')
+Plug ('zk-org/zk-nvim')
 
 -- NERDTree
 Plug ('scrooloose/nerdtree')
@@ -53,7 +54,7 @@ Plug ('junegunn/vim-easy-align')
 Plug ('Oldenborg/vim-px-to-rem')
 Plug ('heavenshell/vim-jsdoc', { ['for'] = {'javascript', 'javascript.jsx','typescript'}, ['do'] = 'make install' })
 Plug ('nicwest/vim-camelsnek')
-Plug ('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+Plug ('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && npx --yes yarn install' })
 Plug ('github/copilot.vim')
 Plug ('robitx/gp.nvim')
 
