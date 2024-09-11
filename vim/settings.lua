@@ -56,3 +56,10 @@ function DisableCopilot()
         vim.cmd('Copilot disable')
     end
 end
+-- zk
+require("zk").setup()
+require("zk.api").index("/Users/tony.pai/.local/share/instant-snippets")
+
+local opts = { noremap=true, silent=false }
+vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
