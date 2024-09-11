@@ -131,33 +131,45 @@ The following keys are my most used commands.
   - `gu` - undo changes of current hunk
   - `gp` - see changes of current hunk
 - Editing
-  - `sj` - split brackets
-  - `sk` - join brackets
-  - `ga` - active easy align (must do visual select first)
-  - `,mc` - multiple cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
-  - `,ma` - multiple cursor select all words
-  - `gc` - comment / uncomment
-  - `<C-//>` - comment / uncomment
-  - `:%s/old/new/g` - search and replace for the current file
-  - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and repalce for all files
-  - `//` - clear search result
-  - `%` - jump to closing tag
-  - `:e ++ff=dos` - convert `^M` to unix line ending
-  - `<\-p>` - prettify
-  - `<\-f>` - eslint autofix
-  - `ej` - next diagnostic
-  - `ek` - prev diagnostic
-  - `,df` - show definition in floating window
-  - `,jd` - go to definition
-  - `,jr` - list references
-  - `,rn` - symbol renaming
-  - `,rf` - file renaming (require `watchman` to be installed)
-  - `,ac` - show code action dialog
-  - `,cj` - create jsdoc for function
-  - `,,c` - convert to cammel case
-  - `,,s` - convert to snake case
-  - `,,r` - convert to rem
-  - `,,p` - convert to px
+  - splitjoin
+      - `sj` - split brackets
+      - `sk` - join brackets
+  - easy-align
+      - `ga` - active easy align (must do visual select first)
+  - multiple-cursors
+      - `,mc` - multiple cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
+      - `,ma` - multiple cursor select all words
+  - gp
+      - `,k` - (normal) send GPT prompt and append result
+      - `,k` - (visual) send GPT prompt and rewrite selected content
+      - `,p` - (normal) send GPT prompt and show result on a popup
+      - `,K` - stop GPT generating 
+  - coc
+      - `ej` - next diagnostic
+      - `ek` - prev diagnostic
+      - `,df` - show definition in floating window
+      - `,jd` - go to definition
+      - `,jr` - list references
+      - `,rn` - symbol renaming
+      - `,rf` - file renaming (require `watchman` to be installed)
+      - `,ac` - show code action dialog
+  - jsdoc
+      - `,cj` - create jsdoc for function
+  - camelsnek
+      - `,,c` - convert to cammel case
+      - `,,s` - convert to snake case
+  - px-to-rem
+      - `,,r` - convert to rem
+      - `,,p` - convert to px
+  - misc
+      - `:%s/old/new/g` - search and replace for the current file
+      - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and repalce for all files
+      - `:e ++ff=dos` - convert `^M` to unix line ending
+      - `gc` - comment / uncomment
+      - `//` - clear search result
+      - `%` - jump to closing tag
+      - `<\-p>` - prettify
+      - `<\-f>` - eslint autofix
 
 ### Console
 
