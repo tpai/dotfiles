@@ -89,7 +89,10 @@ case "$1" in
     brew install zk
     git clone git@github.com:tpai/instant-snippets.git $ZK_PATH
     cd $ZK_PATH && zk init --no-input && zk index
-    cat <<EOF >> vim/settings.lua
+    cat <<EOF >> $DOT/zsh/general.zsh
+export ZK_NOTEBOOK_DIR=$ZK_PATH
+EOF
+    cat <<EOF >> $DOT/vim/settings.lua
 -- zk
 require("zk").setup()
 require("zk.api").index("$HOME/.local/share/instant-snippets")
