@@ -50,46 +50,26 @@ case "$1" in
     brew install k9s kubectl helm
     mkdir -p $HOME/Library/Application\ Support/k9s
     echo 'plugins:
-  nodeShell:
-    shortCut: s
-    confirm: false
-    description: Shell
-    scopes:
-      - node
-    command: kubectl
-    background: false
-    args:
-      - node-shell
-      - $NAME
-  copyDebug:
-    shortCut: Shift-Y
-    confirm: false
-    description: Debug(--copy-to)
-    scopes:
-    - containers
-    command: bash
-    background: false
-    args:
-    - -c
-    - "kubectl debug -it -n=$NAMESPACE $POD --share-processes --image busybox:1.36 --copy-to=copy-debugger"
   debug:
     shortCut: Shift-D
-    confirm: false
-    description: Debug(--target)
+    description: Add debug container
     scopes:
-    - containers
+      - containers
     command: bash
     background: false
     args:
-    - -c
-    - "kubectl debug -it -n $NAMESPACE $POD --target $NAME --image busybox:1.35.0"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
+      - -c
+      - "kubectl --kubeconfig=$KUBECONFIG debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.13 --share-processes -- sh"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
     ;;
   is)
     ZK_PATH="${HOME:=~}/.local/share/instant-snippets"
     brew install zk
     git clone git@github.com:tpai/instant-snippets.git $ZK_PATH
     cd $ZK_PATH && zk init --no-input && zk index
-    cat <<EOF >> vim/settings.lua
+    cat <<EOF >> $DOT/zsh/general.zsh
+export ZK_NOTEBOOK_DIR=$ZK_PATH
+EOF
+    cat <<EOF >> $DOT/vim/settings.lua
 -- zk
 require("zk").setup()
 require("zk.api").index("$HOME/.local/share/instant-snippets")

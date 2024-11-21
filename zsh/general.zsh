@@ -1,5 +1,6 @@
 # k8s
 export KUBE_EDITOR=nvim
+export K9S_FEATURE_GATE_NODE_SHELL=true
 
 kubeconfig_files=$(ls -xm $HOME/.kube/*.kubeconfig 2>/dev/null)
 if [[ -n $kubeconfig_files ]]; then
