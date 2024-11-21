@@ -4,12 +4,6 @@
     "typescriptreact": ["javascript"],
     "typescript": ["javascript"]
   },
-  "yaml.schemas": {
-    "https://json.schemastore.org/chart.json": "/Chart.yaml",
-    "kubernetes": ["/*.yaml", "/*.yml"]
-  },
   "python.pythonPath": "python",
-  "coc.preferences.formatOnSaveFiletypes": [
-    "go"
-  ]
+  "coc.preferences.formatOnSaveFiletypes": ["go"]
 }
