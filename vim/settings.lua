@@ -8,8 +8,13 @@ require("catppuccin").setup({
 -- lsp
 require('lspconfig').yamlls.setup {
   settings = {
+    ['helm-ls'] = {
+      yamlls = {
+        path = "yaml-language-server",
+      }
+    },
     yaml = {
-      validate = true,
+      validate = false,
       -- disable the schema store
       schemaStore = {
         enable = false,
