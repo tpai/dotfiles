@@ -44,6 +44,7 @@ Plug ('hashivim/vim-hashicorp-tools', { ['do'] = 'sh ./assemble.sh' })
 -- Editing
 Plug ('neoclide/coc.nvim', { ['branch'] = 'release', ['do'] = ':CocInstall coc-tabnine coc-tsserver coc-eslint coc-vetur coc-stylelint coc-html coc-css coc-sh coc-pyright' })
 Plug ('iamcco/coc-tailwindcss',  { ['do'] = 'yarn install --frozen-lockfile && yarn run build' })
+Plug ('towolf/vim-helm', { ['do'] = 'brew install helm-ls' })
 Plug ('neovim/nvim-lspconfig', { ['do'] = 'yarn global add yaml-language-server' })
 Plug ('tpai/vim-prettier', { ['do'] = 'yarn install --frozen-lockfile', ['for'] = {'javascript', 'typescript', 'css', 'scss', 'json', 'vue', 'yaml', 'html', 'sh', 'conf'} })
 Plug ('editorconfig/editorconfig-vim')

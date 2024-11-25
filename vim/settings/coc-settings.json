@@ -4,6 +4,14 @@
     "typescriptreact": ["javascript"],
     "typescript": ["javascript"]
   },
+  "languageserver": {
+    "helm": {
+      "command": "helm_ls",
+      "args": ["serve"],
+      "filetypes": ["helm", "helmfile"],
+      "rootPatterns": ["Chart.yaml"]
+    }
+  },
   "python.pythonPath": "python",
   "coc.preferences.formatOnSaveFiletypes": ["go"]
 }
