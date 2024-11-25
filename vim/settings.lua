@@ -18,8 +18,6 @@ require('lspconfig').yamlls.setup {
       -- manually select schemas
       schemas = {
         ['https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json'] = 'docker-compose*.{yml,yaml}',
-        ['https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/helmfile.json'] = 'templates/*.{yml.yaml}',
-        ['https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.31.2-standalone/all.json'] = 'kubernetes/*.{yml,yaml}',
         ['https://json.schemastore.org/chart.json'] = 'Chart.yaml',
       }
     }
