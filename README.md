@@ -161,6 +161,9 @@ The following keys are my most used commands.
   - px-to-rem
       - `,,r` - convert to rem
       - `,,p` - convert to px
+  - zk
+      - `\zn` - create a ZK note
+      - `\zf` - search ZK notes
   - misc
       - `:%s/old/new/g` - search and replace for the current file
       - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and repalce for all files
