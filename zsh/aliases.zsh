@@ -94,6 +94,6 @@ alias cfl='curl -sSI -o /dev/null -L -D - '
 alias :q='exit'
 
 # instant snippets
-alias is='cd ~/.local/share/instant-snippets; vim +Rg; cd -'
-alias isup='cd ~/.local/share/instant-snippets; git reset --hard HEAD; git pull --rebase; cd -'
-alias isop='cd ~/.local/share/instant-snippets'
+alias kb='open http://localhost:9999'
+alias kbup='cd ~/.local/share/instant-snippets; source ~/.local/share/instant-snippets/.python/bin/activate && python3 ~/.local/share/instant-snippets/web_server.py'
+alias kbop='cd ~/.local/share/instant-snippets'

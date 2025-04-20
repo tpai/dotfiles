@@ -6,28 +6,7 @@ require("catppuccin").setup({
 })
 
 -- lsp
-require('lspconfig').yamlls.setup {
-  settings = {
-    ['helm-ls'] = {
-      yamlls = {
-        path = "yaml-language-server",
-      }
-    },
-    yaml = {
-      validate = false,
-      -- disable the schema store
-      schemaStore = {
-        enable = false,
-        url = "",
-      },
-      -- manually select schemas
-      schemas = {
-        ['https://raw.githubusercontent.com/docker/compose/master/compose/config/compose_spec.json'] = 'docker-compose*.{yml,yaml}',
-        ['https://json.schemastore.org/chart.json'] = 'Chart.yaml',
-      }
-    }
-  }
-}
+require('lspconfig').pyright.setup{}
 
 -- gp.nvim
 require('gp').setup({
