@@ -56,6 +56,5 @@ Plug ('heavenshell/vim-jsdoc', { ['for'] = {'javascript', 'javascript.jsx','type
 Plug ('nicwest/vim-camelsnek')
 Plug ('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && npx --yes yarn install' })
 Plug ('github/copilot.vim')
-Plug ('robitx/gp.nvim')
 
 vim.call('plug#end')
