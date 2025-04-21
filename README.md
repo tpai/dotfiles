@@ -39,7 +39,7 @@ Return to dust.
 - foo - test usage
 - tf - install terraform, vim-hashicorp-tools
 - go - install go, vim-go
-- snip - install instant-snippets
+- kb - install kb-search
 
 ## Brew Packages
 
@@ -190,6 +190,4 @@ The following keys are my most used commands.
 - `wifi-password` - retrieve the connected WiFi password
 - `port` - list listening ports
 - `icloud` - navigate to the iCloud directory
-- `q` - query from instant snippets
-- `qup` - update instant snippets repository
 - `exiftool` - print image metadata

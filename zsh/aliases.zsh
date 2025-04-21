@@ -93,7 +93,7 @@ alias cdl='curl -LJO'
 alias cfl='curl -sSI -o /dev/null -L -D - '
 alias :q='exit'
 
-# instant snippets
+# knowledge base search
 alias kb='open http://localhost:9999'
-alias kbup='cd ~/.local/share/instant-snippets; source ~/.local/share/instant-snippets/.python/bin/activate && python3 ~/.local/share/instant-snippets/web_server.py'
-alias kbop='cd ~/.local/share/instant-snippets'
+alias kbup='cd ~/kb-search; source ~/kb-search/.python/bin/activate && python3 ~/kb-search/web_server.py'
+alias kbop='cd ~/kb-search'
