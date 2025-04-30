@@ -51,26 +51,21 @@ if [ ! -d "$DOT" ]; then
   # Clone dotfiles repo
   git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT"
 
-  # Create zsh symlink
-  ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
-
   # Install packages
   echo "📦 Install packages"
   # Misc
   brew install zsh tmux \
-    ripgrep jq zoxide raycast fd duf \
+    ripgrep jq zoxide fd duf \
     eza bat prettyping tldr mas httpie \
-    ctop glances fastfetch onefetch wifi-password \
-    reattach-to-user-namespace watchman cmake
-  brew install --cask fork keka battery keycastr
-  brew install yarn --ignore-dependencies
+    ctop glances fastfetch onefetch wifi-password
+  brew install --cask battery keycastr
 
   # Install from App Store
   # Magnet, Bitwarden
   mas install 441258766 1352778147
   # Telegram, LINE
   mas install 539883307 747648890
-
+  
   # Install neovim
   brew install neovim
   mkdir -p ~/.local/share/nvim/site/autoload/
@@ -84,6 +79,9 @@ if [ ! -d "$DOT" ]; then
 
   # Create coc settings
   cp $DOT/vim/settings/coc-settings.json $DOT/vim/coc-settings.json
+
+  # Create zsh symlink
+  ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
 
   # Create symlinks
   echo "🔗 Create symlinks"
@@ -119,19 +117,17 @@ else
   git pull --rebase
   git stash pop
 
-  # Reset zsh symlink
-  ln -nfs "$DOT/zsh/zshrc" ".zshrc"
-
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-    ripgrep jq zoxide raycast fd duf \
+    ripgrep jq zoxide fd duf \
     eza bat prettyping tldr mas httpie \
-    ctop glances fastfetch onefetch wifi-password \
-    reattach-to-user-namespace watchman cmake
-  brew upgrade --cask fork keka battery keycastr
-  brew upgrade yarn
+    ctop glances fastfetch onefetch wifi-password
+  brew upgrade --cask battery keycastr
   brew upgrade neovim
+
+  # Reset zsh symlink
+  ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
 
   # Reset symlinks
   echo "🔗 Reset symlinks"
