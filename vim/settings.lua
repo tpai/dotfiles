@@ -1,5 +1,12 @@
 local home = os.getenv("HOME")
 
+-- which-key
+require("which-key").setup()
+
+vim.keymap.set("n", "<C-g>", function()
+  require("which-key").show({ global = false })
+end, { desc = "Buffer Local Keymaps (which-key)" })
+
 -- vim theme
 require("catppuccin").setup({
   flavour = "mocha",

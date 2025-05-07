@@ -18,6 +18,7 @@ Plug ('airblade/vim-gitgutter')
 Plug ('ctrlpvim/ctrlp.vim')
 Plug ('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' })
 Plug ('junegunn/fzf.vim')
+Plug ('folke/which-key.nvim')
 
 -- NERDTree
 Plug ('scrooloose/nerdtree')
