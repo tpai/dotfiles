@@ -15,10 +15,9 @@ Plug ('junegunn/gv.vim')
 Plug ('airblade/vim-gitgutter')
 
 -- Search
-Plug ('ctrlpvim/ctrlp.vim')
-Plug ('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' })
-Plug ('junegunn/fzf.vim')
 Plug ('folke/which-key.nvim')
+Plug ('nvim-lua/plenary.nvim', { ['branch'] = 'master' })
+Plug ('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 
 -- NERDTree
 Plug ('scrooloose/nerdtree')
