@@ -1,7 +1,13 @@
 local home = os.getenv("HOME")
 
 -- which-key
-require("which-key").setup()
+require("which-key").setup({
+  preset = "helix",
+  keys = {
+    scroll_down = "<c-j>", -- binding to scroll down inside the popup
+    scroll_up = "<c-k>", -- binding to scroll up inside the popup
+  },
+})
 
 vim.keymap.set("n", "<C-g>", function()
   require("which-key").show({ global = false })
