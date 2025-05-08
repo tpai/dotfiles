@@ -62,11 +62,7 @@ case "$1" in
       - "kubectl --kubeconfig=$KUBECONFIG debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.13 --share-processes -- sh"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
     ;;
   kb)
-    PATH="${HOME:=~}/kb-search"
-    git clone git@github.com:tpai/kb-search.git $PATH
-    python3 -m venv $PATH/.python
-    source $PATH/.python/bin/activate && \
-      pip3 install -r $PATH/requirements.txt && \
-      python3 $PATH/gen_index.py
+    KB_PATH="${HOME:=~}/kb-search"
+    git clone git@github.com:tpai/kb-search.git $KB_PATH
     ;;
 esac
