@@ -92,8 +92,8 @@ alias cs='curl -s'
 alias cdl='curl -LJO'
 alias cfl='curl -sSI -o /dev/null -L -D - '
 alias :q='exit'
+alias code='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
 
 # knowledge base search
-alias kb='open http://localhost:9999'
-alias kbup='cd ~/kb-search; source ~/kb-search/.python/bin/activate && python3 ~/kb-search/web_server.py'
+alias kb='cd ~/kb-search; vim +Telescope\ live_grep; cd -'
 alias kbop='cd ~/kb-search'
