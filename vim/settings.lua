@@ -18,6 +18,10 @@ require("catppuccin").setup({
   flavour = "mocha",
 })
 
+-- telescope
+require('telescope').setup()
+require('telescope').load_extension('fzf')
+
 -- lsp
 require('lspconfig').pyright.setup{}
 
