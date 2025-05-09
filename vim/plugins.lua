@@ -10,8 +10,8 @@ Plug ('terryma/vim-multiple-cursors')
 Plug ('christoomey/vim-tmux-navigator')
 
 -- Git
-Plug ('tpope/vim-fugitive')
 Plug ('junegunn/gv.vim')
+Plug ('tpope/vim-fugitive')
 Plug ('airblade/vim-gitgutter')
 
 -- Search

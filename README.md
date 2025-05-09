@@ -118,19 +118,18 @@ The following keys are my most used commands.
   - `,ag` - using fuzzy search (powered by `fzf`)
     - `<Tab>` - select files which needs to change
     - `:cfdo %s/old/new/g | update` - search, replace and update multiple files
-- Diff
-  - `:windo diffthis` - diff check for active files
-- Git
-  - `gva` - browse changes of commits of all files
-  - `gvc` - browse changes of commits of current file
-  - `gs` - git status (next: `<C-n>`, prev: `<C-p>`)
-  - `gb` - git blame
-  - `gd` - git diff
-  - `gj` - next hunk
-  - `gk` - prev hunk
-  - `gu` - undo changes of current hunk
-  - `gp` - see changes of current hunk
 - Editing
+  - git
+      - `gl` - show commits
+      - `gh` - show file history
+      - `gb` - blame file
+      - `gd` - diff file
+      - `gj` - navigate to next hunk
+      - `gk` - navigate to prev hunk
+      - `ga` - stage current hunk
+      - `gu` - undo current hunk
+      - `gp` - reset hard
+      - `gr` - reset soft
   - splitjoin
       - `sj` - split brackets
       - `sk` - join brackets
