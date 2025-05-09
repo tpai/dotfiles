@@ -112,10 +112,12 @@ The following keys are my most used commands.
   - `?` - show help
 - File
   - `:new` - create new file
+  - `]]` - next markdown block
+  - `]p` - preview markdown
 - File Navigation
-  - `,t` - in current folder (powered by `ctrlp`)
-  - `,b` - in buffer (powered by `fzf`)
-  - `,ag` - using fuzzy search (powered by `fzf`)
+  - `,t` - files in current folder (powered by `Telescope`)
+  - `,b` - buffer files (powered by `Telescope`)
+  - `,ag` - fuzzy search (powered by `Telescope`)
     - `<Tab>` - select files which needs to change
     - `:cfdo %s/old/new/g | update` - search, replace and update multiple files
 - Editing
@@ -138,11 +140,6 @@ The following keys are my most used commands.
   - multiple-cursors
       - `,mc` - multiple cursor (next: `<C-n>`, prev: `<C-p>`, skip: `<C-x>`)
       - `,ma` - multiple cursor select all words
-  - gp
-      - `,k` - (normal) send GPT prompt and append result
-      - `,k` - (visual) send GPT prompt and rewrite selected content
-      - `,p` - (normal) send GPT prompt and show result on a popup
-      - `,K` - stop GPT generating 
   - coc
       - `ej` - next diagnostic
       - `ek` - prev diagnostic
@@ -160,9 +157,6 @@ The following keys are my most used commands.
   - px-to-rem
       - `,,r` - convert to rem
       - `,,p` - convert to px
-  - zk
-      - `\zn` - create a ZK note
-      - `\zf` - search ZK notes
   - misc
       - `:%s/old/new/g` - search and replace for the current file
       - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and repalce for all files
