@@ -80,6 +80,9 @@ if [ ! -d "$DOT" ]; then
   # Create coc settings
   cp $DOT/vim/settings/coc-settings.json $DOT/vim/coc-settings.json
 
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+
   # Create zsh symlink
   ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
 
@@ -105,9 +108,6 @@ if [ ! -d "$DOT" ]; then
 
   # Install vim plugins
   nvim -c PlugInstall -c q! -c q!
-
-  # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 else
   echo "🚀 Upgrading dotfiles"
 
@@ -125,6 +125,9 @@ else
     ctop glances fastfetch onefetch wifi-password
   brew upgrade --cask battery keycastr
   brew upgrade neovim
+
+  # Upgrade oh-my-zsh
+  sh $ZSH/tools/upgrade.sh
 
   # Reset zsh symlink
   ln -nfs "$DOT/zsh/zshrc" "$HOME/.zshrc"
@@ -151,7 +154,4 @@ else
 
   # Upgrade vim-plug self and update plugins
   nvim -c PlugUpgrade -c PlugUpdate -c q! -c q!
-
-  # Upgrade oh-my-zsh
-  sh $ZSH/tools/upgrade.sh
 fi
