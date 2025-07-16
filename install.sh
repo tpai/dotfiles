@@ -100,8 +100,10 @@ if [ ! -d "$DOT" ]; then
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
     mv $HOME/.ssh $HOME/.ssh-old || true
     mv $HOME/.kube $HOME/.kube-old || true
+    mv $HOME/.aws $HOME/.aws-old || true
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh" "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.aws" "$HOME/.aws"
   else
     echo "iCloud sync folder does not exist."
   fi
@@ -146,8 +148,10 @@ else
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
     rm -rf "$HOME/.ssh"
     rm -rf "$HOME/.kube"
+    rm -rf "$HOME/.aws"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh" "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.aws" "$HOME/.aws"
   else
     echo "iCloud sync folder does not exist."
   fi
