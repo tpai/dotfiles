@@ -1,5 +1,6 @@
 nmap gl :GV<cr>
 nmap gh :GV!<cr>
+nmap gs :Git<cr>
 nmap gb :Git blame<cr>
 nmap gd :Gvdiffsplit @<cr>
 nmap gj :GitGutterNextHunk<cr>
