@@ -59,7 +59,7 @@ case "$1" in
     background: false
     args:
       - -c
-      - "kubectl --kubeconfig=$KUBECONFIG debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.13 --share-processes -- sh"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
+      - "kubectl debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.13 --share-processes -- bash"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
     ;;
   kb)
     KB_PATH="${HOME:=~}/kb-search"
