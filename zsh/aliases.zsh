@@ -84,6 +84,21 @@ alias ki='kubectl describe'
 alias kg='kubectl get'
 alias kl='kubectl logs'
 
+# azure
+alias azrcd='kubelogin remove-cache-dir'
+alias azcc='az ad signed-in-user show'
+alias azcg='az account list -o table'
+alias azcu='az account set --subscription'
+
+# gcloud
+alias gccc='gcloud info --format json | jq .config.active_config_name'
+alias gccg='gcloud config configurations list'
+alias gccu='gcloud config configurations activate'
+
+# aws
+alias awcg='cat ~/.aws/credentials'
+alias awcc='aws sts get-caller-identity'
+
 # shortcuts
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias ports='if [ "$(uname)" = "Darwin" ]; then lsof -Pni4 | grep LISTEN; else netstat -tulpn | grep LISTEN; fi'
