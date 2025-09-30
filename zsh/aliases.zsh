@@ -6,7 +6,7 @@ alias psg="ps aux | grep "
 alias olddf="/usr/bin/env df"
 alias df='duf'
 alias olddu="/usr/bin/env du"
-alias du='olddu -h -d 2 | sort --reverse -h'
+alias du='olddu -h -d 2 | sort --reverse -h | head -n 10'
 
 alias ll='eza -alg --git'
 alias ls='eza -s ext'
@@ -91,7 +91,7 @@ alias azcg='az account list -o table'
 alias azcu='az account set --subscription'
 
 # gcloud
-alias gccc='gcloud info --format json | jq .config.active_config_name'
+alias gccc='gcloud info --format json | jq ".config | pick(.active_config_name, .account, .project)"'
 alias gccg='gcloud config configurations list'
 alias gccu='gcloud config configurations activate'
 
