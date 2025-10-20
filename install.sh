@@ -56,7 +56,7 @@ if [ ! -d "$DOT" ]; then
   # Misc
   brew install zsh tmux \
     ripgrep jq zoxide fd duf \
-    eza bat prettyping tldr mas httpie \
+    eza bat prettyping tldr mas httpie lazyssh wailbrew \
     ctop glances fastfetch onefetch wifi-password
   brew install --cask battery keycastr
 
@@ -125,7 +125,7 @@ else
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
     ripgrep jq zoxide fd duf \
-    eza bat prettyping tldr mas httpie \
+    eza bat prettyping tldr mas httpie lazyssh wailbrew \
     ctop glances fastfetch onefetch wifi-password
   brew upgrade --cask battery keycastr
   brew upgrade neovim
