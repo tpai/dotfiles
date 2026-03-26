@@ -98,14 +98,18 @@ if [ ! -d "$DOT" ]; then
 
   # Install sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
+    mv $HOME/.aws $HOME/.aws-old || true
+    mv $HOME/.creds $HOME/.creds-old || true
+    mv $HOME/.config/gcloud/configurations $HOME/.config/gcloud/configurations-old || true
+    mv $HOME/.scripts $HOME/.scripts-old || true
     mv $HOME/.ssh $HOME/.ssh-old || true
     mv $HOME/.kube $HOME/.kube-old || true
-    mv $HOME/.aws $HOME/.aws-old || true
-    mv $HOME/.scripts $HOME/.scripts-old || true
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.aws" "$HOME/.aws"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.creds" "$HOME/.creds"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.gcloud" "$HOME/.config/gcloud/configurations"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.scripts" "$HOME/.scripts"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh" "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
-    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.aws" "$HOME/.aws"
-    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.scripts" "$HOME/.scripts"
   else
     echo "iCloud sync folder does not exist."
   fi
@@ -148,14 +152,18 @@ else
 
   # Reset sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
+    rm -rf "$HOME/.aws"
+    rm -rf "$HOME/.creds"
+    rm -rf "$HOME/.config/gcloud/configurations"
+    rm -rf "$HOME/.scripts"
     rm -rf "$HOME/.ssh"
     rm -rf "$HOME/.kube"
-    rm -rf "$HOME/.aws"
-    rm -rf "$HOME/.scripts"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.aws" "$HOME/.aws"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.creds" "$HOME/.creds"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.gcloud" "$HOME/.config/gcloud/configurations"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.scripts" "$HOME/.scripts"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.ssh" "$HOME/.ssh"
     ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.kube" "$HOME/.kube"
-    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.aws" "$HOME/.aws"
-    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/.scripts" "$HOME/.scripts"
   else
     echo "iCloud sync folder does not exist."
   fi
