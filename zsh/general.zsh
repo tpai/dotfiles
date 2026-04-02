@@ -9,7 +9,7 @@ else
   export KUBECONFIG=/Users/$USER/.kube/config
 fi
 
-# M1
+# ARM arch
 if [[ $(arch) == 'arm64' ]]; then
   export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
   export DOCKER_DEFAULT_PLATFORM=linux/amd64
