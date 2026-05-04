@@ -23,6 +23,9 @@ export HISTSIZE=1000000000
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 
+# exclude ._* files from tar file
+export COPYFILE_DISABLE=1
+
 # git
 export LANG=en_US.UTF-8
 
