@@ -85,6 +85,10 @@ alias ki='kubectl describe'
 alias kg='kubectl get'
 alias kl='kubectl logs'
 
+# docker
+alias orbdc='vim ~/.orbstack/config/docker.json'
+alias dockerc='vim /etc/docker/daemon.json'
+
 # azure
 alias azrcd='kubelogin remove-cache-dir'
 alias azcc='az ad signed-in-user show'
