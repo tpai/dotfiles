@@ -14,6 +14,7 @@ alias ls='eza -s ext'
 # Vim Aliases
 if type nvim &> /dev/null; then
   alias oldvim='/usr/bin/vim'
+  alias svim='sudo vim -u NONE'
   alias vim='nvim'
   alias vi='nvim'
   alias vimrc='nvim ~/.vimrc'
