@@ -97,6 +97,12 @@ if [ ! -d "$DOT" ]; then
   ln -nfs "$DOT/tmux/tmux.conf"        "$HOME/.tmux.conf"
   ln -nfs "$DOT/.gitconfig"            "$HOME/.gitconfig"
 
+  # Install Life-hacks config
+  if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Life-hacks" ]; then
+    mv $HOME/Life-hacks $HOME/Life-hacks-old || true
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Life-hacks" "$HOME/Life-hacks"
+  fi
+
   # Install sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
     mv $HOME/.aws $HOME/.aws-old || true
@@ -150,6 +156,12 @@ else
   ln -nfs "$DOT/tmux"                  "$HOME/.tmux"
   ln -nfs "$DOT/tmux/tmux.conf"        "$HOME/.tmux.conf"
   ln -nfs "$DOT/.gitconfig"            "$HOME/.gitconfig"
+
+  # Reset Life-hacks config
+  if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Life-hacks" ]; then
+    rm -rf "$HOME/Life-hacks"
+    ln -nfs "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Life-hacks" "$HOME/Life-hacks"
+  fi
 
   # Reset sync configs
   if [ -d "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/" ]; then
