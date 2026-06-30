@@ -56,7 +56,7 @@ if [ ! -d "$DOT" ]; then
   # Misc
   brew tap darrylmorley/whatcable
   brew install zsh tmux \
-    ripgrep jq zoxide fd duf witr \
+    ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
     ctop glances fastfetch onefetch wifi-password
   brew install --cask battery keycastr whatcable
@@ -135,7 +135,7 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-    ripgrep jq zoxide fd duf witr \
+    ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
     ctop glances fastfetch onefetch wifi-password
   brew upgrade --cask battery keycastr whatcable
