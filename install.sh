@@ -58,7 +58,7 @@ if [ ! -d "$DOT" ]; then
   brew install zsh tmux \
     ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
-    ctop glances fastfetch onefetch wifi-password
+    ctop glances fastfetch onefetch
   brew install --cask battery keycastr whatcable
 
   # Install from App Store
@@ -137,7 +137,7 @@ else
   brew upgrade zsh tmux \
     ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
-    ctop glances fastfetch onefetch wifi-password
+    ctop glances fastfetch onefetch
   brew upgrade --cask battery keycastr whatcable
   brew upgrade neovim
 
