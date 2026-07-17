@@ -146,7 +146,7 @@ else
   brew upgrade neovim
   brew upgrade --cask iterm2 raycast
   # Good to have
-  brew upgrade--cask battery keycastr
+  brew upgrade --cask battery keycastr
   brew upgrade --cask whatcable
 
   # Upgrade oh-my-zsh
