@@ -54,12 +54,16 @@ if [ ! -d "$DOT" ]; then
   # Install packages
   echo "📦 Install packages"
   # Misc
-  brew tap darrylmorley/whatcable
   brew install zsh tmux \
     ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
     ctop glances fastfetch onefetch
-  brew install --cask battery keycastr whatcable
+  # Required
+  brew install --cask iterm2 raycast
+  # Good to have
+  brew install --cask battery keycastr
+  brew trust darrylmorley/whatcable
+  brew install --cask whatcable
 
   # Install from App Store
   # Magnet, Bitwarden
@@ -138,8 +142,12 @@ else
     ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
     ctop glances fastfetch onefetch
-  brew upgrade --cask battery keycastr whatcable
+  # Required
   brew upgrade neovim
+  brew upgrade --cask iterm2 raycast
+  # Good to have
+  brew upgrade--cask battery keycastr
+  brew upgrade --cask whatcable
 
   # Upgrade oh-my-zsh
   sh $ZSH/tools/upgrade.sh
