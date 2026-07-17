@@ -15,9 +15,27 @@ case "$1" in
   foo)
     echo bar
     ;;
-  ai)
-    if ! which q &> /dev/null; then
-      curl https://raw.githubusercontent.com/ibigio/shell-ai/main/install.sh | sudo bash
+  codeagent)
+    if ! which claude &> /dev/null; then
+      curl -fsSL https://claude.ai/install.sh | bash
+    fi
+
+    if ! which opencode &> /dev/null; then
+      curl -fsSL https://opencode.ai/install | bash
+    fi
+    ;;
+  cloud)
+    if ! which az &> /dev/null; then
+      brew install azure-cli Azure/kubelogin/kubelogin
+    fi
+
+    if ! which aws &> /dev/null; then
+      brew install awscli
+    fi
+
+    if ! which gcloud &> /dev/null; then
+      brew install --cask gcloud-cli
+      gcloud components install gke-gcloud-auth-plugin
     fi
     ;;
   tf)
@@ -38,8 +56,8 @@ case "$1" in
     if ! which go &> /dev/null; then
       bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
       source ~/.gvm/scripts/gvm
-      gvm install go1.22.5 -B
-      gvm use go1.22.5 --default
+      gvm install go1.25 -B
+      gvm use go1.25 --default
       go version
       nvim -c 'CocInstall coc-go | PlugInstall'
     else
@@ -60,9 +78,5 @@ case "$1" in
     args:
       - -c
       - "kubectl debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.13 --share-processes -- bash"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
-    ;;
-  kb)
-    KB_PATH="${HOME:=~}/kb-search"
-    git clone git@github.com:tpai/kb-search.git $KB_PATH
     ;;
 esac
