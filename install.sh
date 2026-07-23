@@ -66,8 +66,8 @@ if [ ! -d "$DOT" ]; then
   brew install --cask whatcable
 
   # Install from App Store
-  # Magnet, Bitwarden
-  mas install 441258766 1352778147
+  # Magnet, Xnip, Bitwarden
+  mas install 441258766 1221250572 1352778147
   # Telegram, LINE
   mas install 539883307 747648890
   
