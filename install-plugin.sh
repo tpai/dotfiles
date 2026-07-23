@@ -65,7 +65,7 @@ case "$1" in
     fi
     ;;
   k8s)
-    brew install k9s kubectl helm
+    brew install k9s kubectl helm skopeo
     mkdir -p $HOME/Library/Application\ Support/k9s
     echo 'plugins:
   debug:
