@@ -64,6 +64,14 @@ case "$1" in
       nvim -c 'CocUpdate | PlugUpdate'
     fi
     ;;
+  rust)
+    if ! which rust &> /dev/null; then
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      rustc --version
+      cargo --version
+      rustup --version
+    fi
+    ;;
   k8s)
     brew install k9s kubectl helm skopeo
     mkdir -p $HOME/Library/Application\ Support/k9s
