@@ -1,7 +1,5 @@
 # Dotfiles
 
-The purpose of this repository is to enhance my terminal and IDE setup for improved productivity.
-
 ## Installation
 
 1. Run install script
@@ -20,7 +18,7 @@ The purpose of this repository is to enhance my terminal and IDE setup for impro
 ./install.sh
 ```
 
-Update required brew formulas, vim plugins and oh-my-zsh.
+Updates brew formulas, vim plugins and oh-my-zsh.
 
 ### Uninstall
 
@@ -28,55 +26,17 @@ Update required brew formulas, vim plugins and oh-my-zsh.
 ./uninstall.sh
 ```
 
-Return to dust.
-
 ## Install Plugin
 
 ```sh
 ./install-plugin.sh {plugin}
 ```
 
-- foo - test usage
+- codeagent - install claude, opencode
 - tf - install terraform, vim-hashicorp-tools
 - go - install go, vim-go
-- kb - install kb-search
-
-## Brew Packages
-
-- Main
-  - zsh
-  - tmux
-- Search
-  - ripgrep - code fuzzy search
-  - zsh-z - folder navigation
-  - fd - file and folder search
-- Better Command
-  - exa - ls
-  - bat - cat
-  - prettyping - ping
-  - glances - top
-  - ctop - ctop
-  - tldr - man
-  - duf - df
-- Language
-  - jq - json query
-- Info
-  - neofetch - system info
-  - onefetch - git repo info
-  - wifi-password
-- Misc
-  - reattach-to-user-namespace - for tmux clipboard
-  - watchman - coc file renaming (update related imports)
-  - git
-  - yarn
-  - neovim
-  - cmake
-  - pyenv
-  - nvm
 
 ## Mappings
-
-The following keys are my most used commands.
 
 ### tmux
 
@@ -152,14 +112,14 @@ The following keys are my most used commands.
   - jsdoc
       - `,cj` - create jsdoc for function
   - camelsnek
-      - `,,c` - convert to cammel case
+      - `,,c` - convert to camel case
       - `,,s` - convert to snake case
   - px-to-rem
       - `,,r` - convert to rem
       - `,,p` - convert to px
   - misc
       - `:%s/old/new/g` - search and replace for the current file
-      - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and repalce for all files
+      - `:vimgrep /old/g **/*` > `:cfdo %s/old/new/g | update` - search and replace for all files
       - `:e ++ff=dos` - convert `^M` to unix line ending
       - `gc` - comment / uncomment
       - `//` - clear search result
@@ -167,20 +127,20 @@ The following keys are my most used commands.
       - `<\-p>` - prettify
       - `<\-f>` - eslint autofix
 
-### Console
+### Shell overrides
 
+These shadow the real commands — see `zsh/aliases.zsh` for the full list.
+
+- `ls`, `ll` - eza
+- `cat` - bat
+- `find` - fd
+- `ping` - prettyping
+- `top` - glances
+- `man` - tldr
+- `df` - duf
+- `du` - top 10 largest, depth 2
 - `z` - cd to a folder using fuzzy search
 - `ctrl+r` - fuzzy search for used commands
-- `ping` - display pretty ping
-- `top` - awesome interactive process viewer
-- `ctop` - docker terminal UI
-- `find` - improved file search
-- `l` - list files in the current folder with details
-- `cat` - print beautified file contents
-- `jq` - JSON text parser (e.g. `echo '{"a": 1}' | jq .a`)
-- `man` - neat man pages (e.g. `man ls`)
-- `http|https` - friendly HTTP request tool
-- `wifi-password` - retrieve the connected WiFi password
-- `port` - list listening ports
+- `ports` - list listening ports
 - `icloud` - navigate to the iCloud directory
-- `exiftool` - print image metadata
+- Prefix any override with `old` for the original (`oldcat`, `oldfind`)
