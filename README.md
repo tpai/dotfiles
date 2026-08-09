@@ -136,6 +136,7 @@ These shadow the real commands — see `zsh/aliases.zsh` for the full list.
 - `find` - fd
 - `ping` - prettyping
 - `top` - glances
+- `netstat` - rustnet
 - `man` - tldr
 - `df` - duf
 - `du` - top 10 largest, depth 2

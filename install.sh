@@ -57,7 +57,7 @@ if [ ! -d "$DOT" ]; then
   brew install zsh tmux \
     ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
-    ctop glances fastfetch onefetch
+    ctop glances rustnet fastfetch onefetch
   # Required
   brew install --cask iterm2 raycast
   # Good to have
@@ -141,7 +141,7 @@ else
   brew upgrade zsh tmux \
     ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
-    ctop glances fastfetch onefetch
+    ctop glances rustnet fastfetch onefetch
   # Required
   brew upgrade neovim
   brew upgrade --cask iterm2 raycast
