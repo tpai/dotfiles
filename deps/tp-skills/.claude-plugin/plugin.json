@@ -1,0 +1,16 @@
+{
+  "name": "tp-skills",
+  "version": "0.1.0",
+  "description": "Test-maintenance skills for keeping suites focused on live behavior.",
+  "author": {
+    "name": "Tony P"
+  },
+  "keywords": [
+    "testing",
+    "test-maintenance",
+    "test-pruning"
+  ],
+  "skills": [
+    "./prune-tests"
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prune Tests"
+  short_description: "Remove redundant and dead-code-aligned tests"
+  default_prompt: "Use $prune-tests to simplify this test suite without weakening coverage of live behavior."

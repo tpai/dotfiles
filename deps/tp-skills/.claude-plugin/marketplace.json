@@ -1,0 +1,20 @@
+{
+  "name": "tpai",
+  "owner": {
+    "name": "Tony P"
+  },
+  "description": "Tony P's skills as installable Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "tp-skills",
+      "source": "./",
+      "description": "Test-maintenance skills for keeping suites focused on live behavior.",
+      "category": "development",
+      "keywords": [
+        "testing",
+        "test-maintenance",
+        "skills"
+      ]
+    }
+  ]
+}
