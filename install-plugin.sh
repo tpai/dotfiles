@@ -29,8 +29,8 @@ case "$1" in
     fi
     ;;
   skills)
-      cp -r ./skills/skills/* ~/.agents/skills
-      cp -r ./skills/skills/* ~/.codex/skills
+      cp -r ./deps/mattpocock-skills/skills/* ~/.agents/skills
+      cp -r ./deps/mattpocock-skills/skills/* ~/.codex/skills
     ;;
   cloud)
     if ! which az &> /dev/null; then
