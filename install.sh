@@ -49,7 +49,7 @@ if [ ! -d "$DOT" ]; then
   echo "🌱 Install dotfiles"
 
   # Clone dotfiles repo
-  git clone --depth=1 https://github.com/tpai/dotfiles.git "$DOT"
+  git clone --depth=1 --recurse-submodules git@github.com:tpai/dotfiles.git "$DOT"
 
   # Install packages
   echo "📦 Install packages"

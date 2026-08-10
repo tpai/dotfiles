@@ -15,14 +15,22 @@ case "$1" in
   foo)
     echo bar
     ;;
-  codeagent)
+  cagent)
     if ! which claude &> /dev/null; then
       curl -fsSL https://claude.ai/install.sh | bash
+    fi
+
+    if ! which codex &> /dev/null; then
+      curl -fsSL https://chatgpt.com/codex/install.sh | sh
     fi
 
     if ! which opencode &> /dev/null; then
       curl -fsSL https://opencode.ai/install | bash
     fi
+    ;;
+  skills)
+      cp -r ./skills/skills/* ~/.agents/skills
+      cp -r ./skills/skills/* ~/.codex/skills
     ;;
   cloud)
     if ! which az &> /dev/null; then
