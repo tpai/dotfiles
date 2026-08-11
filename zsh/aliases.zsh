@@ -99,6 +99,7 @@ alias azcu='az account set --subscription'
 alias gccc='gcloud info --format json | jq ".config | pick(.active_config_name, .account, .project)"'
 alias gccg='gcloud config configurations list'
 alias gccu='gcloud config configurations activate'
+alias gcasa='gcloud auth activate-service-account'
 
 # aws
 alias awcg='cat ~/.aws/credentials'
