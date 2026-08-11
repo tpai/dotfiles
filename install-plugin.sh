@@ -31,8 +31,8 @@ case "$1" in
   skills)
       cp -r ./deps/mattpocock-skills/skills/* ~/.agents/skills
       cp -r ./deps/mattpocock-skills/skills/* ~/.codex/skills
-      cp -r ./deps/tp-skills/skills/* ~/.agents/skills
-      cp -r ./deps/tp-skills/skills/* ~/.codex/skills
+      cp -r ./deps/tp-skills/* ~/.agents/skills
+      cp -r ./deps/tp-skills/* ~/.codex/skills
     ;;
   cloud)
     if ! which az &> /dev/null; then
