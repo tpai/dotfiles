@@ -28,18 +28,18 @@ alias ga='git add -A'
 alias gcm='git commit -m'
 alias gcam='git commit --amend'
 alias gco='git checkout'
-alias gcob='git checkout -b'              # create branch
-alias gco-='git checkout --'              # unchange files
-alias gcfd='git clean -fd'                # remove untracked files
-alias gfp='git fetch --all --prune'       # fetch and prune branch
-alias gplr='git pull --rebase --tags'     # pull and ff branch
+alias gcob='git checkout -b'                               # create branch
+alias gco-='git checkout --'                               # unchange files
+alias gcfd='git clean -fd'                                 # remove untracked files
+alias gfp='git fetch --all --prune'                        # fetch and prune branch
+alias gplr='git pull --rebase --tags --recurse-submodules' # pull and ff branch
 alias gpu='git push -u origin $(git branch --show-current)'
 alias gr='git rebase'
-alias gri='git rebase --interactive'      # rebase in interactive mode
-alias gr.='git reset .'                   # unstage all
-alias grh='git reset --hard'              # force reset
+alias gri='git rebase --interactive'                       # rebase in interactive mode
+alias gr.='git reset .'                                    # unstage all
+alias grh='git reset --hard'                               # force reset
 alias gs='git status'
-alias gsh='git stash --include-untracked' # stash untracked files
+alias gsh='git stash --include-untracked'                  # stash untracked files
 alias gshp='git stash pop'
 
 # Go
