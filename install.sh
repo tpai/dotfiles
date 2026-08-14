@@ -23,15 +23,8 @@ fi
 
 if ! type node &> /dev/null; then
   echo "🔯 Install node"
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-  nvm install lts/iron
-  nvm use lts/iron
-  nvm ls
+  brew install node
+  node --version
 fi
 
 if ! type pyenv &> /dev/null; then
