@@ -36,11 +36,21 @@ export GO111MODULE=on
 # node: homebrew node only (no nvm)
 
 # Python
+# Fast pyenv setup: export shims directly instead of running slow `pyenv init -`
+# at every shell startup (saves ~1.5s). `pyenv shell` support is initialized
+# lazily on first use of the `pyenv` command.
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-alias python="$(pyenv which python)"
-alias pip="$(pyenv which pip)"
+export PATH="$PYENV_ROOT/shims:$PATH"
+pyenv() {
+  unset -f pyenv
+  eval "$(command pyenv init -)"
+  pyenv "$@"
+}
+# Direct aliases: avoid `pyenv which` subprocess at startup AND per-invocation
+# shim overhead. Keep in sync with the version in ~/.pyenv/version.
+alias python="$PYENV_ROOT/versions/3.12.13/bin/python"
+alias pip="$PYENV_ROOT/versions/3.12.13/bin/pip"
 
 # OpenAI
 export OPENAI_API_KEY=
