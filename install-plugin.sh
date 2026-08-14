@@ -29,8 +29,12 @@ case "$1" in
     fi
     ;;
   skills)
+      claude plugin marketplace add ./deps/mattpocock-skills/skills
+      claude plugin install mattpocock-skills@mattpocok
       cp -r ./deps/mattpocock-skills/skills/* ~/.agents/skills
       cp -r ./deps/mattpocock-skills/skills/* ~/.codex/skills
+      claude plugin marketplace add ./deps/tp-skills
+      claude plugin install tp-skills@tpai
       cp -r ./deps/tp-skills/* ~/.agents/skills
       cp -r ./deps/tp-skills/* ~/.codex/skills
     ;;
