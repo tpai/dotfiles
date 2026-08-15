@@ -8,11 +8,13 @@
     {
       "name": "tp-skills",
       "source": "./",
-      "description": "Test-maintenance skills for keeping suites focused on live behavior.",
+      "description": "Skills for focused test maintenance and clear animated explanations.",
       "category": "development",
       "keywords": [
         "testing",
         "test-maintenance",
+        "animation",
+        "animejs",
         "skills"
       ]
     }

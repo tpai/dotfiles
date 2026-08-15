@@ -1,16 +1,20 @@
 {
   "name": "tp-skills",
-  "version": "0.1.0",
-  "description": "Test-maintenance skills for keeping suites focused on live behavior.",
+  "version": "0.2.0",
+  "description": "Tony P's skills for focused test maintenance and clear animated explanations.",
   "author": {
     "name": "Tony P"
   },
   "keywords": [
     "testing",
     "test-maintenance",
-    "test-pruning"
+    "test-pruning",
+    "animation",
+    "animejs",
+    "visual-explanations"
   ],
   "skills": [
-    "./prune-tests"
+    "./skills/animate-low-poly",
+    "./skills/prune-tests"
   ]
 }
