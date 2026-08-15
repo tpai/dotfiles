@@ -11,6 +11,68 @@ function toggle_plugin {
   fi
 }
 
+# Skill sources: <path-to-repo>:<claude-marketplace-name>:<claude-plugin-ids>
+# (plugin ids are comma-separated; empty marketplace/plugins = copy skills to
+# agents/codex only, skip the claude plugin steps)
+SKILL_SOURCES=(
+  "deps/mattpocock-skills:mattpocock:mattpocock-skills"
+  "deps/tp-skills:tpai:tp-skills@tpai"
+  "deps/anthropics-skills::"
+)
+
+function install_skills {
+  local entry path marketplace plugins plugin_ids plugin_id dest
+  for entry in "${SKILL_SOURCES[@]}"; do
+    IFS=':' read -r path marketplace plugins <<< "$entry"
+    if [[ -n "$marketplace" ]]; then
+      IFS=',' read -ra plugin_ids <<< "$plugins"
+      echo "==> claude: add marketplace $marketplace ($path)"
+      claude plugin marketplace add "$DOT/$path"
+      for plugin_id in "${plugin_ids[@]}"; do
+        echo "==> claude: install plugin $plugin_id"
+        claude plugin install "$plugin_id"
+      done
+    fi
+    for dest in "$HOME/.agents/skills" "$HOME/.codex/skills"; do
+      echo "==> copy skills to $dest"
+      mkdir -p "$dest"
+      cp -r "$DOT/$path/skills/"* "$dest/"
+    done
+  done
+}
+
+function uninstall_skills {
+  local entry path marketplace plugins plugin_ids plugin_id dest skill
+  echo "This will remove the deps skills from ~/.agents/skills and ~/.codex/skills,"
+  echo "and uninstall the claude plugins + marketplaces."
+  read -r -p "Continue? [y/N] " answer
+  if [[ ! "$answer" =~ ^[Yy]$ ]]; then
+    echo "aborted"
+    exit 0
+  fi
+
+  for entry in "${SKILL_SOURCES[@]}"; do
+    IFS=':' read -r path marketplace plugins <<< "$entry"
+    echo "==> remove skills copied from $path"
+    for skill in "$DOT/$path/skills/"*; do
+      [ -e "$skill" ] || continue
+      name=$(basename "$skill")
+      for dest in "$HOME/.agents/skills" "$HOME/.codex/skills"; do
+        [[ -n "$dest" && -e "$dest/$name" ]] && rm -rf "${dest:?}/$name"
+      done
+    done
+    if [[ -n "$marketplace" ]]; then
+      IFS=',' read -ra plugin_ids <<< "$plugins"
+      for plugin_id in "${plugin_ids[@]}"; do
+        echo "==> claude: uninstall plugin $plugin_id"
+        claude plugin uninstall "$plugin_id" || true
+      done
+      echo "==> claude: remove marketplace $marketplace"
+      claude plugin marketplace remove "$marketplace" || true
+    fi
+  done
+}
+
 case "$1" in
   foo)
     echo bar
@@ -29,14 +91,18 @@ case "$1" in
     fi
     ;;
   skills)
-      claude plugin marketplace add ./deps/mattpocock-skills/skills
-      claude plugin install mattpocock-skills@mattpocok
-      cp -r ./deps/mattpocock-skills/skills/* ~/.agents/skills
-      cp -r ./deps/mattpocock-skills/skills/* ~/.codex/skills
-      claude plugin marketplace add ./deps/tp-skills
-      claude plugin install tp-skills@tpai
-      cp -r ./deps/tp-skills/* ~/.agents/skills
-      cp -r ./deps/tp-skills/* ~/.codex/skills
+    case "$2" in
+      ""|install)
+        install_skills
+        ;;
+      uninstall|remove)
+        uninstall_skills
+        ;;
+      *)
+        echo "usage: $0 skills [install|uninstall]" >&2
+        exit 1
+        ;;
+    esac
     ;;
   cloud)
     if ! which az &> /dev/null; then

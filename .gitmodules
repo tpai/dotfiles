@@ -1,3 +1,6 @@
 [submodule "deps/mattpocock-skills"]
 	path = deps/mattpocock-skills
 	url = git@github.com:tpai/skills.git
+[submodule "deps/anthropics-skills"]
+	path = deps/anthropics-skills
+	url = git@github.com:anthropics/skills.git
