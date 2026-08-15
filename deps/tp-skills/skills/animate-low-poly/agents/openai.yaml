@@ -1,0 +1,4 @@
+interface:
+  display_name: "Animate Low Poly"
+  short_description: "Make ideas memorable through interaction"
+  default_prompt: "Use $animate-low-poly to turn this concept or code change into a simple interactive simulation readers can quickly grasp and remember."
