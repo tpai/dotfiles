@@ -1,6 +1,6 @@
 ---
 name: animate-low-poly
-description: Create simple, interactive low-poly simulations with Anime.js that help readers quickly grasp and remember an idea, process, system, or code change. Use when turning an abstract concept or source-code change into a hands-on visual explanation, explorable simulation, animated diagram, or before/after comparison. For code changes, always provide an obvious Before/After switch so users can compare behavior or structure.
+description: Create simple, interactive low-poly simulations with Anime.js that help readers quickly grasp and remember an idea, process, system, or code change. Use when turning an abstract concept or source-code change into a hands-on visual explanation, explorable simulation, animated diagram, or before/after comparison. For code changes, always provide an obvious Before/After switch so users can compare behavior or structure. Every artifact ships bilingual copy (en-US and zh-Hant) behind an in-page language switch.
 ---
 
 # Animate Low Poly
@@ -32,11 +32,22 @@ Implement these essentials:
 - Make motion explain causality, sequence, state, or contrast. Every animated element must carry meaning.
 - Make interaction central rather than ornamental. Give readers one or two obvious controls that change a meaningful input, state, or path and produce immediate visual feedback.
 - Make exploration repeatable and safe: readers should be able to try alternatives, reset, and quickly connect each action to its outcome.
-- Keep on-screen copy plain, precise, and brief: one short title, one-sentence takeaway, and labels of roughly one to five words.
+- Keep on-screen copy plain, precise, and brief: one short title, one-sentence takeaway, and labels of roughly one to five words. Write it in both supported languages.
 - Provide replay or restart when the animation is not continuously understandable.
 - Keep controls keyboard-accessible and visible at common mobile and desktop widths.
 - Respect `prefers-reduced-motion`; show the meaningful end state without relying on movement.
 - Fit the entire scene, controls, and copy inside the visible viewport at common mobile and desktop sizes; nothing may require scrolling — no horizontal or vertical scrollbars may appear.
+
+## Ship English and Traditional Chinese
+
+Every artifact carries its complete on-screen copy in `en-US` and `zh-Hant`, switchable in the page. Read the bilingual copy contract in [references/scene-guidelines.md](references/scene-guidelines.md) before writing any string.
+
+- Keep every user-facing string in one table keyed by locale: title, takeaway, control labels, scene labels, state-specific copy, code annotations, and any assumption note. Leave no hardcoded user-facing text in the markup.
+- Add a two-option language switch labeled `EN` and `繁中`. Place it near the title, keep both options always available, and give it the same keyboard access, focus treatment, and selection semantics required of the Before/After switch.
+- Start in `en-US`, unless the user asks otherwise or the browser reports a Traditional Chinese locale (`zh-Hant`, `zh-TW`, `zh-HK`, `zh-MO`).
+- Set `document.documentElement.lang` to the active locale on load and on every switch.
+- Re-render text from the same render-state function that draws the scene. Switching language must not restart the animation, reset the Before/After state, or leave stale text behind.
+- Write the `zh-Hant` copy as natural Traditional Chinese in Taiwan usage, not a word-for-word rendering of the English. Carry the same claim, not the same sentence shape. Keep technical terms in English when that is how readers say them.
 
 ## Require comparison for code changes
 
@@ -57,8 +68,9 @@ Show code snippets only when they clarify the concept. Keep them to the smallest
 1. Confirm the deliverable is a single HTML file in the current working directory and opens directly in a browser without a build step.
 2. Open the artifact when browser tooling is available. Check initial render, replay, responsive layout, reduced motion, and keyboard controls.
 3. For code changes, switch Before/After repeatedly and confirm that each view is accurate, distinct, and stable.
-4. Confirm a reader can discover the main cause and effect through interaction, then state the core idea from the resulting visual state.
-5. Remove any visual, label, motion, or control that does not improve understanding or recall.
-6. Report the saved file with a clickable absolute path, then summarize what it shows and how to use its controls.
+4. Switch languages in both directions, in every scene state, and confirm that no English text remains in the `zh-Hant` view, no text clips or wraps out of the viewport, and the scene state survives the switch.
+5. Confirm a reader can discover the main cause and effect through interaction, then state the core idea from the resulting visual state, in either language.
+6. Remove any visual, label, motion, or control that does not improve understanding or recall.
+7. Report the saved file with a clickable absolute path, then summarize what it shows and how to use its controls.
 
 Do not over-explain implementation details unless the user asks. Let the animation carry the explanation.
