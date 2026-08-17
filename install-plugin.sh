@@ -92,14 +92,14 @@ case "$1" in
     ;;
   skills)
     case "$2" in
-      ""|install)
+      ""|i)
         install_skills
         ;;
-      uninstall|remove)
+      u)
         uninstall_skills
         ;;
       *)
-        echo "usage: $0 skills [install|uninstall]" >&2
+        echo "usage: $0 skills [i|u]" >&2
         exit 1
         ;;
     esac
