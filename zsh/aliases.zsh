@@ -28,14 +28,12 @@ alias ga='git add -A'
 alias gcm='git commit -m'
 alias gcam='git commit --amend'
 alias gco='git checkout'
-alias gcob='git checkout -b'                               # create branch
-alias gco-='git checkout --'                               # unchange files
-alias gcfd='git clean -fd'                                 # remove untracked files
-alias gfp='git fetch --all --prune'                        # fetch and prune branch
-gplr() { # pull and ff branch
-  git pull --rebase --tags --recurse-submodules && \
-    git submodule update --init --recursive --force
-}
+alias gcob='git checkout -b'                                 # create branch
+alias gco-='git checkout --'                                 # unchange files
+alias gcfd='git clean -fd'                                   # remove untracked files
+alias gfp='git fetch --all --prune'                          # fetch and prune branch
+alias gplr='git pull --rebase --tags --recurse-submodules'   # pull rebase and update submodules
+alias gsur='git submodule update --init --recursive --force' # force reset submodule
 alias gpu='git push -u origin $(git branch --show-current)'
 alias gr='git rebase'
 alias gri='git rebase --interactive'                       # rebase in interactive mode
