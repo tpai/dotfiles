@@ -32,7 +32,10 @@ alias gcob='git checkout -b'                               # create branch
 alias gco-='git checkout --'                               # unchange files
 alias gcfd='git clean -fd'                                 # remove untracked files
 alias gfp='git fetch --all --prune'                        # fetch and prune branch
-alias gplr='git pull --rebase --tags --recurse-submodules' # pull and ff branch
+gplr() { # pull and ff branch
+  git pull --rebase --tags --recurse-submodules && \
+    git submodule update --init --recursive --force
+}
 alias gpu='git push -u origin $(git branch --show-current)'
 alias gr='git rebase'
 alias gri='git rebase --interactive'                       # rebase in interactive mode
