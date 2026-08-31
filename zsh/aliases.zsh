@@ -97,6 +97,7 @@ alias azcg='az account list -o table'
 alias azcu='az account set --subscription'
 
 # gcloud
+alias gcpl='gcloud projects list'
 alias gccc='gcloud info --format json | jq ".config | pick(.active_config_name, .account, .project)"'
 alias gccg='gcloud config configurations list'
 alias gccu='gcloud config configurations activate'
