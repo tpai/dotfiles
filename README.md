@@ -33,7 +33,7 @@ Updates brew formulas, vim plugins and oh-my-zsh.
 ```
 
 - codeagent - install claude, opencode
-- skills - install claude plugins (mattpocock, tp) + skills for agents/codex (mattpocock, tp, anthropics)
+- skills - install claude plugins (mattpocock, tp, drawio) + skills for agents/codex (mattpocock, tp, anthropics, drawio)
   - `./install-plugin.sh skills` or `./install-plugin.sh skills install` - install
   - `./install-plugin.sh skills uninstall` - uninstall (removes copied skills and claude plugins/marketplaces)
 - tf - install terraform, vim-hashicorp-tools

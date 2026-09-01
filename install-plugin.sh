@@ -18,6 +18,7 @@ SKILL_SOURCES=(
   "deps/mattpocock-skills:mattpocock:mattpocock-skills"
   "deps/tp-skills:tpai:tp-skills@tpai"
   "deps/anthropics-skills::"
+  "deps/drawio-skill:agents365:drawio-skill@agents365"
 )
 
 function install_skills {

@@ -4,3 +4,6 @@
 [submodule "deps/anthropics-skills"]
 	path = deps/anthropics-skills
 	url = git@github.com:anthropics/skills.git
+[submodule "deps/drawio-skill"]
+	path = deps/drawio-skill
+	url = git@github.com:tpai/drawio-skill.git
