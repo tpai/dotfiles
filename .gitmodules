@@ -1,9 +1,11 @@
 [submodule "deps/mattpocock-skills"]
 	path = deps/mattpocock-skills
 	url = git@github.com:tpai/skills.git
+  branch = tweak/my-skills
 [submodule "deps/anthropics-skills"]
 	path = deps/anthropics-skills
 	url = git@github.com:anthropics/skills.git
 [submodule "deps/drawio-skill"]
 	path = deps/drawio-skill
 	url = git@github.com:tpai/drawio-skill.git
+  branch = tweak/my-skills
