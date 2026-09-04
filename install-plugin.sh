@@ -43,7 +43,7 @@ function install_skills {
 }
 
 function uninstall_skills {
-  local entry path marketplace plugins plugin_ids plugin_id dest skill
+  local entry path marketplace plugins plugin_ids plugin_id dest skill name
   echo "This will remove the deps skills from ~/.agents/skills and ~/.codex/skills,"
   echo "and uninstall the claude plugins + marketplaces."
   read -r -p "Continue? [y/N] " answer
@@ -74,9 +74,28 @@ function uninstall_skills {
   done
 }
 
+function usage {
+  cat <<EOF
+usage: $0 <command> [args]
+
+commands:
+  cagent          install the coding agent CLIs (claude, codex, opencode)
+  skills [i|u]    install (default) or uninstall the deps skills:
+                  copies them to ~/.agents/skills and ~/.codex/skills, and
+                  adds/removes the matching claude marketplaces + plugins
+  cloud           install the cloud CLIs (az + kubelogin, aws, gcloud)
+  tf              install/upgrade opentofu + terraform, enable the vim plugin
+  go              install go via gvm (or update nvim go tooling if present)
+  rust            install the rust toolchain via rustup
+  k8s             install k9s, kubectl, helm, skopeo and write the k9s debug plugin
+
+  -h, --help      show this help
+EOF
+}
+
 case "$1" in
-  foo)
-    echo bar
+  -h|--help|"")
+    usage
     ;;
   cagent)
     if ! which claude &> /dev/null; then
@@ -167,5 +186,11 @@ case "$1" in
     args:
       - -c
       - "kubectl debug -it --context $CONTEXT -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.13 --share-processes -- bash"' > $HOME/Library/Application\ Support/k9s/plugins.yaml
+    ;;
+  *)
+    echo "$0: unknown command '$1'" >&2
+    echo >&2
+    usage >&2
+    exit 1
     ;;
 esac
