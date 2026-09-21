@@ -48,7 +48,7 @@ if [ ! -d "$DOT" ]; then
   echo "📦 Install packages"
   # Misc
   brew install zsh tmux \
-    ripgrep jq zoxide fd duf witr mole \
+    fzf ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
     ctop glances rustnet fastfetch onefetch
   # Required
@@ -132,7 +132,7 @@ else
   # Upgrade packages
   echo "📦 Upgrade packages"
   brew upgrade zsh tmux \
-    ripgrep jq zoxide fd duf witr mole \
+    fzf ripgrep jq zoxide fd duf witr mole \
     eza bat prettyping tldr mas httpie lazyssh \
     ctop glances rustnet fastfetch onefetch
   # Required
